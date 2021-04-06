@@ -1,0 +1,43 @@
+{
+  "name": "vuepress-theme-ououe",
+  "version": "1.5.3",
+  "main": "index.js",
+  "description": "A blog theme for VuePress by hirasu1231",
+  "author": "tolking <qw13131wang@gmail.com>",
+  "repository": "https://github.com/hirasu1231/ououe_hamlet_engineer",
+  "bugs": {
+    "url": "https://github.com/hirasu1231/ououe_hamlet_engineer/issues"
+  },
+  "keywords": [
+    "vue",
+    "vuepress",
+    "blog",
+    "blog-theme",
+    "vuepress-theme",
+    "light-theme",
+    "dark-theme"
+  ],
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.3.1",
+    "@vuepress/plugin-last-updated": "^1.3.1",
+    "@vuepress/plugin-nprogress": "^1.3.1",
+    "@vuepress/plugin-search": "^1.3.1",
+    "@vuepress/shared-utils": "^1.3.1",
+    "css-prefers-color-scheme": "^3.1.1",
+    "vuepress": "^1.3.1",
+    "vuepress-plugin-blog-multidir": "^1.0.4",
+    "vuepress-plugin-img-lazy": "^1.0.4",
+    "vuepress-plugin-reading-progress": "^1.0.10",
+    "vuepress-theme-ououe": "^1.5.3"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+  }
+}
