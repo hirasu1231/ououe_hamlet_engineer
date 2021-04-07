@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Theme',
   description: 'theme for Vuepress',
-  base: '/ououe_hamlet_engineer/',
+  base: '/',
   dest: 'docs',
   theme: require.resolve('../../'),
   themeConfig: {
