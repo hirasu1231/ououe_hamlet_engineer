@@ -3,7 +3,7 @@ display: home
 title: 'CUDAとTensorFlow，PyTorchのversion対応について'
 description: PythonでAI系をやっていると，CUDA・TensorFlow・PyTorchのversionの違いでつまずくことがありますので，version対応について記述します．
 date: 2021-03-21
-image: ../thumbnail/cuda.jpg
+image: /image/cuda.jpg
 categories: 
   - Python
 tags:
@@ -17,9 +17,9 @@ PythonでAI系をやっていると，CUDA・TensorFlow・PyTorchのversionの�
 <!-- more -->
 
 ## TensorFlowとの対応表について
-![](./image/CUDA_tf.png)
+![](/image/CUDA_tf.png)
 
-```init
+```
 # GPUが使用できるかを確認
 import TensorFlow as tf
 device_name = tf.test.gpu_device_name()
@@ -30,7 +30,7 @@ print('Found GPU at: {}'.format(device_name))
 
 ## PyTorchとの対応について
 [PyTorchとCUDAの対応について](https://PyTorch.org/get-started/previous-versions/)
-```init
+```
 # GPUが使用できるかを確認
 import torch
 print(torch.CUDA.is_available())
@@ -38,10 +38,10 @@ print(torch.CUDA.is_available())
 
 ## CUDA
 CUDA ToolkitとNVIDIAドライバの各バージョンについて，以下の画像に示します．
-![](./image/cuda_nvidia.png)
+![](/image/cuda_nvidia.png)
 
 ### 前準備
-```init
+```
 sudo apt update
 sudo apt-get update
 ```
@@ -49,7 +49,7 @@ sudo apt-get update
 ### Nvidiaドライバのインストール
 Nvidiaドライバをインストールします．
 該当ドライバのバージョンのインストールがうまくいかない場合は、バージョンを少しずつ下げてみるのがお勧めです．
-```init
+```
 sudo apt update
 # インストール可能なドライバのバージョンを確認
 apt-cache search 'nvidia-[0-9]+$'
@@ -59,10 +59,10 @@ sudo apt-get install nvidia-361
 
 また，Nvidiaの公式サイトからもドライバをインストールできます．
 [NVIDIAドライバダウンロード](https://www.nvidia.co.jp/Download/index.aspx?lang=jp#)<br>
-![](./image/nvidia_dl.png)
+![](/image/nvidia_dl.png)
 
 ### CUDAのインストール
-```init
+```
 sudo apt-get update
 sudo apt-get install build-essential
 sudo apt-get install CUDA-10-0
@@ -70,11 +70,11 @@ sudo apt-get install CUDA-10-0
 ### 実行環境の確認
 以下のコードでCUDAのversionを確認します．<br>
 `watch -n 0.5`はコードを回している間に，GPUの使用状況を見る場合にも便利です．
-```init
+```
 nvcc --version
 ```
 以下のコードでgpuの使用状況を確認．
-```init
+```
 #0.5秒毎にnvidia-smiの情報を更新して表示する
 watch -n 0.5 nvidia-smi
 ```
