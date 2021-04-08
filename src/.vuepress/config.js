@@ -26,11 +26,11 @@ module.exports = {
       { text: 'ホーム', link: '/' },
       { text: '技術', link: '/posts/' },
       { text: 'メンタル', link: '/mental/' },
+      { text: '趣味', link: '/mental/' },
       { text: 'タグ', link: '/tag/' },
       { text: 'カテゴリ', link: '/category/' },
       { text: 'サイトマップ', link: '/about/' },
-      { text: 'Twitter', link: 'https://twitter.com/hirasu1231' },
-      { text: 'Github', link: 'https://github.com/hirasu1231' }
+      { text: '筆者', link: 'https://twitter.com/hirasu1231' },
     ],
     footer: [
       { text: 'Twitter', link: 'https://twitter.com/hirasu1231' },
