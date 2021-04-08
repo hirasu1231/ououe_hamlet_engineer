@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python + Google Colab + keras-yolo4でバイク検出を転移学習する | Theme</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="COCOデータセットから特定のクラスの画像を抽出し，アノテーション情報を整形したので，keras-yolo4での転移学習を実施します．">
+    
+    <link rel="preload" href="/assets/css/0.styles.65f6958d.css" as="style"><link rel="preload" href="/assets/js/app.c4b0b824.js" as="script"><link rel="preload" href="/assets/js/17.08afe030.js" as="script"><link rel="prefetch" href="/assets/js/10.ac2573f3.js"><link rel="prefetch" href="/assets/js/11.9453abb4.js"><link rel="prefetch" href="/assets/js/12.5a41be42.js"><link rel="prefetch" href="/assets/js/13.3a5ed5bd.js"><link rel="prefetch" href="/assets/js/14.d0f92e45.js"><link rel="prefetch" href="/assets/js/15.79fb4d97.js"><link rel="prefetch" href="/assets/js/16.efa6a708.js"><link rel="prefetch" href="/assets/js/18.12981a8e.js"><link rel="prefetch" href="/assets/js/19.82b9d603.js"><link rel="prefetch" href="/assets/js/2.38531e8c.js"><link rel="prefetch" href="/assets/js/20.fa3fb389.js"><link rel="prefetch" href="/assets/js/21.a6da3135.js"><link rel="prefetch" href="/assets/js/22.579b2372.js"><link rel="prefetch" href="/assets/js/23.447fe43d.js"><link rel="prefetch" href="/assets/js/24.81e86c2a.js"><link rel="prefetch" href="/assets/js/25.c2029de4.js"><link rel="prefetch" href="/assets/js/26.e0777382.js"><link rel="prefetch" href="/assets/js/27.48a2fce0.js"><link rel="prefetch" href="/assets/js/28.8c1203b8.js"><link rel="prefetch" href="/assets/js/29.8729398e.js"><link rel="prefetch" href="/assets/js/3.b3caa0ed.js"><link rel="prefetch" href="/assets/js/30.dc5ef7e0.js"><link rel="prefetch" href="/assets/js/4.51bd6144.js"><link rel="prefetch" href="/assets/js/5.55aa42f1.js"><link rel="prefetch" href="/assets/js/6.f2f299c6.js"><link rel="prefetch" href="/assets/js/7.5165d974.js"><link rel="prefetch" href="/assets/js/8.553f6394.js"><link rel="prefetch" href="/assets/js/9.716828db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.65f6958d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-98a81704><header class="header" data-v-00466d8e data-v-98a81704><div class="header-navbar" data-v-00466d8e><div class="flex-xbc main header-nav" data-v-00466d8e><div class="nav-link" data-v-00466d8e><a href="/" class="inblock link-logo router-link-active" data-v-00466d8e><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-00466d8e></a> <nav class="link-list" data-v-00466d8e><a href="/" class="list-item router-link-active" data-v-00466d8e>ホーム</a><a href="/posts/" class="list-item router-link-active" data-v-00466d8e>技術</a><a href="/mental/" class="list-item" data-v-00466d8e>メンタル</a><a href="/mental/" class="list-item" data-v-00466d8e>趣味</a><a href="/tag/" class="list-item" data-v-00466d8e>タグ</a><a href="/category/" class="list-item" data-v-00466d8e>カテゴリ</a><a href="/about/" class="list-item" data-v-00466d8e>サイトマップ</a><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-00466d8e>筆者</a></nav></div> <div class="search-box" data-v-00466d8e><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-98a81704 data-v-98a81704><section class="info no-bg" data-v-2602fa21><article class="main info-content" data-v-09525e5c data-v-2602fa21><div class="content-header" data-v-09525e5c><h1 class="header-title" data-v-09525e5c>Python + Google Colab + keras-yolo4でバイク検出を転移学習する</h1></div> <div class="flex-wcc content-tag" data-v-09525e5c><div class="inblock tag-list" data-v-09525e5c><a href="/category/Python/" class="tag-text" data-v-09525e5c>Python
+      </a></div> <span class="tag-space" data-v-09525e5c>/</span> <div class="inblock tag-list" data-v-09525e5c><a href="/tag/Python/" class="tag-text" data-v-09525e5c>Python
+      </a><a href="/tag/Jupyter/" class="tag-text" data-v-09525e5c>Jupyter
+      </a><a href="/tag/物体検出/" class="tag-text" data-v-09525e5c>物体検出
+      </a><a href="/tag/YOLO/" class="tag-text" data-v-09525e5c>YOLO
+      </a><a href="/tag/トラッキング/" class="tag-text" data-v-09525e5c>トラッキング
+      </a><a href="/tag/Google Colab/" class="tag-text" data-v-09525e5c>Google Colab
+      </a><a href="/tag/Keras/" class="tag-text" data-v-09525e5c>Keras
+      </a></div></div> <div class="content content__default" data-v-09525e5c><p>COCOデータセットから特定のクラスの画像を抽出し，アノテーション情報を整形したので，keras-yolo4での転移学習を実施します．
+</p> <p>今回はGoogle ColabとGoogle Driveを連携させて，notebook形式で実行してます．<br></p> <blockquote><p>Google Colaboratory（以下Google Colab）は、Google社が無料で提供している機械学習の教育や研究用の開発環境です。開発環境はJupyter Notebookに似たインターフェースを持ち、Pythonの主要なライブラリがプリインストールされています。<br>
+引用元：<a href="https://interface.cqpub.co.jp/ail01/" target="_blank" rel="noopener noreferrer">Google Colabの使い方<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>最終的に，Youtubeの<a href="https://www.youtube.com/watch?v=wnRH3-CIk4I" target="_blank" rel="noopener noreferrer">平成24年 元旦配達出発式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．</p> <h2 id="google-colabのファイル構成"><a href="#google-colabのファイル構成" class="header-anchor">#</a> Google Colabのファイル構成</h2> <p>プロジェクトディレクトリはpost_bikeとしています．度々，省略しています．</p> <div class="language- extra-class"><pre class="language-text"><code>post_bike
+├── /keras-yolo4
+│   ├── /logs &lt;- 学習モデルの保存先
+│   │   └── /keras_bike
+│   ├── keras_bike.zip &lt;- 学習データ解凍前
+│   ├── /keras_bike &lt;- 学習データ
+│   ├── decode_np.py
+│   ├── test.py
+│   ├── test_video.py
+│   ├── yolov4.weights
+│   ├── yolo4_weight.h5
+│   ├── H240101_post.mp4 &lt;- 元動画
+│   ├── keras_post.mp4 &lt;- 検出動画
+│   └── (省略)
+└── keras-yolo4.ipynb &lt;- 実行用ノートブック
+</code></pre></div><h2 id="転移学習"><a href="#転移学習" class="header-anchor">#</a> 転移学習</h2> <blockquote><p>転移学習とは、ある領域の知識を別の領域の学習に適用させる技術です。<br>
+たとえば大量の犬の画像データと少量の猫の画像データがあり、犬の種類判別モデルと猫の種類判別モデルを作成する場合、通常の機械学習では下図の左側のように犬と猫別々でモデルを作成します。しかしこのとき、猫の画像は少ないので猫の種類判別モデルは判別精度が低い可能性があります。そこで下図の右側のように、犬の種類判別の課題から得られた知識を猫の種類判別モデルに適応させる転移学習を行うことで、判別精度の向上を図ることができます。<br>
+引用元:<a href="https://ledge.ai/transfer-learning/#:~:text=%E8%BB%A2%E7%A7%BB%E5%AD%A6%E7%BF%92%E3%81%A8%E3%81%AF%E3%80%81%E3%81%82%E3%82%8B,%E3%81%AB%E9%81%A9%E7%94%A8%E3%81%95%E3%81%9B%E3%82%8B%E6%8A%80%E8%A1%93%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer">転移学習とは | メリット・デメリット・ファインチューニングの意味<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>本稿では，出力される1つ前の層(Yolov4では3つある)までを固定して，残りを学習させています．</p> <h2 id="keras-yolo4"><a href="#keras-yolo4" class="header-anchor">#</a> keras-yolo4</h2> <h3 id="keras-yolo4のダウンロード"><a href="#keras-yolo4のダウンロード" class="header-anchor">#</a> keras-yolo4のダウンロード</h3> <p>Google ColabとGoogle Driveを連携させて，gitからkeras-yolo4をダウンロードします．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># Google ColabとGoogle Driveを連携</span>
+<span class="token keyword">from</span> google<span class="token punctuation">.</span>colab <span class="token keyword">import</span> drive
+drive<span class="token punctuation">.</span>mount<span class="token punctuation">(</span><span class="token string">'/content/drive'</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token operator">%</span><span class="token operator">%</span>bash
+<span class="token comment"># ディレクトリの移動</span>
+cd drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>
+<span class="token comment"># gitのダウンロード</span>
+git clone https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>Ma<span class="token operator">-</span>Dan<span class="token operator">/</span>keras<span class="token operator">-</span>yolo4<span class="token punctuation">.</span>git
+</code></pre></div><h2 id="keras-yolo4の起動チェック"><a href="#keras-yolo4の起動チェック" class="header-anchor">#</a> keras-yolo4の起動チェック</h2> <p>正常に起動するか，デフォルトで入っている画像を検出させてチェックします．</p> <h3 id="初期重みのダウンロード"><a href="#初期重みのダウンロード" class="header-anchor">#</a> 初期重みのダウンロード</h3> <p>今回は起動するかチェックするために，YOLOv4学習済みのパラメータをダウンロードします．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>keras<span class="token operator">-</span>yolo4<span class="token operator">/</span>
+<span class="token comment"># 初期重みをダウンロード</span>
+!wget https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>AlexeyAB<span class="token operator">/</span>darknet<span class="token operator">/</span>releases<span class="token operator">/</span>download<span class="token operator">/</span>darknet_yolo_v3_optimal<span class="token operator">/</span>yolov4<span class="token punctuation">.</span>weights
+</code></pre></div><h3 id="モジュールのインストール"><a href="#モジュールのインストール" class="header-anchor">#</a> モジュールのインストール</h3> <p>keras-yolo4に応じて，モジュールをインストールします．</p> <div class="language-python extra-class"><pre class="language-python"><code>!pip install keras<span class="token operator">==</span><span class="token number">2.2</span><span class="token number">.0</span>
+!pip install tensorflow<span class="token operator">==</span><span class="token number">1.15</span><span class="token number">.0</span>
+!pip install tensorflow<span class="token operator">-</span>gpu<span class="token operator">==</span><span class="token number">1.15</span><span class="token number">.0</span>
+!pip install keras<span class="token operator">-</span>applications<span class="token operator">==</span><span class="token number">1.0</span><span class="token number">.7</span>
+</code></pre></div><h3 id="重みの変換"><a href="#重みの変換" class="header-anchor">#</a> 重みの変換</h3> <p>darknet用の重みをkerasで使えるように変換します．(yolov4.weights -&gt; yolo4_weight.h5)</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>keras<span class="token operator">-</span>yolo4<span class="token operator">/</span>
+<span class="token comment"># 重みの変換</span>
+!python convert<span class="token punctuation">.</span>py
+</code></pre></div><h3 id="テストの実行"><a href="#テストの実行" class="header-anchor">#</a> テストの実行</h3> <p>GPUが認識しているかの確認後，検出が実行しkeras-yolo4が正常に起動するか確認します．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token comment"># GPUの起動確認</span>
+device_name <span class="token operator">=</span> tf<span class="token punctuation">.</span>test<span class="token punctuation">.</span>gpu_device_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> device_name <span class="token operator">!=</span> <span class="token string">'/device:GPU:0'</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'GPU device not found'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Found GPU at: {}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>device_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># Found GPU at: /device:GPU:0</span>
+</code></pre></div><p>test.pyを以下の記述に変更して実行してください．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># test.pyの36-38行目</span>
+model_path <span class="token operator">=</span> <span class="token string">'yolo4_weight.h5'</span>
+anchors_path <span class="token operator">=</span> <span class="token string">'model_data/yolo4_anchors.txt'</span>
+classes_path <span class="token operator">=</span> <span class="token string">'model_data/coco_classes.txt'</span>
+
+<span class="token comment"># test.pyの61-行目をコメントアウト</span>
+<span class="token comment"># while True:</span>
+<span class="token comment">#     # img = input('Input image filename:')</span>
+<span class="token comment">#     try:</span>
+<span class="token comment">#         image = cv2.imread(img)</span>
+<span class="token comment">#     except:</span>
+<span class="token comment">#         print('Open Error! Try again!')</span>
+<span class="token comment">#         continue</span>
+<span class="token comment">#     else:</span>
+<span class="token comment">#         image, boxes, scores, classes = _decode.detect_image(image, True)</span>
+<span class="token comment">#         cv2.imshow('image', image)</span>
+<span class="token comment">#         cv2.waitKey(0)</span>
+<span class="token comment">#         cv2.destroyAllWindows()</span>
+
+<span class="token comment"># yolo4_model.close_session()</span>
+
+<span class="token comment"># 追記</span>
+image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">'person.jpg'</span><span class="token punctuation">)</span>
+image<span class="token punctuation">,</span> boxes<span class="token punctuation">,</span> scores<span class="token punctuation">,</span> classes <span class="token operator">=</span> _decode<span class="token punctuation">.</span>detect_image<span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span><span class="token string">'person_result.jpg'</span><span class="token punctuation">,</span>image<span class="token punctuation">)</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>keras<span class="token operator">-</span>yolo4<span class="token operator">/</span>
+<span class="token comment"># テスト用画像のダウンロード</span>
+!wget https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>AlexeyAB<span class="token operator">/</span>darknet<span class="token operator">/</span>blob<span class="token operator">/</span>master<span class="token operator">/</span>data<span class="token operator">/</span>person<span class="token punctuation">.</span>jpg?raw<span class="token operator">=</span>true <span class="token operator">-</span>O person<span class="token punctuation">.</span>jpg
+<span class="token comment"># テスト(person.jpg)</span>
+!python test<span class="token punctuation">.</span>py
+</code></pre></div><p>person.jpgの検出結果<br> <img alt="" data-src="/image/keras_person_result.jpg" loading="lazy" class="lazy"></p> <h2 id="keras-yolo4での学習"><a href="#keras-yolo4での学習" class="header-anchor">#</a> keras-yolo4での学習</h2> <p>keras-yolo4も起動も確認できたので，keras-yolo4でバイク検出の学習を実施します．</p> <h3 id="学習データのアップロード"><a href="#学習データのアップロード" class="header-anchor">#</a> 学習データのアップロード</h3> <p>僕の経験の話になりますが，Google Colabを使う場合は，zip圧縮してからGoogle Driveにアップロードして，Google Colabのノートブック上で解凍させた方がエラーもなく早い感じがするので，ここではそのコードをあげます．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>darknet<span class="token operator">/</span>
+<span class="token comment"># 学習データの解凍</span>
+!unzip darknet4_bike<span class="token punctuation">.</span><span class="token builtin">zip</span> <span class="token operator">&gt;</span> <span class="token operator">/</span>dev<span class="token operator">/</span>null
+</code></pre></div><h3 id="学習の実行"><a href="#学習の実行" class="header-anchor">#</a> 学習の実行</h3> <p>ダウンロードしたkeras-yolo4に移動して，train.pyの設定をイジって実行準備をします．<br>
+annotation_train_pathとannotation_val_pathは学習・評価用のデータ，log_dirはモデルの出力先，classes_pathはクラスのリストを示す．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># train.py</span>
+<span class="token comment"># 26-29行目</span>
+annotation_train_path <span class="token operator">=</span> <span class="token string">'keras_bike/train.txt'</span> 
+annotation_val_path <span class="token operator">=</span> <span class="token string">'keras_bike/val.txt'</span> 
+log_dir <span class="token operator">=</span> <span class="token string">'logs/keras_bike/'</span>
+classes_path <span class="token operator">=</span> <span class="token string">'keras_bike/yolov4_bike.txt'</span>  
+
+<span class="token comment"># 51行目</span>
+<span class="token comment"># weights_path：重みの読み込み</span>
+<span class="token comment"># freeze_body：固定の仕方の設定</span>
+<span class="token comment"># 1:250層目の特徴量抽出層までを固定</span>
+<span class="token comment"># 2:出力直前の3層前までを固定</span>
+model<span class="token punctuation">,</span> model_body <span class="token operator">=</span> create_model<span class="token punctuation">(</span>input_shape<span class="token punctuation">,</span> anchors_stride_base<span class="token punctuation">,</span> num_classes<span class="token punctuation">,</span> load_pretrained<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> freeze_body<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> weights_path<span class="token operator">=</span><span class="token string">'yolo4_weight.h5'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 58行目</span>
+<span class="token comment"># eval_file='2012_val.txt' -&gt; eval_file=annotation_val_path</span>
+evaluation <span class="token operator">=</span> Evaluate<span class="token punctuation">(</span>model_body<span class="token operator">=</span>model_body<span class="token punctuation">,</span> anchors<span class="token operator">=</span>anchors<span class="token punctuation">,</span> class_names<span class="token operator">=</span>class_index<span class="token punctuation">,</span> score_threshold<span class="token operator">=</span><span class="token number">0.05</span><span class="token punctuation">,</span> tensorboard<span class="token operator">=</span>logging<span class="token punctuation">,</span> weighted_average<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> eval_file<span class="token operator">=</span>annotation_val_path<span class="token punctuation">,</span> log_dir<span class="token operator">=</span>log_dir<span class="token punctuation">)</span>
+
+<span class="token comment"># 127-128行目</span>
+<span class="token comment"># 固定する層の指定</span>
+<span class="token keyword">if</span> freeze_body <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+  <span class="token comment"># Freeze darknet53 body or freeze all but 3 output layers.</span>
+  num <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">250</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>model_body<span class="token punctuation">.</span>layers<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">[</span>freeze_body<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span> model_body<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>trainable <span class="token operator">=</span> <span class="token boolean">False</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Freeze the first {} layers of total {} layers.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>model_body<span class="token punctuation">.</span>layers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>keras<span class="token operator">-</span>yolo4<span class="token operator">/</span>
+<span class="token comment"># 学習の実行</span>
+!python train<span class="token punctuation">.</span>py
+</code></pre></div><h2 id="バイク検出の実行"><a href="#バイク検出の実行" class="header-anchor">#</a> バイク検出の実行</h2> <p>学習(約5時間)が終わったので，出力された最終の重み<code>logs/keras_bike/ep063-loss12.063.h5</code>でtest_video.pyを作成しバイク検出を実施します．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># test_video.py</span>
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> colorsys
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> keras <span class="token keyword">import</span> backend <span class="token keyword">as</span> K
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> load_model
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Input
+
+<span class="token keyword">from</span> yolo4<span class="token punctuation">.</span>model <span class="token keyword">import</span> yolo_eval<span class="token punctuation">,</span> yolo4_body
+<span class="token keyword">from</span> yolo4<span class="token punctuation">.</span>utils <span class="token keyword">import</span> letterbox_image
+
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image<span class="token punctuation">,</span> ImageFont<span class="token punctuation">,</span> ImageDraw
+<span class="token keyword">from</span> timeit <span class="token keyword">import</span> default_timer <span class="token keyword">as</span> timer
+<span class="token keyword">import</span> cv2
+
+<span class="token keyword">from</span> decode_np <span class="token keyword">import</span> Decode
+
+
+<span class="token keyword">def</span> <span class="token function">get_class</span><span class="token punctuation">(</span>classes_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    classes_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>expanduser<span class="token punctuation">(</span>classes_path<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>classes_path<span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        class_names <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    class_names <span class="token operator">=</span> <span class="token punctuation">[</span>c<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> c <span class="token keyword">in</span> class_names<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> class_names
+
+<span class="token keyword">def</span> <span class="token function">get_anchors</span><span class="token punctuation">(</span>anchors_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    anchors_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>expanduser<span class="token punctuation">(</span>anchors_path<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>anchors_path<span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        anchors <span class="token operator">=</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    anchors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> anchors<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>anchors<span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Please visit https://github.com/miemie2013/Keras-YOLOv4 for more complete model!'</span><span class="token punctuation">)</span>
+
+    model_path <span class="token operator">=</span> <span class="token string">'logs/keras_bike/ep063-loss12.063.h5'</span>
+    anchors_path <span class="token operator">=</span> <span class="token string">'model_data/yolo4_anchors.txt'</span>
+    classes_path <span class="token operator">=</span> <span class="token string">'keras_bike/yolov4_bike.txt'</span>
+
+    class_names <span class="token operator">=</span> get_class<span class="token punctuation">(</span>classes_path<span class="token punctuation">)</span>
+    anchors <span class="token operator">=</span> get_anchors<span class="token punctuation">(</span>anchors_path<span class="token punctuation">)</span>
+
+    num_anchors <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>anchors<span class="token punctuation">)</span>
+    num_classes <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>class_names<span class="token punctuation">)</span>
+
+    model_image_size <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">608</span><span class="token punctuation">,</span> <span class="token number">608</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 分数阈值和nms_iou阈值</span>
+    conf_thresh <span class="token operator">=</span> <span class="token number">0.2</span>
+    nms_thresh <span class="token operator">=</span> <span class="token number">0.45</span>
+
+    yolo4_model <span class="token operator">=</span> yolo4_body<span class="token punctuation">(</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span>model_image_size<span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> num_anchors<span class="token operator">//</span><span class="token number">3</span><span class="token punctuation">,</span> num_classes<span class="token punctuation">)</span>
+
+    model_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>expanduser<span class="token punctuation">(</span>model_path<span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> model_path<span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token string">'.h5'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'Keras model or weights must be a .h5 file.'</span>
+
+    yolo4_model<span class="token punctuation">.</span>load_weights<span class="token punctuation">(</span>model_path<span class="token punctuation">)</span>
+
+    _decode <span class="token operator">=</span> Decode<span class="token punctuation">(</span>conf_thresh<span class="token punctuation">,</span> nms_thresh<span class="token punctuation">,</span> model_image_size<span class="token punctuation">,</span> yolo4_model<span class="token punctuation">,</span> class_names<span class="token punctuation">)</span>
+    
+    <span class="token comment"># 入力動画</span>
+    input_video <span class="token operator">=</span> <span class="token string">'H240101_post.mp4'</span>
+    output_video <span class="token operator">=</span> <span class="token string">'keras_post.mp4'</span>
+    <span class="token comment"># 出力動画</span>
+    vid <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoCapture<span class="token punctuation">(</span>input_video<span class="token punctuation">)</span>
+    codec <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoWriter_fourcc<span class="token punctuation">(</span><span class="token operator">*</span><span class="token string">'XVID'</span><span class="token punctuation">)</span>
+    vid_fps <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>vid<span class="token punctuation">.</span>get<span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>CAP_PROP_FPS<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    vid_width<span class="token punctuation">,</span>vid_height <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>vid<span class="token punctuation">.</span>get<span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>CAP_PROP_FRAME_WIDTH<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>vid<span class="token punctuation">.</span>get<span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>CAP_PROP_FRAME_HEIGHT<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    out <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoWriter<span class="token punctuation">(</span>output_video<span class="token punctuation">,</span> codec<span class="token punctuation">,</span> vid_fps<span class="token punctuation">,</span> <span class="token punctuation">(</span>vid_width<span class="token punctuation">,</span> vid_height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        _<span class="token punctuation">,</span> img <span class="token operator">=</span> vid<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> img <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Completed'</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+        <span class="token comment"># 高さと幅</span>
+        height<span class="token punctuation">,</span> width<span class="token punctuation">,</span> _ <span class="token operator">=</span> img<span class="token punctuation">.</span>shape
+        <span class="token comment"># 検出</span>
+        img_out<span class="token punctuation">,</span> boxes<span class="token punctuation">,</span> scores<span class="token punctuation">,</span> classes <span class="token operator">=</span> _decode<span class="token punctuation">.</span>detect_image<span class="token punctuation">(</span>img<span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+        <span class="token comment"># 出力動画に書き込み</span>
+        out<span class="token punctuation">.</span>write<span class="token punctuation">(</span>img_out<span class="token punctuation">)</span>
+        
+        <span class="token keyword">if</span> cv2<span class="token punctuation">.</span>waitKey<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'q'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+    
+vid<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+out<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>以下のコードをGoogle Colabで実行します．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>MyDrive<span class="token operator">/</span>post_bike<span class="token operator">/</span>keras<span class="token operator">-</span>yolo4<span class="token operator">/</span>
+<span class="token comment"># 学習の実行</span>
+!python test_video<span class="token punctuation">.</span>py
+</code></pre></div><p>keras-yolo4の検出結果<br> <img alt="keras-yolo4の検出結果" data-src="/image/keras_post_md.gif" loading="lazy" class="lazy"></p> <h2 id="まとめ"><a href="#まとめ" class="header-anchor">#</a> まとめ</h2> <p>keras-yolo4でのバイク検出の転移学習を実施しましました．<br>
+結構検出できていたので，次は，DEEPSORTによるトラッキング」・「FastMOTによるトラッキング」・「EfficientDet」を実施します．</p> <h2 id="参考サイト"><a href="#参考サイト" class="header-anchor">#</a> 参考サイト</h2> <p><a href="https://github.com/Ma-Dan/keras-yolo4" target="_blank" rel="noopener noreferrer">Ma-Dan/keras-yolo4<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://ameblo.jp/sijukara-tama/entry-12641048746.html" target="_blank" rel="noopener noreferrer">Keras版 YOLOv4を動かしてみる。<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://nixeneko.hatenablog.com/entry/2018/08/15/000000" target="_blank" rel="noopener noreferrer">Windows 10上のDarknetでYolo v3をトレーニングしOpenCVから使ってみる<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://note.nkmk.me/python-opencv-imread-imwrite/" target="_blank" rel="noopener noreferrer">Python, OpenCVで画像ファイルの読み込み、保存（imread, imwrite）<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://note.nkmk.me/python-opencv-draw-function/" target="_blank" rel="noopener noreferrer">Python, OpenCVで図形描画（線、長方形、円、矢印、文字など）<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://qiita.com/wMETAw/items/fdb754022aec1da88e6e" target="_blank" rel="noopener noreferrer">FFmpegで動画をGIFに変換<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <div class="content-time" data-v-09525e5c><time datetime="3/2/2021, 12:00:00 AM" class="time-text" data-v-09525e5c>Create Time: 3/2/2021, 12:00:00 AM
+    </time> <time datetime="4/8/2021, 9:26:35 AM" class="time-text" data-v-09525e5c>Last Updated: 4/8/2021, 9:26:35 AM
+    </time></div></article> <section class="flex-xb main info-nav" data-v-203269c1 data-v-2602fa21><a href="/posts/object_detection07.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="/image/count_bike.png" loading="lazy" alt="Python + Google Colab + yolov4-deepsortでバイクをカウントする" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>Python + Google Colab + yolov4-deepsortでバイクをカウントする</h2> <div class="content" data-v-203269c1><p>バイク検出のモデルを作成いたしましたので，DeepSortというトラッキング(物体追跡)を使い，Youtubeの<a href="https://www.youtube.com/watch?v=wnRH3-CIk4I" target="_blank" rel="noopener noreferrer">平成24年 元旦配達出発式<OutboundLink/></a>のバイクをカウントします．<br></p>
+</div></article></a> <a href="/posts/object_detection05.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="/image/keras.png" loading="lazy" alt="Python + keras-yolo4で学習させるためにデータを整形する" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>Python + keras-yolo4で学習させるためにデータを整形する</h2> <div class="content" data-v-203269c1><p>COCOデータセットから特定のクラスの抽出・<a href="https://github.com/Ma-Dan/keras-yolo4" target="_blank" rel="noopener noreferrer">keras-yolo4<OutboundLink/></a>の学習形式への整形を実施します．<br></p>
+</div></article></a></section> <!----></section></section> <footer class="footer" data-v-8dceedee data-v-98a81704><nav class="link-list" data-v-8dceedee><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Twitter</a><a href="https://github.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-8dceedee>Theme © 2021</a></footer></section><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.c4b0b824.js" defer></script><script src="/assets/js/17.08afe030.js" defer></script>
+  </body>
+</html>
