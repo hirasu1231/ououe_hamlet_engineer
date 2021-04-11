@@ -34,6 +34,13 @@ module.exports = {
         twitterCard: _ => 'summary_large_image',
         image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image) || 'https://placehold.jp/40//333/600x315.png?css=%7B"padding"%3A"%200%2080px"%2C"background-image"%3A"%20url(https://lh3.googleusercontent.com/pw/ACtC-3d3gJEIns_Ufsr-NuGVe54oIqIZCcWTSR_u8KXhVz9L09TQMoPCO_qTdzKkQS-h8AUfYBRhdakl-qXxjnGOQv7ypd2RwB2mLzb2gMGB-o0pDy5s8Juln8qZfbCG3GDdu1nWw5JJ-NxjAYg7-bXPGIM=w600-h315-no?authuser=0)"%7D&text='+encodeURIComponent($page.title||$site.title),
     },
+    // 吹き出し
+    'vuepress-plugin-container': {
+        type: 'bubble9',
+        defaultTitle: '',
+        before: info => `<div class="bubble9"><div class="imgs"><img src="/hirasu1231.jpg" alt=""></div><div class="chat"><div class="ss">${info}`,
+        after: '</div></div></div>',
+      },
   },
   // サイトのタイトル
   title: 'ハムレット型エンジニアのカンニングノート',
@@ -67,6 +74,24 @@ module.exports = {
     //     weekday: 'long'
     //   }
     // },
+    // ボタンなどを日本語に変更
+    lang: {
+      home: 'ホーム',
+      posts: '技術',
+      mental: 'メンタル',
+      other: 'その他',
+      category: 'カテゴリー',
+      categories: 'カテゴリー',
+      allCategories: '全て',
+      tag: 'タグ',
+      tags: 'タグ',
+      search: '検索',
+      createdAt: '作成日',
+      updatedAt: '更新日',
+      prevPost: '前の記事へ',
+      nextPost: '次の記事へ',
+      toc: '目次',
+  },
     nav: [
       { text: 'ホーム', link: '/' },
       { text: 'ページ集', link: '/about/' },

@@ -36,6 +36,56 @@
     @media (prefers-color-scheme: dark)
       color transparentify(#fff, 0.5)
 
+/* 吹き出し*/
+/*以下、②左側のコメント*/
+.bubble9 
+  width 100%
+  margin 1.5em 0
+  overflow hidden
+
+.bubble9
+  .imgs 
+    float left
+    margin-right -90px
+    width 75px
+
+.bubble9 
+  .imgs img
+    position relative
+    top 10px
+    width 95%
+    height auto
+    border solid 3px #1976D2
+    border-radius 50%
+
+.bubble9
+  .chat 
+    width 95%
+
+.ss 
+  margin 16px
+  position relative
+  padding 10px
+  border-radius 10px
+  color #000000
+  background-color #BBDEFB
+  margin-left 90px
+
+.ss
+  :after 
+    content ""
+    display inline-block
+    position absolute
+    top 20px 
+    left -24px
+    border 12px solid transparent
+    border-right 12px solid #BBDEFB
+
+.ss p 
+  margin 16
+  padding 10
+
+
 @media print
   .tip, .warning, .danger
     background-color transparent
