@@ -3,7 +3,7 @@ display: home
 title: 'Python, OpenCVで指定した色の抽出と別の色への置換を実装する'
 description: Python, ESPNetでCityscapesデータセットから人のみを抽出して，仮のオリジナルデータを生成します．
 date: 2021-03-21
-image: /image/color_replace.png
+image: https://www.hamlet-engineer.com/image/color_replace.png
 categories: 
   - Python
 tags:

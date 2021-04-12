@@ -3,7 +3,7 @@ display: home
 title: 'Nimが対応したJupyterLabをDockerでインストールする'
 description: Nimが扱えるJupyterLabをDockerにインストールします．
 date: 2021-02-20
-image: /image/nim.png
+image: https://www.hamlet-engineer.com/image/nim.png
 categories: 
   - Nim
 tags:

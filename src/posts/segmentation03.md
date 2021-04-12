@@ -3,7 +3,7 @@ display: home
 title: 'Python + ESPNetをオリジナルデータで学習する(学習編)'
 description: Python + ESPNetでCityscapesデータセットから人のみを抽出した仮のオリジナルデータで学習を実施します．
 date: 2021-03-23
-image: /image/org_seg1.png
+image: https://www.hamlet-engineer.com/image/org_seg1.png
 categories: 
   - Python
 tags:

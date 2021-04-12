@@ -3,7 +3,7 @@ display: home
 title: 'Python + ESPNetをオリジナルデータで学習する(データ生成編) '
 description: Python + ESPNetでCityscapesデータセットから人のみを抽出して，仮のオリジナルデータを生成します．
 date: 2021-03-17
-image: /image/color_mask_image.png
+image: https://www.hamlet-engineer.com/image/color_mask_image.png
 categories: 
   - Python
 tags:

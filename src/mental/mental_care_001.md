@@ -2,7 +2,7 @@
 title: 引き寄せの法則は嘘だった！？
 description: 近年では引き寄せの法則は嘘であるという研究結果があります．ここでは，その研究結果を紹介しつつ，目標や夢を叶える別の手法について自分なりに解釈していきます．
 date: 2021-04-10
-image: /image/hikiyose.png
+image: https://www.hamlet-engineer.com/image/hikiyose.png
 categories: 
   - メンタル
 tags:

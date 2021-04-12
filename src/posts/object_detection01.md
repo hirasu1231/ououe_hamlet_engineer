@@ -3,7 +3,7 @@ display: home
 title: 'COCOデータセットをダウンロードし，特定のクラスを抽出する'
 description: YOLO・SSDの物体検出の実施のために，COCOデータセットをダウンロードし，特定のクラスだけを抽出します．
 date: 2021-02-21
-image: /image/000000356387.jpg
+image: https://www.hamlet-engineer.com/image/000000356387.jpg
 categories: 
   - Python
 tags:

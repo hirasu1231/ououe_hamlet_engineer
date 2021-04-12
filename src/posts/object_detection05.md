@@ -3,7 +3,7 @@ display: home
 title: 'Python + keras-yolo4で学習させるためにデータを整形する'
 description: COCOデータセットから特定のクラスの抽出・Pythonのkeras-yolo4の学習形式への整形を実施します．
 date: 2021-02-28
-image: /image/keras.png
+image: https://www.hamlet-engineer.com/image/keras.png
 categories: 
   - Python
 tags:

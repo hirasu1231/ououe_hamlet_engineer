@@ -46,5 +46,9 @@ layout: Page
 [Python + ESPNetをオリジナルデータで学習する(学習編)](https://www.hamlet-engineer.com/posts/segmentation03.html)<br>
 [Python + ESPNetでクロマキー合成を実施する](https://www.hamlet-engineer.com/posts/segmentation04.html)<br>
 
+## 文字起こし
+[pythonで音声からの文字起こしを実装する](https://www.hamlet-engineer.com/posts/mojiokoshi.html)<br>
+[pythonで長い音声・動画からの文字起こしを実装する](https://www.hamlet-engineer.com/posts/mojiokoshi_long.html)<br>
+
 ## Nim
 [Nimが対応したJupyterLabをDockerでインストールする](https://www.hamlet-engineer.com/posts/nim.html)<br>

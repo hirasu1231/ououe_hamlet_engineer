@@ -3,7 +3,7 @@ display: home
 title: 'Python + CycleGanで茶毛のウマをシマウマに変換する'
 description: 画像生成系のCycleGanを実装します．Python + CycleGanで茶毛のウマをシマウマに変換します．
 date: 2021-03-28
-image: /image/cyclegan_zebra.png
+image: https://www.hamlet-engineer.com/image/cyclegan_zebra.png
 categories: 
   - Python
 tags:

@@ -3,7 +3,7 @@ display: home
 title: 'pythonで音声からの文字起こしを実装する'
 description: 本稿では，音声データからテキストに変換する文字起こしを実装します．
 date: 2021-04-09
-image: /image/mojiokoshi.png
+image: https://www.hamlet-engineer.com/image/mojiokoshi.png
 categories: 
   - Python
 tags:
@@ -22,7 +22,7 @@ tags:
 ここではSpeechRecognitionというモジュールを用いります．googleのAPIを間接的に利用します．<br>
 [Speech-to-Text 公式API](https://cloud.google.com/speech-to-text/docs/libraries#client-libraries-install-python)
 
-```init
+```
 pip install SpeechRecognition
 # Successfully installed SpeechRecognition-3.8.1
 ```
@@ -31,7 +31,7 @@ pip install SpeechRecognition
 サンプルコードでは読み込む拡張子が「.wav」となっているため，mp3 -> wavに変換します．<br>
 ファイル変換はターミナル上でffmpegで実行します．
 
-```再生リストのダウンロード
+```
 # ffmpegのインストール
 apt-get install -y ffmpeg
 
@@ -41,7 +41,7 @@ ffmpeg -i aps-smp.mp3 aps-smp.wav
 
 ## 音声のテキスト変換
 以下のコードで音声からテキストに変換する文字起こしに実施します．
-```
+```python
 # 音声のテキスト変換
 import speech_recognition as sr
  

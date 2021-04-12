@@ -3,7 +3,7 @@ display: home
 title: 'Python + CycleGanでオリジナルデータでの学習を実装する'
 description: Python + CycleGanでオリジナルデータでの学習を実行します．本稿ではディアブロス(原種)とディアブロス亜種の変換を実施します．
 date: 2021-03-29
-image: /image/gan_mhw.png
+image: https://www.hamlet-engineer.com/image/gan_mhw.png
 categories: 
   - Python
 tags:

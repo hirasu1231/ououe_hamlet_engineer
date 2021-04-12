@@ -3,7 +3,7 @@ display: home
 title: 'Darknet(Yolov4)で学習させるためのcfgファイル等を作成する'
 description: COCOデータセットから特定のクラスを抽出・学習形式に整形ましたので，そのデータでdarknet(Yolov4)で学習を実施します．
 date: 2021-02-24
-image: /image/000000356387_bb.jpg
+image: https://www.hamlet-engineer.com/image/000000356387_bb.jpg
 categories: 
   - Python
 tags:

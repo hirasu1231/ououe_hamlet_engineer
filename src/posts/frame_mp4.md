@@ -3,7 +3,7 @@ display: home
 title: 'Python, OpenCVで好きな動画ファイルからフレームを切り出して保存します'
 description: Python, OpenCVを用いて，任意の秒数単位で動画のフレームを画像として出力するコードを作成します．
 date: 2021-03-13
-image: /image/opencv.png
+image: https://www.hamlet-engineer.com/image/opencv.png
 categories: 
   - Python
 tags:

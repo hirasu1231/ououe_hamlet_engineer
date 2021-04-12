@@ -3,7 +3,7 @@ display: home
 title: 'Python + ESPNetでクロマキー合成を実施する'
 description: Python + ESPNetで学習した人を検出するセマンティックセグメンテーションのモデルを使って，クロマキー合成を実施します．
 date: 2021-03-24
-image: /image/chromakey.jpg
+image: https://www.hamlet-engineer.com/image/chromakey.jpg
 categories: 
   - Python
 tags:

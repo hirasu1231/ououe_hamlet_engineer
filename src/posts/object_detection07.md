@@ -3,7 +3,7 @@ display: home
 title: 'Python + Google Colab + yolov4-deepsortでバイクをカウントする'
 description: バイク検出のモデルを作成いたしましたので，DeepSortというトラッキング(物体追跡)を使いIDを振り分けることでバイクカウントを実施します．
 date: 2021-03-04
-image: /image/count_bike.png
+image: https://www.hamlet-engineer.com/image/count_bike.png
 categories: 
   - Python
 tags:

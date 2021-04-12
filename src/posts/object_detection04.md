@@ -3,7 +3,7 @@ display: home
 title: 'Python + Google Colab + Darknet(Yolov4)でバイク検出を学習する'
 description: COCOデータセットから特定のクラスの画像を抽出し，アノテーション情報を整形したので，Darknet(Yolov4)での学習を実施します．
 date: 2021-02-25
-image: /image/yolov4_post.png
+image: https://www.hamlet-engineer.com/image/yolov4_post.png
 categories: 
   - Python
 tags:

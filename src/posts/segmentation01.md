@@ -3,7 +3,7 @@ display: home
 title: 'Python + ESPNetをCityscapesデータセットで学習する'
 description: Python + ESPNetでCityscapesデータセットでセマンティックセグメンテーションの学習を実施します．
 date: 2021-03-15
-image: /image/ESPNet_sample3_city.png
+image: https://www.hamlet-engineer.com/image/ESPNet_sample3_city.png
 categories: 
   - Python
 tags:

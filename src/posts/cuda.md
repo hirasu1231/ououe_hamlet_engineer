@@ -3,7 +3,7 @@ display: home
 title: 'CUDAとTensorFlow，PyTorchのversion対応について'
 description: PythonでAI系をやっていると，CUDA・TensorFlow・PyTorchのversionの違いでつまずくことがありますので，version対応について記述します．
 date: 2021-03-21
-image: /image/cuda.jpg
+image: https://www.hamlet-engineer.com/image/cuda.jpg
 categories: 
   - Python
 tags:

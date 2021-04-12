@@ -3,7 +3,7 @@ display: home
 title: 'JupyterLabに17言語を対応させる'
 description: 17言語が扱えるJupyterLabをDockerにインストールしました．
 date: 2021-02-21
-image: /image/jupyter_langs.png
+image: https://www.hamlet-engineer.com/image/jupyter_langs.png
 categories: 
   - Jupyter
 tags:

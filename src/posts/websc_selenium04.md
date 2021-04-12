@@ -3,7 +3,7 @@ display: home
 title: 'Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードする'
 description: Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードします．本稿では，OfflibertyをSeleniumでダウンロードします
 date: 2021-02-15
-image: /image/offliberty.png
+image: https://www.hamlet-engineer.com/image/offliberty.png
 categories: 
   - Python
 tags:

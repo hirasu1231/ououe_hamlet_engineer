@@ -3,7 +3,7 @@ display: home
 title: 'COCOデータセットをDarknet(Yolov4)で学習できるように整形する'
 description: COCOデータセットから特定のクラスを抽出できるようにしたので，Darknet(Yolov4)で学習できるように整形します．
 date: 2021-02-22
-image: /image/000000356387_bb.jpg
+image: https://www.hamlet-engineer.com/image/000000356387_bb.jpg
 categories: 
   - Python
 tags:
