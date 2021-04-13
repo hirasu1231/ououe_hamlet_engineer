@@ -4,10 +4,10 @@ layout: Page
 ---
 
 ## Vuepress
-[Vuepressで当ブログを作る](https://www.hamlet-engineer.com/posts/tech_0001.html)<br>
-[Vuepressで作成したブログをGithub Pagesで公開する](https://www.hamlet-engineer.com/posts/tech_0002.html)<br>
-[Vuepressのフォントの設定とページメニューの追加](https://www.hamlet-engineer.com/posts/tech_0003.html)<br>
-[VuepressにSEO対策を実施します](https://www.hamlet-engineer.com/posts/tech_0004.html)<br>
+[Vuepressで当ブログを作る](https://www.hamlet-engineer.com/posts/vuepress_0001.html)<br>
+[Vuepressで作成したブログをGithub Pagesで公開する](https://www.hamlet-engineer.com/posts/vuepress_0002.html)<br>
+[Vuepressのフォントの設定とページメニューの追加](https://www.hamlet-engineer.com/posts/vuepress_0003.html)<br>
+[VuepressにSEO対策を実施します](https://www.hamlet-engineer.com/posts/vuepress_0004.html)<br>
 
 
 ## Python
