@@ -8,7 +8,7 @@ layout: Page
 [Vuepressで作成したブログをGithub Pagesで公開する](https://www.hamlet-engineer.com/posts/vuepress_0002.html)<br>
 [Vuepressのフォントの設定とページメニューの追加](https://www.hamlet-engineer.com/posts/vuepress_0003.html)<br>
 [VuepressにSEO対策を実施します](https://www.hamlet-engineer.com/posts/vuepress_0004.html)<br>
-
+[Vuepressで吹き出しを実装する](https://www.hamlet-engineer.com/posts/vuepress_0005.html)<br>
 
 ## Python
 ### OpenCV
@@ -23,6 +23,7 @@ layout: Page
 [Python＋Docker＋Selenium＋Chromeでウェブスクレイピングをする part2](https://www.hamlet-engineer.com/posts/websc_selenium02.html)<br>
 [Python＋Docker＋Selenium＋Chromeでウェブスクレイピングをする part3](https://www.hamlet-engineer.com/posts/websc_selenium03.html)<br>
 [Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードする](https://www.hamlet-engineer.com/posts/websc_selenium04.html)<br>
+[Python＋Selenium＋Chromeのウェブスクレイピングで，スペースが入った要素を取得する](https://www.hamlet-engineer.com/posts/websc_selenium05.html)<br>
 
 
 ## 物体検出

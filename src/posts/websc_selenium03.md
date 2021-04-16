@@ -15,7 +15,7 @@ tags:
 Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，前回のまでの工程をdef文を用いて定義します．<br>
 <!-- more -->
 
-作業用BGMとして[甘茶の音楽工房](https://amachamusic.chagasi.com/image_kurai.htm)の音楽をダウンロードして聞いていました．いい加減面倒臭くなってきたので，ウェブスクレイピングでダウンロードしていきます．
+作業用BGMとして[甘茶の音楽工房](https://amachamusic.chagasi.com/image_kurai.html)の音楽をダウンロードして聞いていました．いい加減面倒臭くなってきたので，ウェブスクレイピングでダウンロードしていきます．
 
 ## スクリプト
 ### モジュール

@@ -15,7 +15,7 @@ tags:
 Python＋Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，seleniumの操作を検索しながら必要な工程を実装します．jupyterだと楽です．<br>
 <!-- more -->
 
-作業用BGMとして[甘茶の音楽工房](https://amachamusic.chagasi.com/image_kurai.htm)の音楽をダウンロードして聞いていました．いい加減面倒臭くなってきたので，ウェブスクレイピングでダウンロードしていきます．<br>
+作業用BGMとして[甘茶の音楽工房](https://amachamusic.chagasi.com/image_kurai.html)の音楽をダウンロードして聞いていました．いい加減面倒臭くなってきたので，ウェブスクレイピングでダウンロードしていきます．<br>
 
 ## Seleniumの操作
 ### モジュール

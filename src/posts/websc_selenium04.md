@@ -14,7 +14,7 @@ tags:
 Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードします．本稿では，OfflibertyをSeleniumでダウンロードします<br>
 <!-- more -->
 
-前回までの[甘茶の音楽工房のダウンロード](https://hirasu1231.github.io/hamlet_engineer/posts/2021/02/11/websc-selenium01.html)を実施していましたが，せっかくなのでseleniumをとうしたブラウザの操作をしてみます．<br>
+前回までの[甘茶の音楽工房のダウンロード](https://www.hamlet-engineer.com/posts/websc_selenium01.html)を実施していましたが，せっかくなのでseleniumをとうしたブラウザの操作をしてみます．<br>
 本稿では，[Offliberty](http://offliberty.io)というYouTubeのURLをコピペすればダウンロードできるサイトがあったので，これの操作をSeleniumでします．<br>
 今回は練習でしたものですので，多分に悪ふざけが入っていますし，def文でまとめてはいません．
 

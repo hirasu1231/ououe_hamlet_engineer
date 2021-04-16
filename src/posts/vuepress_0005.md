@@ -1,7 +1,7 @@
 ---
 display: home
 title: 'Vuepressで吹き出しを実装する'
-description: VuepressのSEO関係の設定を実装します．本稿では，Google Search Console・サイトマップ・Googleアナリティクス・SEO・RSSの設定を実施します．
+description: Vuepressで吹き出しを実装します．主にcssの設定をVuepressでどうのように実装するかの流れになります．
 date: 2021-04-13
 image: https://www.hamlet-engineer.com/image/vuepress.png
 categories: 

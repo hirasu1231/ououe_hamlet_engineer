@@ -16,7 +16,7 @@ Python＋Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイ
 <!-- more -->
 
 ただし，jupyter or pythonはローカルです．<br>
-作業用BGMとして[甘茶の音楽工房](https://amachamusic.chagasi.com/image_kurai.htm)の音楽をダウンロードして聞いていました．いい加減面倒臭くなってきたので，ウェブスクレイピングでダウンロードしていきます．
+作業用BGMとして[甘茶の音楽工房](https://amachamusic.chagasi.com/image_kurai.html)の音楽をダウンロードして聞いていました．いい加減面倒臭くなってきたので，ウェブスクレイピングでダウンロードしていきます．
 
 ## Selenium
 本稿では，seleniumでウェブスクレイピングを実施します．以前はrequestsとBeautifulSoupでスクレイピングしていましたが，jsで情報を挿入しているサイトではスクレイピングできないことがありましたので，seleniumを使います．<br>
