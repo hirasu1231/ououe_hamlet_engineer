@@ -5,18 +5,6 @@ module.exports = {
     ],
   // プラグイン
   plugins: {
-    '@vssue/vuepress-plugin-vssue': {
-      // set `platform` rather than `api`
-      platform: 'github',
-      // all other options of Vssue are allowed
-      owner: 'hirasu1231',
-      repo: 'hamlet_engineer_comments',
-      clientId: '9bfb2f12acc2b80ae783',
-      clientSecret: '7a055be271513ec9c49e5c9360739e23b5688dc1',
-      // repo: 'demo_comment',
-      // clientId: '32def2ff56a8dfd21580',
-      // clientSecret: 'a4a557e5c0c0af8d3dfbefad841c1f4f26d9f4f8',
-      },
     // サイトマップ(案内図)
     //hostnameは自身のサイトのトップページです．
     'sitemap': {

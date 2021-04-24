@@ -109,4 +109,4 @@ DSMデータはテキストファイルですので，メニューバーの「�
 [兵庫県_DSM](https://www.geospatial.jp/ckan/dataset/2010-2018-hyogo-geo-dsm/resource/5473fd75-0bcc-423b-960d-99ab37b25bff)
 
 <!-- コメント -->
-<Vssue :title="$title" />
+<disqus/>
