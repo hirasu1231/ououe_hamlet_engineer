@@ -3,6 +3,7 @@
 </template>
 <script>
   export default {
+    name: 'PostDisqus',
     mounted() {
       var disqus_config = function () {
         this.page.url = window.location.origin;  

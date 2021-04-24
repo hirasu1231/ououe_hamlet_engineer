@@ -25,6 +25,9 @@
       </div>
     </div>
     <Content class="content" />
+    <section class="content content__default">
+      <PostDisqus />
+    </section>
     <div v-if="postTime" class="content-time">
       <time
         v-if="postTime.createTime && createTime"
@@ -44,9 +47,13 @@
 
 <script>
 import { getCategories, getTags } from '@theme/lib/util'
+import PostDisqus from '@theme/components/PostDisqus.vue'
 
 export default {
   name: 'InfoContent',
+  components: {
+    PostDisqus
+  },
   computed: {
     categories() {
       return getCategories(this.$frontmatter)
