@@ -2,6 +2,8 @@ module.exports = {
   // metaタグ
   head: [
     ['meta', { name: 'google-site-verification', content: 'BDXGk8FJfikB_I6Pyxv35Zc87jBMziCgRMvmpNDpdYA' }],
+    // google-adsense
+    ["script",{"data-ad-client": "ca-pub-2245427233262012", async: true, src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}],
     ],
   // プラグイン
   plugins: {
