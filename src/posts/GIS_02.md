@@ -2,7 +2,7 @@
 display: home
 title: 'QGIS3で兵庫県の「DSM」から3D地図を描画する'
 description: 兵庫県がオープンデータで「DSM」を公開しているので，QGISで3D地図を描画します．QGISのversionは3.18です．
-date: 2021-04-16
+date: 2021-04-27
 image: https://www.hamlet-engineer.com/image/hyogo_dsm_3d.png
 categories: 
   - GIS
