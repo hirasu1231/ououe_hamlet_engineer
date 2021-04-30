@@ -1,21 +1,27 @@
 ---
 display: home
 title: '[1週目1日目_座学]どんな本でもよみきれる読書術'
-description: 精神疾患になってから4ヶ月経ちました．さすがに，なんとかしないといけないので，Daigoさんの動画であった[カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)を実施します．
+description: youtubeで公開されている[どんな本でもよみきれるようになるクリティカル読書術](https://www.youtube.com/watch?v=4E44Nbi4cjg)を無料枠の部分のみ解説つきで整理します．
 date: 2021-04-29
 image: https://www.hamlet-engineer.com/image/read.jpg
 categories: 
   - メンタル
 tags:
-  - 6週間人生改造プログラム
+  - 学習法
 ---
-2021-04-29_カリフォルニア大学式6週間人生改造プログラム1週目1日目の座学です．
 
 本稿では，youtubeで公開されている[どんな本でもよみきれるようになるクリティカル読書術](https://www.youtube.com/watch?v=4E44Nbi4cjg)を無料枠の部分のみ解説つきで整理します．
 
+<!-- more -->
+
 有料枠の箇所は，自分なりに整理した後の実践内容のみを記述します．解説は載せません．
 
-<!-- more -->
+::: bubble9
+吹き出しは事実ではなく，自分の感想です．
+
+モチベーションを維持するために，自分のリアクションを記述しています．
+:::
+
 
 <!-- <span style="background-color: #ffff99;"></span> -->
 <!-- <span style="color: #ff0000;"></span> -->
