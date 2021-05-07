@@ -7,7 +7,7 @@ image: https://www.hamlet-engineer.com/image/kiroku.jpeg
 categories: 
   - メンタル
 tags:
-  - 思い込み
+  - 自分を変える
 ---
 
 本稿では，youtubeで公開されている[若い時にやると人生変わる8つのこと 【前編】](https://www.youtube.com/watch?v=MexmTNjWxh4)について，整理します．
