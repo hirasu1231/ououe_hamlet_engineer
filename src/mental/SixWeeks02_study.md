@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 目標達成
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[自分を操る超記録術～計画より記録が自制心を高める](https://www.youtube.com/watch?v=4E44Nbi4cjg)を無料枠の部分のみ解説つきで整理します．

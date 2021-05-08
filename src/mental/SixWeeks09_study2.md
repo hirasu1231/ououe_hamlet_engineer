@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 人脈術
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[心理学者が選ぶ【最強の話術】といえばこちら](https://www.youtube.com/watch?v=WMcqBDsn0n4)について，整理します．

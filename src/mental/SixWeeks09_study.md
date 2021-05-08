@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 人脈術
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[5倍速で給料アップ！ボストン大学式の人脈術「ネットワーキングの科学」](https://www.youtube.com/watch?v=OSfqf3iZwk0)について，整理します．

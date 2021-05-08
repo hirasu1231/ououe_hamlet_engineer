@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 学習法
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[どんな本でもよみきれるようになるクリティカル読書術](https://www.youtube.com/watch?v=4E44Nbi4cjg)を無料枠の部分のみ解説つきで整理します．

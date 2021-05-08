@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 睡眠
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[睡眠の質を高める心理学](https://m.youtube.com/watch?v=3GANcWJuiCE&t=376s)を無料枠の部分のみ解説つきで整理します．

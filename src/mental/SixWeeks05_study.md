@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 思い込み
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[人生損する【無駄な思い込み】を減らす方法](https://www.youtube.com/watch?v=ykhqu43pKRE)について，解説つきで整理します．

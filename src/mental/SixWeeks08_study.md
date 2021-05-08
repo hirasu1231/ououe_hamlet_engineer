@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 自分を変える
+  - 座学
 ---
 
 本稿では，D-Labで公開されている[若い時にやると人生変わる8つのこと 【後編】](https://daigovideolab.jp/play/ypr1GonT39qBVbt2YUsw)について，整理します．

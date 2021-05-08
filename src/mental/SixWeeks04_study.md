@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 思い込み
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[抜け出せば人生変わる3つの思い込み【バイアス】](https://www.youtube.com/watch?v=AIwuJTz2vVo)について，解説つきで整理します．

@@ -8,6 +8,7 @@ categories:
   - メンタル
 tags:
   - 思い込み
+  - 座学
 ---
 
 本稿では，youtubeで公開されている[頭から消えない悩みを止める意外な方法が発見された件](https://www.youtube.com/watch?v=-tEzsLmFIMw)について，解説つきで整理します．
