@@ -17,6 +17,8 @@ tags:
 ## <u>目標達成</u>
 [引き寄せの法則は嘘だった！？](/mental/mental_care_001.html)<br>
 [自制心を高める記録術](/mental/SixWeeks02_study.html)<br>
+[自分をコントロールするテクニック](/mental/SixWeeks11_study.html)<br>
+[衝動を抑える7つの方法](/mental/SixWeeks12_study.html)<br>
 
 ***
 
