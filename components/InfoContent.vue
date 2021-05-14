@@ -25,9 +25,6 @@
       </div>
     </div>
     <Content class="content" />
-    <section class="content content__default">
-      <PostDisqus />
-    </section>
     <div v-if="postTime" class="content-time">
       <time
         v-if="postTime.createTime && createTime"
@@ -135,4 +132,5 @@ export default {
       transition all .5s ease-in-out
       @media (prefers-color-scheme: dark)
         color $textDarkColor
+
 </style>

@@ -19,6 +19,8 @@ tags:
 [自制心を高める記録術](/mental/SixWeeks02_study.html)<br>
 [自分をコントロールするテクニック](/mental/SixWeeks11_study.html)<br>
 [衝動を抑える7つの方法](/mental/SixWeeks12_study.html)<br>
+[意志力を2倍にする方法](/mental/SixWeeks13_study.html)<br>
+
 
 ***
 
@@ -29,9 +31,10 @@ tags:
 
 ***
 
-## <u>思い込み</u>
+## <u>自分を変える</u>
 [若い時にやると人生変わる8つのこと 【前編】](/mental/SixWeeks07_study.html)<br>
 [若い時にやると人生変わる8つのこと 【後編】](/mental/SixWeeks08_study.html)<br>
+[悲劇的逆境から立ち直るための7つの習慣](/mental/SixWeeks14_study.html)<br>
 
 ***
 

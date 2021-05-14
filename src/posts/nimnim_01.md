@@ -16,7 +16,7 @@ Google ColaboratoryでNimが扱えるそうなので，慣れるために適当�
 > Google Colaboratory（以下Google Colab）は、Google社が無料で提供している機械学習の教育や研究用の開発環境です。開発環境はJupyter Notebookに似たインターフェースを持ち、Pythonの主要なライブラリがプリインストールされています。<br>
 引用元：[Google Colabの使い方](https://interface.cqpub.co.jp/ail01/)
 
-目次
+## 目次
 [[toc]]
 
 ## Google Colabのファイル構成
