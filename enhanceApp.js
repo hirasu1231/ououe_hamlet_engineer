@@ -2,7 +2,23 @@ import themeConfig from '@theme/lib/themeConfig'
 import { objectDeepMerge } from '@theme/lib/util'
 import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
 
-export default ({ Vue }) => {
+export default ({ Vue, options,router,siteData }) => {
+  // google ads↓
+  if (typeof window !== 'undefined') {
+    import('vue-google-adsense')
+      .then(module => {
+        const Ads = module.default
+        Vue.use(require('vue-script2'))
+        Vue.use(Ads.Adsense)
+        Vue.use(Ads.InArticleAdsense)
+        Vue.use(Ads.InFeedAdsense)
+      })
+      .catch(e => {
+        console.log(e)
+      })
+  }
+  // google ads↑
+
   Vue.component(ImgLazy.name, ImgLazy)
   Vue.mixin({
     computed: {
