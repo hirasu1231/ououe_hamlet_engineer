@@ -158,3 +158,7 @@ Nimに慣れるために適当な関数を作成してみました．
 [Nim Compiler User Guide](https://nim-lang.org/docs/nimc.html)
 
 [スレッドローカルストレージ](https://cpprefjp.github.io/lang/cpp11/thread_local_storage.html)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
