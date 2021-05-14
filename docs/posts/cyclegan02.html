@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python + CycleGanでオリジナルデータでの学習を実装する | ハムレット型エンジニアのカンニングノート</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script data-ad-client="ca-pub-2263820744635038" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Python + CycleGanでオリジナルデータでの学習を実行します．本稿ではディアブロス(原種)とディアブロス亜種の変換を実施します．">
+    <meta property="article:published_time" content="2021-03-29T00:00:00.000Z">
+    <meta property="article:modified_time" content="2021-04-12T09:12:47.000Z">
+    <meta property="og:site_name" content="ハムレット型エンジニアのカンニングノート">
+    <meta property="og:title" content="Python + CycleGanでオリジナルデータでの学習を実装する">
+    <meta property="og:description" content="Python + CycleGanでオリジナルデータでの学習を実行します．本稿ではディアブロス(原種)とディアブロス亜種の変換を実施します．">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/posts/cyclegan02.html">
+    <meta property="og:image" content="https://www.hamlet-engineer.com/image/gan_mhw.png">
+    <meta name="twitter:title" content="Python + CycleGanでオリジナルデータでの学習を実装する">
+    <meta name="twitter:description" content="Python + CycleGanでオリジナルデータでの学習を実行します．本稿ではディアブロス(原種)とディアブロス亜種の変換を実施します．">
+    <meta name="twitter:url" content="/posts/cyclegan02.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.hamlet-engineer.com/image/gan_mhw.png">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Python, Jupyter, CycleGan, GAN">
+    <meta property="article:tag" content="Python">
+    <meta name="google-site-verification" content="BDXGk8FJfikB_I6Pyxv35Zc87jBMziCgRMvmpNDpdYA">
+    
+    <link rel="preload" href="/assets/css/0.styles.77a4f79c.css" as="style"><link rel="preload" href="/assets/js/app.7ed2020c.js" as="script"><link rel="preload" href="/assets/js/49.a22d82a5.js" as="script"><link rel="prefetch" href="/assets/js/10.26486e74.js"><link rel="prefetch" href="/assets/js/11.5d6cb24a.js"><link rel="prefetch" href="/assets/js/12.b2684856.js"><link rel="prefetch" href="/assets/js/13.a311b950.js"><link rel="prefetch" href="/assets/js/14.b8f94137.js"><link rel="prefetch" href="/assets/js/15.293f5530.js"><link rel="prefetch" href="/assets/js/16.be708846.js"><link rel="prefetch" href="/assets/js/17.a00c09a3.js"><link rel="prefetch" href="/assets/js/18.819cc428.js"><link rel="prefetch" href="/assets/js/19.a7407c71.js"><link rel="prefetch" href="/assets/js/2.a260b7e2.js"><link rel="prefetch" href="/assets/js/20.6b9b19e0.js"><link rel="prefetch" href="/assets/js/21.6600d831.js"><link rel="prefetch" href="/assets/js/22.57858a19.js"><link rel="prefetch" href="/assets/js/23.815538b4.js"><link rel="prefetch" href="/assets/js/24.cb3e213b.js"><link rel="prefetch" href="/assets/js/25.1c2475d1.js"><link rel="prefetch" href="/assets/js/26.505b2092.js"><link rel="prefetch" href="/assets/js/27.22513d12.js"><link rel="prefetch" href="/assets/js/28.40b5aa68.js"><link rel="prefetch" href="/assets/js/29.5c014099.js"><link rel="prefetch" href="/assets/js/3.0b80a010.js"><link rel="prefetch" href="/assets/js/30.b53bc66d.js"><link rel="prefetch" href="/assets/js/31.024eccac.js"><link rel="prefetch" href="/assets/js/32.9964116a.js"><link rel="prefetch" href="/assets/js/33.37e19a60.js"><link rel="prefetch" href="/assets/js/34.e80d7679.js"><link rel="prefetch" href="/assets/js/35.a346ef43.js"><link rel="prefetch" href="/assets/js/36.dcba23ec.js"><link rel="prefetch" href="/assets/js/37.1eb2cf65.js"><link rel="prefetch" href="/assets/js/38.49960c42.js"><link rel="prefetch" href="/assets/js/39.9d29c7bb.js"><link rel="prefetch" href="/assets/js/4.0314c659.js"><link rel="prefetch" href="/assets/js/40.a1687906.js"><link rel="prefetch" href="/assets/js/41.2c70b5f8.js"><link rel="prefetch" href="/assets/js/42.85d1627c.js"><link rel="prefetch" href="/assets/js/43.83b969d2.js"><link rel="prefetch" href="/assets/js/44.39efd15a.js"><link rel="prefetch" href="/assets/js/45.88f87afd.js"><link rel="prefetch" href="/assets/js/46.1678335b.js"><link rel="prefetch" href="/assets/js/47.d4d2febd.js"><link rel="prefetch" href="/assets/js/48.4d6cdf4e.js"><link rel="prefetch" href="/assets/js/5.12daca72.js"><link rel="prefetch" href="/assets/js/50.ffe5ee93.js"><link rel="prefetch" href="/assets/js/51.98e3cb81.js"><link rel="prefetch" href="/assets/js/52.cbb86eb4.js"><link rel="prefetch" href="/assets/js/53.bb9b5968.js"><link rel="prefetch" href="/assets/js/54.53471eeb.js"><link rel="prefetch" href="/assets/js/55.fca7d044.js"><link rel="prefetch" href="/assets/js/56.a9d5906a.js"><link rel="prefetch" href="/assets/js/57.82039203.js"><link rel="prefetch" href="/assets/js/58.2f8c3ed3.js"><link rel="prefetch" href="/assets/js/59.a3cd0e60.js"><link rel="prefetch" href="/assets/js/6.aa8dd1a0.js"><link rel="prefetch" href="/assets/js/60.2359ebba.js"><link rel="prefetch" href="/assets/js/61.a6565f08.js"><link rel="prefetch" href="/assets/js/62.01779d71.js"><link rel="prefetch" href="/assets/js/63.d55e5c74.js"><link rel="prefetch" href="/assets/js/64.a9b1ef79.js"><link rel="prefetch" href="/assets/js/65.0ec501cd.js"><link rel="prefetch" href="/assets/js/66.eada66f8.js"><link rel="prefetch" href="/assets/js/67.368ac513.js"><link rel="prefetch" href="/assets/js/68.fa2f318c.js"><link rel="prefetch" href="/assets/js/69.2560bc46.js"><link rel="prefetch" href="/assets/js/7.4f7ac804.js"><link rel="prefetch" href="/assets/js/70.3a33d77e.js"><link rel="prefetch" href="/assets/js/71.18ba2a4e.js"><link rel="prefetch" href="/assets/js/72.6c575821.js"><link rel="prefetch" href="/assets/js/73.1e1a5480.js"><link rel="prefetch" href="/assets/js/74.398e0159.js"><link rel="prefetch" href="/assets/js/75.f6dcea8d.js"><link rel="prefetch" href="/assets/js/76.c0d2ea8b.js"><link rel="prefetch" href="/assets/js/77.f54601e0.js"><link rel="prefetch" href="/assets/js/78.dea39406.js"><link rel="prefetch" href="/assets/js/79.0d7298eb.js"><link rel="prefetch" href="/assets/js/8.d1322c87.js"><link rel="prefetch" href="/assets/js/9.8a75d3e9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.77a4f79c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-98a81704><header class="header" data-v-00466d8e data-v-98a81704><div class="header-navbar" data-v-00466d8e><div class="flex-xbc main header-nav" data-v-00466d8e><div class="nav-link" data-v-00466d8e><a href="/" class="inblock link-logo router-link-active" data-v-00466d8e><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-00466d8e></a> <nav class="link-list" data-v-00466d8e><a href="/" class="list-item router-link-active" data-v-00466d8e>ホーム</a><a href="/about/" class="list-item" data-v-00466d8e>ページ集</a><a href="/posts/" class="list-item router-link-active" data-v-00466d8e>技術</a><a href="/mental/" class="list-item" data-v-00466d8e>メンタル</a><a href="/other/" class="list-item" data-v-00466d8e>その他</a><a href="/tag/" class="list-item" data-v-00466d8e>タグ</a><a href="/category/" class="list-item" data-v-00466d8e>カテゴリ</a><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-00466d8e>筆者</a></nav></div> <div class="search-box" data-v-00466d8e><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-98a81704 data-v-98a81704><section class="info no-bg" data-v-2602fa21><article class="main info-content" data-v-114671a7 data-v-2602fa21><div class="content-header" data-v-114671a7><h1 class="header-title" data-v-114671a7>Python + CycleGanでオリジナルデータでの学習を実装する</h1></div> <div class="flex-wcc content-tag" data-v-114671a7><div class="inblock tag-list" data-v-114671a7><a href="/category/Python/" class="tag-text" data-v-114671a7>Python
+      </a></div> <span class="tag-space" data-v-114671a7>/</span> <div class="inblock tag-list" data-v-114671a7><a href="/tag/Python/" class="tag-text" data-v-114671a7>Python
+      </a><a href="/tag/Jupyter/" class="tag-text" data-v-114671a7>Jupyter
+      </a><a href="/tag/CycleGan/" class="tag-text" data-v-114671a7>CycleGan
+      </a><a href="/tag/GAN/" class="tag-text" data-v-114671a7>GAN
+      </a></div></div> <div class="content content__default" data-v-114671a7><p>Python + CycleGanでオリジナルデータでの学習を実装を目指して，本稿ではディアブロス(原種)とディアブロス亜種の変換を実施します．<br></p> <p>今回はGoogle ColabとGoogle Driveを連携させて，notebook形式で実行してます．<br></p> <blockquote><p>Google Colaboratory（以下Google Colab）は、Google社が無料で提供している機械学習の教育や研究用の開発環境です。開発環境はJupyter Notebookに似たインターフェースを持ち、Pythonの主要なライブラリがプリインストールされています。<br>
+引用元：<a href="https://interface.cqpub.co.jp/ail01/" target="_blank" rel="noopener noreferrer">Google Colabの使い方<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>最終的に，実写モンハンのディアブロス亜種を原種に戻す試みをします．
+<img alt="" data-src="/image/diablos_black.jpg" loading="lazy" class="lazy"></p> <h2 id="作業ディレクトリのファイル構成"><a href="#作業ディレクトリのファイル構成" class="header-anchor">#</a> 作業ディレクトリのファイル構成</h2> <p>プロジェクトディレクトリはdiablos_ganとしています．度々，省略しています．</p> <div class="language- extra-class"><pre class="language-text"><code>diablos_gan
+├── /pytorch-CycleGAN-and-pix2pix
+│   ├── /checkpoints &lt;- 学習モデルの保存先
+│   │   └── /diablos_gan
+│   │       ├── /web &lt;- 学習中の変換画像
+│   │       ├── latest_net_G.pth &lt;- テストで使う変換モデル
+│   │       ├── latest_net_G_A.pth &lt;- AからBへの変換モデル
+│   │       └── latest_net_G_B.pth &lt;- BからAへの変換モデル
+│   ├── /results &lt;- 出力される変換画像
+│   │   └── /diablos_gan
+│   ├── /datasets &lt;- 学習データ
+│   │   ├── diablos_gan.zip
+│   │   └── /diablos_gan
+│   │       ├── trainA
+│   │       ├── testA
+│   │       ├── trainB
+│   │       └── testB
+│   ├── requirements.txt
+│   ├── train.py
+│   ├── test.py
+│   └── (省略)
+└── diablos_gan.ipynb &lt;- 実行用ノートブック
+</code></pre></div><h2 id="オリジナルデータの学習"><a href="#オリジナルデータの学習" class="header-anchor">#</a> オリジナルデータの学習</h2> <p>ディアブロスとディアブロス亜種の画像を準備して，オリジナルデータでの学習を実施します．</p> <h3 id="学習データの準備"><a href="#学習データの準備" class="header-anchor">#</a> 学習データの準備</h3> <p>ディアブロスとディアブロス亜種のGoogle画像検索をウェブスクレイピングして，準備しました．<br>
+Google Driveでデータをやりとりする場合は，zipで圧縮したものをアップロードして，Colab上で回答した方がエラーも発生しづらくおすすめです．<br>
+以下のコマンドでzipの解凍ができます．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>My\ Drive<span class="token operator">/</span>diablos_gan<span class="token operator">/</span>pytorch<span class="token operator">-</span>CycleGAN<span class="token operator">-</span><span class="token keyword">and</span><span class="token operator">-</span>pix2pix<span class="token operator">/</span>datasets
+<span class="token comment"># 学習データの解凍</span>
+!unzip diablos_gan<span class="token punctuation">.</span><span class="token builtin">zip</span> <span class="token operator">&gt;</span> <span class="token operator">/</span>dev<span class="token operator">/</span>null
+<span class="token comment"># データ数</span>
+<span class="token comment"># (trainA, testA) = (80, 16)</span>
+<span class="token comment"># (trainB, testB) = (80, 16)</span>
+</code></pre></div><h3 id="オリジナルデータの学習-2"><a href="#オリジナルデータの学習-2" class="header-anchor">#</a> オリジナルデータの学習</h3> <p>以下のコマンドで学習を実行できます．<br></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># ディレクトリの移動</span>
+<span class="token operator">%</span>cd <span class="token operator">/</span>content<span class="token operator">/</span>drive<span class="token operator">/</span>My\ Drive<span class="token operator">/</span>diablos_gan<span class="token operator">/</span>pytorch<span class="token operator">-</span>CycleGAN<span class="token operator">-</span><span class="token keyword">and</span><span class="token operator">-</span>pix2pix
+<span class="token comment"># オリジナルデータの学習</span>
+!python train<span class="token punctuation">.</span>py <span class="token operator">-</span><span class="token operator">-</span>dataroot <span class="token punctuation">.</span><span class="token operator">/</span>datasets<span class="token operator">/</span>diablos_gan \
+                 <span class="token operator">-</span><span class="token operator">-</span>n_epochs <span class="token number">300</span> \
+                 <span class="token operator">-</span><span class="token operator">-</span>name diablos_gan \
+                 <span class="token operator">-</span><span class="token operator">-</span>model cycle_gan \
+                 <span class="token operator">-</span><span class="token operator">-</span>display_id <span class="token number">0</span> <span class="token operator">-</span><span class="token operator">-</span>gpu_ids <span class="token number">0</span>
+</code></pre></div><h3 id="オリジナルデータの学習モデルでテスト"><a href="#オリジナルデータの学習モデルでテスト" class="header-anchor">#</a> オリジナルデータの学習モデルでテスト</h3> <p>ディアブロスとディアブロス亜種の画像を変換する学習モデルを作成しましたので，以下のコマンドでテストを実行します．<br>
+--nameでは/checkpointsの中にある学習モデルのディレクトリ名を記述します．<br>
+学習モデルの名前は<code>latest_net_G.pth</code>としてください．<br>
+Aのデータ -&gt; Bのデータに変換するモデルは<code>＊＊＊_G_A.pth</code>で，Bのデータ -&gt; Aのデータに変換するのモデルは<code>＊＊＊_G_B.pth</code>です．<br>
+※trainA・testAはディアブロス原種，trainB・testBはディアブロス亜種の画像となっています．<br> <br>
+変換画像は自動的に256x256の正方形に変換されて出力されます．オリジナルのサイズとアスペクト比を保持したい場合は， <code>--preprocess none</code>を追記してください．<br>
+ただし，GPUの負荷もハンパなく重くなります．僕の場合は，1920x1280と1080x720はGPUのメモリーをオーバーして，640x480で動きました．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># 現在ディレクトリ</span>
+<span class="token comment"># /content/drive/My\ Drive/diablos_gan/pytorch-CycleGAN-and-pix2pix</span>
+
+<span class="token comment"># 学習モデルの名前変更</span>
+!cp checkpoints<span class="token operator">/</span>diablos_gan<span class="token operator">/</span>latest_net_G_B<span class="token punctuation">.</span>pth checkpoints<span class="token operator">/</span>diablos_gan<span class="token operator">/</span>latest_net_G<span class="token punctuation">.</span>pth
+<span class="token comment"># 学習モデルのテスト実行</span>
+!python test<span class="token punctuation">.</span>py <span class="token operator">-</span><span class="token operator">-</span>dataroot datasets<span class="token operator">/</span>diablos_gan<span class="token operator">/</span>testB \
+                <span class="token operator">-</span><span class="token operator">-</span>name diablos_gan \
+                <span class="token operator">-</span><span class="token operator">-</span>results_dir <span class="token punctuation">.</span><span class="token operator">/</span>results<span class="token operator">/</span>diablos_gan<span class="token operator">/</span> \
+                <span class="token operator">-</span><span class="token operator">-</span>preprocess none \
+                <span class="token operator">-</span><span class="token operator">-</span>model test <span class="token operator">-</span><span class="token operator">-</span>no_dropout
+</code></pre></div><h3 id="mhw版ディアブロス亜種の変換"><a href="#mhw版ディアブロス亜種の変換" class="header-anchor">#</a> MHW版ディアブロス亜種の変換</h3> <p>MHW版ディアブロス亜種の変換前画像<br> <img alt="" data-src="/image/mhw_real.png" loading="lazy" class="lazy"></p> <p>MHW版ディアブロス亜種の変換後画像<br> <img alt="" data-src="/image/mhw_fake.png" loading="lazy" class="lazy"></p> <h3 id="実写版ディアブロス亜種の変換"><a href="#実写版ディアブロス亜種の変換" class="header-anchor">#</a> 実写版ディアブロス亜種の変換</h3> <p>実写版ディアブロス亜種の変換前画像<br> <img alt="" data-src="/image/diablos_real.png" loading="lazy" class="lazy"></p> <p>実写版ディアブロス亜種の変換後画像<br> <img alt="" data-src="/image/diablos_fake.png" loading="lazy" class="lazy"></p> <h2 id="おまけ"><a href="#おまけ" class="header-anchor">#</a> おまけ</h2> <p>最近発売したモンハンライズでは原種のディアブロスはでているので，イラストをディアブロス亜種に変換しました．</p> <h3 id="mhr版ディアブロス-イラスト-の変換"><a href="#mhr版ディアブロス-イラスト-の変換" class="header-anchor">#</a> MHR版ディアブロス(イラスト)の変換</h3> <p>MHR版ディアブロス(イラスト)の変換前画像<br> <img alt="" data-src="/image/mhr_illust_real.png" loading="lazy" class="lazy"></p> <p>MHR版ディアブロス(イラスト)の変換後画像<br> <img alt="" data-src="/image/mhr_illust_fake.png" loading="lazy" class="lazy"></p> <h2 id="まとめ"><a href="#まとめ" class="header-anchor">#</a> まとめ</h2> <p>Python + CycleGanでオリジナルデータでの学習を兼ねて，ディアブロス(原種)とディアブロス亜種の変換を実施します<br>
+たった80枚の学習画像でも結構できていましたが，もう少し精度が向上するように手を加えていきます．</p> <h2 id="参考サイト"><a href="#参考サイト" class="header-anchor">#</a> 参考サイト</h2> <p><a href="https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix" target="_blank" rel="noopener noreferrer">junyanz/pytorch-CycleGAN-and-pix2pix<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br></p></div> <div class="content-time" data-v-114671a7><time datetime="3/29/2021, 12:00:00 AM" class="time-text" data-v-114671a7>Create Time: 3/29/2021, 12:00:00 AM
+    </time> <time datetime="4/12/2021, 9:12:47 AM" class="time-text" data-v-114671a7>Last Updated: 4/12/2021, 9:12:47 AM
+    </time></div></article> <section class="flex-xb main info-nav" data-v-203269c1 data-v-2602fa21><a href="/posts/mojiokoshi.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="https://www.hamlet-engineer.com/image/mojiokoshi.png" loading="lazy" alt="pythonで音声からの文字起こしを実装する" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>pythonで音声からの文字起こしを実装する</h2> <div class="content" data-v-203269c1><p>本稿では，音声データからテキストに変換する文字起こしを実装します．<br></p>
+</div></article></a> <a href="/posts/cyclegan01.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="https://www.hamlet-engineer.com/image/cyclegan_zebra.png" loading="lazy" alt="Python + CycleGanで茶毛のウマをシマウマに変換する" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>Python + CycleGanで茶毛のウマをシマウマに変換する</h2> <div class="content" data-v-203269c1><p>画像生成系のCycleGanを実装します．Python + CycleGanで茶毛のウマをシマウマに変換します．<br></p>
+</div></article></a></section> <!----></section></section> <footer class="footer" data-v-8dceedee data-v-98a81704><nav class="link-list" data-v-8dceedee><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Twitter</a><a href="https://github.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-8dceedee>ハムレット型エンジニアのカンニングノート © 2021</a></footer></section><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.7ed2020c.js" defer></script><script src="/assets/js/49.a22d82a5.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Darknet(Yolov4)で学習させるためのcfgファイル等を作成する | ハムレット型エンジニアのカンニングノート</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script data-ad-client="ca-pub-2263820744635038" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="COCOデータセットから特定のクラスを抽出・学習形式に整形ましたので，そのデータでdarknet(Yolov4)で学習を実施します．">
+    <meta property="article:published_time" content="2021-02-24T00:00:00.000Z">
+    <meta property="article:modified_time" content="2021-04-12T09:12:47.000Z">
+    <meta property="og:site_name" content="ハムレット型エンジニアのカンニングノート">
+    <meta property="og:title" content="Darknet(Yolov4)で学習させるためのcfgファイル等を作成する">
+    <meta property="og:description" content="COCOデータセットから特定のクラスを抽出・学習形式に整形ましたので，そのデータでdarknet(Yolov4)で学習を実施します．">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/posts/object_detection03.html">
+    <meta property="og:image" content="https://www.hamlet-engineer.com/image/000000356387_bb.jpg">
+    <meta name="twitter:title" content="Darknet(Yolov4)で学習させるためのcfgファイル等を作成する">
+    <meta name="twitter:description" content="COCOデータセットから特定のクラスを抽出・学習形式に整形ましたので，そのデータでdarknet(Yolov4)で学習を実施します．">
+    <meta name="twitter:url" content="/posts/object_detection03.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.hamlet-engineer.com/image/000000356387_bb.jpg">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Python, Jupyter, 物体検出, YOLO, Darknet, Google Colab">
+    <meta property="article:tag" content="Python">
+    <meta name="google-site-verification" content="BDXGk8FJfikB_I6Pyxv35Zc87jBMziCgRMvmpNDpdYA">
+    
+    <link rel="preload" href="/assets/css/0.styles.77a4f79c.css" as="style"><link rel="preload" href="/assets/js/app.7ed2020c.js" as="script"><link rel="preload" href="/assets/js/58.2f8c3ed3.js" as="script"><link rel="prefetch" href="/assets/js/10.26486e74.js"><link rel="prefetch" href="/assets/js/11.5d6cb24a.js"><link rel="prefetch" href="/assets/js/12.b2684856.js"><link rel="prefetch" href="/assets/js/13.a311b950.js"><link rel="prefetch" href="/assets/js/14.b8f94137.js"><link rel="prefetch" href="/assets/js/15.293f5530.js"><link rel="prefetch" href="/assets/js/16.be708846.js"><link rel="prefetch" href="/assets/js/17.a00c09a3.js"><link rel="prefetch" href="/assets/js/18.819cc428.js"><link rel="prefetch" href="/assets/js/19.a7407c71.js"><link rel="prefetch" href="/assets/js/2.a260b7e2.js"><link rel="prefetch" href="/assets/js/20.6b9b19e0.js"><link rel="prefetch" href="/assets/js/21.6600d831.js"><link rel="prefetch" href="/assets/js/22.57858a19.js"><link rel="prefetch" href="/assets/js/23.815538b4.js"><link rel="prefetch" href="/assets/js/24.cb3e213b.js"><link rel="prefetch" href="/assets/js/25.1c2475d1.js"><link rel="prefetch" href="/assets/js/26.505b2092.js"><link rel="prefetch" href="/assets/js/27.22513d12.js"><link rel="prefetch" href="/assets/js/28.40b5aa68.js"><link rel="prefetch" href="/assets/js/29.5c014099.js"><link rel="prefetch" href="/assets/js/3.0b80a010.js"><link rel="prefetch" href="/assets/js/30.b53bc66d.js"><link rel="prefetch" href="/assets/js/31.024eccac.js"><link rel="prefetch" href="/assets/js/32.9964116a.js"><link rel="prefetch" href="/assets/js/33.37e19a60.js"><link rel="prefetch" href="/assets/js/34.e80d7679.js"><link rel="prefetch" href="/assets/js/35.a346ef43.js"><link rel="prefetch" href="/assets/js/36.dcba23ec.js"><link rel="prefetch" href="/assets/js/37.1eb2cf65.js"><link rel="prefetch" href="/assets/js/38.49960c42.js"><link rel="prefetch" href="/assets/js/39.9d29c7bb.js"><link rel="prefetch" href="/assets/js/4.0314c659.js"><link rel="prefetch" href="/assets/js/40.a1687906.js"><link rel="prefetch" href="/assets/js/41.2c70b5f8.js"><link rel="prefetch" href="/assets/js/42.85d1627c.js"><link rel="prefetch" href="/assets/js/43.83b969d2.js"><link rel="prefetch" href="/assets/js/44.39efd15a.js"><link rel="prefetch" href="/assets/js/45.88f87afd.js"><link rel="prefetch" href="/assets/js/46.1678335b.js"><link rel="prefetch" href="/assets/js/47.d4d2febd.js"><link rel="prefetch" href="/assets/js/48.4d6cdf4e.js"><link rel="prefetch" href="/assets/js/49.a22d82a5.js"><link rel="prefetch" href="/assets/js/5.12daca72.js"><link rel="prefetch" href="/assets/js/50.ffe5ee93.js"><link rel="prefetch" href="/assets/js/51.98e3cb81.js"><link rel="prefetch" href="/assets/js/52.cbb86eb4.js"><link rel="prefetch" href="/assets/js/53.bb9b5968.js"><link rel="prefetch" href="/assets/js/54.53471eeb.js"><link rel="prefetch" href="/assets/js/55.fca7d044.js"><link rel="prefetch" href="/assets/js/56.a9d5906a.js"><link rel="prefetch" href="/assets/js/57.82039203.js"><link rel="prefetch" href="/assets/js/59.a3cd0e60.js"><link rel="prefetch" href="/assets/js/6.aa8dd1a0.js"><link rel="prefetch" href="/assets/js/60.2359ebba.js"><link rel="prefetch" href="/assets/js/61.a6565f08.js"><link rel="prefetch" href="/assets/js/62.01779d71.js"><link rel="prefetch" href="/assets/js/63.d55e5c74.js"><link rel="prefetch" href="/assets/js/64.a9b1ef79.js"><link rel="prefetch" href="/assets/js/65.0ec501cd.js"><link rel="prefetch" href="/assets/js/66.eada66f8.js"><link rel="prefetch" href="/assets/js/67.368ac513.js"><link rel="prefetch" href="/assets/js/68.fa2f318c.js"><link rel="prefetch" href="/assets/js/69.2560bc46.js"><link rel="prefetch" href="/assets/js/7.4f7ac804.js"><link rel="prefetch" href="/assets/js/70.3a33d77e.js"><link rel="prefetch" href="/assets/js/71.18ba2a4e.js"><link rel="prefetch" href="/assets/js/72.6c575821.js"><link rel="prefetch" href="/assets/js/73.1e1a5480.js"><link rel="prefetch" href="/assets/js/74.398e0159.js"><link rel="prefetch" href="/assets/js/75.f6dcea8d.js"><link rel="prefetch" href="/assets/js/76.c0d2ea8b.js"><link rel="prefetch" href="/assets/js/77.f54601e0.js"><link rel="prefetch" href="/assets/js/78.dea39406.js"><link rel="prefetch" href="/assets/js/79.0d7298eb.js"><link rel="prefetch" href="/assets/js/8.d1322c87.js"><link rel="prefetch" href="/assets/js/9.8a75d3e9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.77a4f79c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-98a81704><header class="header" data-v-00466d8e data-v-98a81704><div class="header-navbar" data-v-00466d8e><div class="flex-xbc main header-nav" data-v-00466d8e><div class="nav-link" data-v-00466d8e><a href="/" class="inblock link-logo router-link-active" data-v-00466d8e><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-00466d8e></a> <nav class="link-list" data-v-00466d8e><a href="/" class="list-item router-link-active" data-v-00466d8e>ホーム</a><a href="/about/" class="list-item" data-v-00466d8e>ページ集</a><a href="/posts/" class="list-item router-link-active" data-v-00466d8e>技術</a><a href="/mental/" class="list-item" data-v-00466d8e>メンタル</a><a href="/other/" class="list-item" data-v-00466d8e>その他</a><a href="/tag/" class="list-item" data-v-00466d8e>タグ</a><a href="/category/" class="list-item" data-v-00466d8e>カテゴリ</a><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-00466d8e>筆者</a></nav></div> <div class="search-box" data-v-00466d8e><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-98a81704 data-v-98a81704><section class="info no-bg" data-v-2602fa21><article class="main info-content" data-v-114671a7 data-v-2602fa21><div class="content-header" data-v-114671a7><h1 class="header-title" data-v-114671a7>Darknet(Yolov4)で学習させるためのcfgファイル等を作成する</h1></div> <div class="flex-wcc content-tag" data-v-114671a7><div class="inblock tag-list" data-v-114671a7><a href="/category/Python/" class="tag-text" data-v-114671a7>Python
+      </a></div> <span class="tag-space" data-v-114671a7>/</span> <div class="inblock tag-list" data-v-114671a7><a href="/tag/Python/" class="tag-text" data-v-114671a7>Python
+      </a><a href="/tag/Jupyter/" class="tag-text" data-v-114671a7>Jupyter
+      </a><a href="/tag/物体検出/" class="tag-text" data-v-114671a7>物体検出
+      </a><a href="/tag/YOLO/" class="tag-text" data-v-114671a7>YOLO
+      </a><a href="/tag/Darknet/" class="tag-text" data-v-114671a7>Darknet
+      </a><a href="/tag/Google Colab/" class="tag-text" data-v-114671a7>Google Colab
+      </a></div></div> <div class="content content__default" data-v-114671a7><p>COCOデータセットから特定のクラスの抽出・学習形式への整形を実施しましたので，学習に用いる画像のパスを示すtxtファイルやモデルのネットワークを示すcfgファイル等を作成します．<br></p> <p>プログラムはJupyter Notebook形式で作成しています．<br>
+最終的に，Youtubeの<a href="https://www.youtube.com/watch?v=wnRH3-CIk4I" target="_blank" rel="noopener noreferrer">平成24年 元旦配達出発式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．</p> <h2 id="ファイル構成"><a href="#ファイル構成" class="header-anchor">#</a> ファイル構成</h2> <p>プロジェクトディレクトリはpost_bikeとしています．</p> <div class="language- extra-class"><pre class="language-text"><code>post_bike
+├── ./darknet
+│   ├── /annotations
+│   └── /images
+├── check
+│   └── darknet4_bike
+│       ├── /train
+│       └── /val
+├── darknet4_bike
+│   ├── /train
+│   │   └── (省略)
+│   ├── /val
+│   │   ├── 000000356387.jpg
+│   │   ├── 000000356387.txt
+│   │   └── (省略)
+│   ├── train.txt &lt;- 新規
+│   ├── val.txt &lt;- 新規
+│   ├── yolov4_bike.data &lt;- 新規
+│   └──  yolov4_bike.cfg &lt;- 新規
+└── darknet4.ipynb &lt;- 実行用ノートブック
+</code></pre></div><h2 id="学習時に使う画像のパスリストを作成"><a href="#学習時に使う画像のパスリストを作成" class="header-anchor">#</a> 学習時に使う画像のパスリストを作成</h2> <p>学習時，評価時に使う画像のパスリスト(.txt)を作成します．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> os
+<span class="token keyword">import</span> glob
+
+<span class="token comment"># 引数もどき</span>
+project_dir <span class="token operator">=</span> <span class="token string">'darknet4_bike'</span>
+
+<span class="token comment"># 学習用と評価用</span>
+<span class="token keyword">for</span> data_type <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">'train'</span><span class="token punctuation">,</span> <span class="token string">'val'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token comment"># ディレクトリ内の画像のパスを取得</span>
+    image_paths <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> data_type<span class="token punctuation">,</span> <span class="token string">'*.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># テキストファイルの書き込み</span>
+    txt_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> data_type <span class="token operator">+</span> <span class="token string">'.txt'</span><span class="token punctuation">)</span>
+    txt_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>txt_path<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> image_path <span class="token keyword">in</span> image_paths<span class="token punctuation">:</span>
+        <span class="token comment"># txtに書き込む</span>
+        txt_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>image_path<span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+    txt_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># train.txt</span>
+<span class="token comment"># darknet4_bike/train/000000162083.jpg</span>
+<span class="token comment"># darknet4_bike/train/000000041128.jpg</span>
+<span class="token comment"># darknet4_bike/train/000000246833.jpg</span>
+</code></pre></div><h2 id="darknetの設定ファイルの作成"><a href="#darknetの設定ファイルの作成" class="header-anchor">#</a> darknetの設定ファイルの作成</h2> <p>yolov4のconfigファイル(.cfg)，学習するクラス名を記述するnameファイル(.names)，学習時に読み込むファイルの場所を記述するdataファイル(.data)を作成します．</p> <h3 id="namesファイル-names-の作成"><a href="#namesファイル-names-の作成" class="header-anchor">#</a> namesファイル(.names)の作成</h3> <p>nameファイル(.names)は検出のクラス名を記述するファイルです．<br>
+本稿では1クラスしかありませんが，他クラスの場合は「<a href="https://hirasu1231.github.io/hamlet_engineer/posts/2021/02/22/object-detection02.html" target="_blank" rel="noopener noreferrer">COCOデータセットをdarknet(Yolov4)で学習できるように整形する<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>」で作成したtxtファイル(BountingBox情報)のクラスIDに応じて，改行してください．</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment"># sample.name</span>
+<span class="token comment"># txtファイル(BountingBox情報)のクラスIDをcarを0,</span>
+<span class="token comment"># truckを1,bikeを2としていた場合</span>
+car
+truck
+bike
+</code></pre></div><div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment"># yolov4_bike.name</span>
+bike
+</code></pre></div><p>うっかり，ミスることが多かったのでプログラムを書きました．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> os
+
+<span class="token comment"># namesファイル(.names)の作成</span>
+<span class="token keyword">def</span> <span class="token function">make_namesfile</span><span class="token punctuation">(</span>name_path<span class="token punctuation">,</span> class_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># .dataの作成</span>
+    name_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_path<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> _class <span class="token keyword">in</span> class_list<span class="token punctuation">:</span>
+        <span class="token comment"># .dataの書き込む</span>
+        name_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>_class<span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    <span class="token comment"># txtファイルの書き込み終了</span>
+    name_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 引数</span>
+project_dir <span class="token operator">=</span> <span class="token string">'darknet4_bike'</span>
+name_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> <span class="token string">'yolov4_bike.names'</span><span class="token punctuation">)</span>
+class_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'bike'</span><span class="token punctuation">]</span>
+<span class="token comment"># 実行</span>
+make_namesfile<span class="token punctuation">(</span>name_path<span class="token punctuation">,</span> class_list<span class="token punctuation">)</span>
+</code></pre></div><h3 id="dataファイル-data-の作成"><a href="#dataファイル-data-の作成" class="header-anchor">#</a> dataファイル(.data)の作成</h3> <p>dataファイル(.data)は検出するクラス数，学習・評価用画像リスト等の学習時に用いるファイルの場所を記述するファイルです．</p> <div class="language- extra-class"><pre class="language-text"><code># yolov4_bike.data
+classes = 1
+train = darknet4_bike/train.txt
+valid = darknet4_bike/val.txt
+names = darknet4_bike/yolov4_bike.names
+backup = backup
+eval = eval
+</code></pre></div><p>これも，うっかりミスることが多かったのでプログラムを書きました．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">make_datafile</span><span class="token punctuation">(</span>data_path<span class="token punctuation">,</span> project_dir<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># .nameの読み込み</span>
+    name_path <span class="token operator">=</span> data_path<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'.data'</span><span class="token punctuation">,</span> <span class="token string">'.names'</span><span class="token punctuation">)</span>
+    name_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>name_path<span class="token punctuation">,</span> <span class="token string">&quot;r&quot;</span><span class="token punctuation">)</span>
+    reader <span class="token operator">=</span> name_file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    name_num <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>reader<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># .dataの作成</span>
+    data_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>data_path<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># .dataの書き込み</span>
+    <span class="token comment"># classes</span>
+    data_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'classes = {}\n'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>name_num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># train</span>
+    data_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'train = {}\n'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> <span class="token string">'train.txt'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># valid</span>
+    data_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'valid = {}\n'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> <span class="token string">'val.txt'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># names</span>
+    data_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'names = {}\n'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>name_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># backup</span>
+    data_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'backup = backup\n'</span><span class="token punctuation">)</span>
+    <span class="token comment"># eval</span>
+    data_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'eval = eval'</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># txtファイルの書き込み終了</span>
+    data_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 引数</span>
+project_dir <span class="token operator">=</span> <span class="token string">'darknet4_bike'</span>
+data_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> <span class="token string">'yolov4_bike.data'</span><span class="token punctuation">)</span>
+<span class="token comment"># 実行   </span>
+make_datafile<span class="token punctuation">(</span>data_path<span class="token punctuation">,</span> project_dir<span class="token punctuation">)</span>
+</code></pre></div><h3 id="configファイル-cfg-の作成"><a href="#configファイル-cfg-の作成" class="header-anchor">#</a> configファイル(.cfg)の作成</h3> <p>configファイル(.cfg)は学習時に用いるモデルのネットワーク設定を記述するファイルです．<br>
+configファイル(.cfg)は<a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener noreferrer">AlexeyAB/darknet<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>で公開されているyolov4.cfgの一部を書き換えて作成します．</p> <div class="language- extra-class"><pre class="language-text"><code># yolov4.cfgのダウンロード
+wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg -O yolov4.cfg
+</code></pre></div><p>僕は基本的に以下の箇所を書き換えています．</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[net]</span>
+<span class="token comment"># 6-9行目</span>
+<span class="token comment"># GPUのメモリーオーバーが発生した場合，subdivisionsを2倍にしたり，</span>
+<span class="token comment"># width,heightを小さくする．</span>
+<span class="token constant">batch</span><span class="token attr-value"><span class="token punctuation">=</span>64</span>
+<span class="token constant">subdivisions</span><span class="token attr-value"><span class="token punctuation">=</span>8</span>
+<span class="token constant">width</span><span class="token attr-value"><span class="token punctuation">=</span>608</span>
+<span class="token constant">height</span><span class="token attr-value"><span class="token punctuation">=</span>608</span>
+
+<span class="token comment"># 20行目</span>
+<span class="token comment"># max_batchesは最大の学習回数</span>
+<span class="token constant">max_batches</span><span class="token attr-value"><span class="token punctuation">=</span>2000</span>
+
+<span class="token comment"># [yolo]の1つ手前の[convolutional]</span>
+<span class="token comment"># 3箇所ある</span>
+<span class="token selector">[convolutional]</span>
+<span class="token comment"># 961，1049，1137行目</span>
+<span class="token comment"># filters= (class数+5)*3 = (1+5)*3 =18</span>
+<span class="token constant">filters</span><span class="token attr-value"><span class="token punctuation">=</span>18</span>
+
+<span class="token comment"># 3箇所ある</span>
+<span class="token selector">[yolo]</span>
+<span class="token comment"># 968，1056，1144行目</span>
+<span class="token comment"># クラス数</span>
+<span class="token constant">classes</span><span class="token attr-value"><span class="token punctuation">=</span>1</span>
+</code></pre></div><p>これも，うっかりミスることが多かったのでプログラムを書きました．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># configファイルの書き換え</span>
+<span class="token keyword">def</span> <span class="token function">config_replace</span><span class="token punctuation">(</span>cfg_reader<span class="token punctuation">,</span> item<span class="token punctuation">,</span> element<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 書き換えの先頭</span>
+    start <span class="token operator">=</span> cfg_reader<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'\n{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token comment"># 書き換えの後尾</span>
+    end <span class="token operator">=</span> cfg_reader<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">,</span> start<span class="token punctuation">)</span>
+    <span class="token comment"># 書き換え</span>
+    cfg_reader <span class="token operator">=</span> cfg_reader<span class="token punctuation">[</span><span class="token punctuation">:</span>start<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot;{0}={1}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> element<span class="token punctuation">)</span> <span class="token operator">+</span> cfg_reader<span class="token punctuation">[</span>end<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> cfg_reader
+
+<span class="token keyword">def</span> <span class="token function">config_filters_replace</span><span class="token punctuation">(</span>cfg_reader<span class="token punctuation">,</span> classes<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># [yolo]の場所</span>
+    yolo_spans <span class="token operator">=</span> <span class="token punctuation">[</span>m<span class="token punctuation">.</span>span<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> m <span class="token keyword">in</span> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span><span class="token string">'yolo'</span><span class="token punctuation">,</span> cfg_reader<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>yolo_spans<span class="token punctuation">)</span>
+    <span class="token comment"># 3箇所でfillterの書き換え</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>yolo_spans<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        yolo_spans <span class="token operator">=</span> <span class="token punctuation">[</span>m<span class="token punctuation">.</span>span<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> m <span class="token keyword">in</span> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span><span class="token string">'yolo'</span><span class="token punctuation">,</span> cfg_reader<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        syolo<span class="token punctuation">,</span> eyolo <span class="token operator">=</span> yolo_spans<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>cfg_reader<span class="token punctuation">[</span>syolo<span class="token punctuation">:</span>eyolo<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token comment"># 書き換えの先頭</span>
+        start <span class="token operator">=</span> cfg_reader<span class="token punctuation">.</span>rfind<span class="token punctuation">(</span><span class="token string">'\nfilters'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> syolo<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token comment"># 書き換えの後尾</span>
+        end <span class="token operator">=</span> cfg_reader<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">,</span> start<span class="token punctuation">)</span>
+        <span class="token comment"># 書き換え</span>
+        cfg_reader <span class="token operator">=</span> cfg_reader<span class="token punctuation">[</span><span class="token punctuation">:</span>start<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot;filters={}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token punctuation">(</span>classes <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> cfg_reader<span class="token punctuation">[</span>end<span class="token punctuation">:</span><span class="token punctuation">]</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;filters={}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token punctuation">(</span>classes <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> cfg_reader
+
+<span class="token comment"># .cfgのテキストの書き換え</span>
+<span class="token comment"># 引数もどき</span>
+size <span class="token operator">=</span> <span class="token number">608</span>
+max_batch <span class="token operator">=</span> <span class="token number">2000</span>
+cfg_name <span class="token operator">=</span> <span class="token string">'yolov4.cfg'</span>
+outcfg_name <span class="token operator">=</span> cfg_name<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'yolov4'</span><span class="token punctuation">,</span> <span class="token string">'yolov4_bike'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># .cfgの読み込み</span>
+cfg_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>cfg_name<span class="token punctuation">,</span> <span class="token string">&quot;r&quot;</span><span class="token punctuation">)</span>
+cfg_reader <span class="token operator">=</span> cfg_file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># .namesの読み込み</span>
+names_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> <span class="token string">'yolov4_bike.names'</span><span class="token punctuation">)</span>
+names_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>names_path<span class="token punctuation">,</span> <span class="token string">&quot;r&quot;</span><span class="token punctuation">)</span>
+reader <span class="token operator">=</span> names_file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+classes_lsit <span class="token operator">=</span> reader<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+classes_lsit<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+classes <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>classes_lsit<span class="token punctuation">)</span>
+
+<span class="token comment"># .cfgの書き換え</span>
+<span class="token comment"># width</span>
+cfg_reader <span class="token operator">=</span> config_replace<span class="token punctuation">(</span>cfg_reader<span class="token punctuation">,</span> <span class="token string">'width'</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span>
+<span class="token comment"># height</span>
+cfg_reader <span class="token operator">=</span> config_replace<span class="token punctuation">(</span>cfg_reader<span class="token punctuation">,</span> <span class="token string">'height'</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span>
+<span class="token comment"># max_batches(学習回数)</span>
+cfg_reader <span class="token operator">=</span> config_replace<span class="token punctuation">(</span>cfg_reader<span class="token punctuation">,</span> <span class="token string">'max_batches'</span><span class="token punctuation">,</span> max_batch<span class="token punctuation">)</span>
+<span class="token comment"># filters</span>
+cfg_reader <span class="token operator">=</span> config_filters_replace<span class="token punctuation">(</span>cfg_reader<span class="token punctuation">,</span> classes<span class="token punctuation">)</span>
+<span class="token comment"># classes(coco:80クラス前提)</span>
+cfg_reader <span class="token operator">=</span> cfg_reader<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'classes=80'</span><span class="token punctuation">,</span> <span class="token string">'classes={}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>classes<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># .cfgの保存(上書き)</span>
+project_dir <span class="token operator">=</span> <span class="token string">'darknet4_bike'</span>
+cfg_outpath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span> outcfg_name<span class="token punctuation">)</span>
+cfg_outfile <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>cfg_outpath<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+<span class="token comment"># 書き込み</span>
+cfg_outfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>cfg_reader<span class="token punctuation">)</span>
+cfg_outfile<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="まとめ"><a href="#まとめ" class="header-anchor">#</a> まとめ</h2> <p>ここまでで，configファイル(.cfg),nameファイル(.names),dataファイル(.data)を作成しました．<br>
+次では，実際にDarknetの学習を実施します．</p> <h2 id="参考サイト"><a href="#参考サイト" class="header-anchor">#</a> 参考サイト</h2> <p><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener noreferrer">AlexeyAB/darknet<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://wakuphas.hatenablog.com/entry/2018/09/19/025941" target="_blank" rel="noopener noreferrer">Google Colab上でdarknet（YOLO）を使って物体を数える【画像認識】<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://nixeneko.hatenablog.com/entry/2018/08/15/000000" target="_blank" rel="noopener noreferrer">Windows 10上のDarknetでYolo v3をトレーニングしOpenCVから使ってみる<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://note.nkmk.me/python-opencv-imread-imwrite/" target="_blank" rel="noopener noreferrer">Python, OpenCVで画像ファイルの読み込み、保存（imread, imwrite）<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://note.nkmk.me/python-opencv-draw-function/" target="_blank" rel="noopener noreferrer">Python, OpenCVで図形描画（線、長方形、円、矢印、文字など）<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <div class="content-time" data-v-114671a7><time datetime="2/24/2021, 12:00:00 AM" class="time-text" data-v-114671a7>Create Time: 2/24/2021, 12:00:00 AM
+    </time> <time datetime="4/12/2021, 9:12:47 AM" class="time-text" data-v-114671a7>Last Updated: 4/12/2021, 9:12:47 AM
+    </time></div></article> <section class="flex-xb main info-nav" data-v-203269c1 data-v-2602fa21><a href="/posts/object_detection04.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="https://www.hamlet-engineer.com/image/yolov4_post.png" loading="lazy" alt="Python + Google Colab + Darknet(Yolov4)でバイク検出を学習する" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>Python + Google Colab + Darknet(Yolov4)でバイク検出を学習する</h2> <div class="content" data-v-203269c1><p>COCOデータセットから特定のクラスの画像を抽出し，アノテーション情報を整形したので，Darknet(Yolov4)での学習を実施します．<br></p>
+</div></article></a> <a href="/posts/object_detection02.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="https://www.hamlet-engineer.com/image/000000356387_bb.jpg" loading="lazy" alt="COCOデータセットをDarknet(Yolov4)で学習できるように整形する" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>COCOデータセットをDarknet(Yolov4)で学習できるように整形する</h2> <div class="content" data-v-203269c1><p>COCOデータセットから特定のクラスを抽出できるようにしたので，Darknet(Yolov4)で学習できるように整形します．<br></p>
+</div></article></a></section> <!----></section></section> <footer class="footer" data-v-8dceedee data-v-98a81704><nav class="link-list" data-v-8dceedee><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Twitter</a><a href="https://github.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-8dceedee>ハムレット型エンジニアのカンニングノート © 2021</a></footer></section><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.7ed2020c.js" defer></script><script src="/assets/js/58.2f8c3ed3.js" defer></script>
+  </body>
+</html>
