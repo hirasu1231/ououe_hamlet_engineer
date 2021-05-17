@@ -26,6 +26,10 @@ tags:
 <!-- <span style="background-color: #ffff99;"></span> -->
 <!-- <span style="color: #ff0000;"></span> -->
 
+
+## 目次
+[[toc]]
+
 ## 人生損する【無駄な思い込み】を減らす方法
 動画：[人生損する【無駄な思い込み】を減らす方法](https://www.youtube.com/watch?v=ykhqu43pKRE)
 
@@ -76,3 +80,7 @@ tags:
 続きの動画：[ネガティブバイアスから脱出して自分の可能性に気づく方法](https://daigovideolab.jp/play/1540014842)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

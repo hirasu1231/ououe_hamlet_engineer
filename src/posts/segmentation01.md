@@ -24,6 +24,10 @@ tags:
 最終的に，人以外の背景を着色して，zoomのバーチャル背景機能のようなクロマキー合成を実装したいです．<br>
 ![](/image/zoom.jpg)
 
+
+## 目次
+[[toc]]
+
 ## ファイル構成
 プロジェクトディレクトリはsegmentationとしています．度々，省略しています．
 ```
@@ -476,3 +480,7 @@ cp data_loader/segmentation/cityscape_scripts/process_cityscapes.py process_city
 # process_cityscapes.pyを/EdgeNets直下にコピー
 cp data_loader/segmentation/cityscape_scripts/generate_mappings.py generate_mappings.py
 ```
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

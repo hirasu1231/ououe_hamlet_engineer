@@ -20,6 +20,10 @@ tags:
 ちなみに，現状は徐々に回復に向かっていきますが，定期的に発作でパニック障害なったり，自分が幸福・前向きになろうとすると吐き気が催す症状がでます．
 
 
+
+## 目次
+[[toc]]
+
 ## 食事
 食事は以下の3点です．
 - 加工食品は一切口にしない
@@ -129,3 +133,7 @@ HIITは割りと週間化できているので，週3回激しい運動はHIIT4�
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
 
 [人生が翌日から激変する【寝る前20分の使い方】](https://daigoblog.jp/20minutes-night/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

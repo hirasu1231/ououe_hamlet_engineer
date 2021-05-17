@@ -32,6 +32,10 @@ tags:
 
 D-Lab：[若い時にやると人生変わる8つのこと 【前編】](https://daigovideolab.jp/play/R21CWTBQCbDTQuZ2hfX6)
 
+
+## 目次
+[[toc]]
+
 ## 1. 読書
 - 本を読む事で得る知識や能力は凄い
 - 知識以外にも身に付く能力が多くある．
@@ -80,3 +84,7 @@ D-Lab：[若い時にやると人生変わる8つのこと 【前編】](https:/
 D-Lab：[若い時にやると人生変わる8つのこと 【前編】](https://daigovideolab.jp/play/R21CWTBQCbDTQuZ2hfX6)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

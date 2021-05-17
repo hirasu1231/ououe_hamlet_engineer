@@ -26,6 +26,10 @@ tags:
 <!-- <span style="background-color: #ffff99;"></span> -->
 <!-- <span style="color: #ff0000;"></span> -->
 
+
+## 目次
+[[toc]]
+
 ## 睡眠に関する質問
 睡眠に関する質問をいくつか出します．解答方法は以下の通りです．
 1. 全くできない
@@ -74,3 +78,7 @@ tags:
 [睡眠の質を高める心理学](https://m.youtube.com/watch?v=3GANcWJuiCE&t=376s)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

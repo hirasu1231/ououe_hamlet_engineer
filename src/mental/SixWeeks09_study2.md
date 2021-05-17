@@ -33,6 +33,10 @@ youtube：[心理学者が選ぶ【最強の話術】といえばこちら](http
 
 続きの動画：[ミシガン大学✖︎南カリフォルニア大学が明かすエリートが使う49の迎合法](https://daigovideolab.jp/play/1581787202)
 
+
+## 目次
+[[toc]]
+
 ## アドバイススシーキング
 
 ### アドバイススシーキングとは
@@ -63,3 +67,7 @@ youtube：[心理学者が選ぶ【最強の話術】といえばこちら](http
 続きの動画：[ミシガン大学✖︎南カリフォルニア大学が明かすエリートが使う49の迎合法](https://daigovideolab.jp/play/1581787202)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

@@ -12,6 +12,10 @@ tags:
 サーバーを契約するのが面倒くさいので，Github PagesでVuepressを公開します．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## Vuepressをビルド
 ビルドが終了するとdocsディレクトリが生成され，その中にビルドファイルが出力されます．
 ビルドファイルで動作確認するにはgoogle chromeのWeb Server for Chromeという拡張機能を利用すると便利です．
@@ -69,3 +73,8 @@ https://hirasu1231.github.io/hamlet_engineer
 
 ## 参考サイト
 - [VuePressで作成した静的サイトをGitHub Pagesで公開する](https://qiita.com/rubytomato@github/items/f8153f0d00f89ba87ed5#docs%E3%82%92%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A%E3%82%92%E8%A1%8C%E3%81%86)
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

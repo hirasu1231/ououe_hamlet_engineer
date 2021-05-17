@@ -22,6 +22,10 @@ tags:
 > Google Colaboratory（以下Google Colab）は、Google社が無料で提供している機械学習の教育や研究用の開発環境です。開発環境はJupyter Notebookに似たインターフェースを持ち、Pythonの主要なライブラリがプリインストールされています。<br>
 引用元：[Google Colabの使い方](https://interface.cqpub.co.jp/ail01/)
 
+
+## 目次
+[[toc]]
+
 ## Google Colabのファイル構成
 プロジェクトディレクトリはpost_bikeとしています．度々，省略しています．
 ```
@@ -641,3 +645,8 @@ yolov4-deepsortでバイクのカウントを実施しました．<br>
 [Pythonのdequeでキュー、スタック、デック（両端キュー）を扱う](https://note.nkmk.me/python-collections-deque/)<br>
 [DeepSort : 人物のトラッキングを行う機械学習モデル](https://medium.com/axinc/deepsort-%E4%BA%BA%E7%89%A9%E3%81%AE%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%92%E8%A1%8C%E3%81%86%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB-e8cb7410457c)<br>
 [TensorFlow2でDeepSORTを使用したオブジェクトトラッキング](https://ichi.pro/tensorflow-2-de-deepsort-o-shiyoshita-obujyekuto-torakkingu-259490015275855)
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

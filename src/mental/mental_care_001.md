@@ -15,6 +15,10 @@ tags:
 <!-- more -->
 <br>
 
+
+## 目次
+[[toc]]
+
 ## １：「引き寄せの法則」とは
 「引き寄せの法則」について，以下の2つのサイトから引用します．
 > 『引き寄せの法則』とは、自分の思考やあり方を変えることによって望ましい現実を引き寄せようとするものです。 <br>
@@ -118,3 +122,7 @@ tags:
 [【引き寄せの法則】心理学NLPに学ぶ「効果的な10の鍵」と良い流れに乗る方法](https://life-and-mind.com/hikiyose-2887#i-3)<br>
 [メンタリスト DaiGo【引き寄せの大嘘】望むほど夢が叶わない理由](https://www.youtube.com/watch?v=3-1b-nh2ng4)<br>
 [【新事実】引き寄せの法則は嘘だった！？本当の正しい使い方](http://vital-blogger.com/hikiyosenohousoku-uso/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

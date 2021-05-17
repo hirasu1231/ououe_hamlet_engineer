@@ -19,6 +19,10 @@ tags:
 学会講演［音声］のサンプル音声(aps-smp.mp3)をダウンロードします．
 
 
+
+## 目次
+[[toc]]
+
 ## 事前準備
 ここではSpeechRecognitionというモジュールを用いります．googleのAPIを間接的に利用します．<br>
 [Speech-to-Text 公式API](https://cloud.google.com/speech-to-text/docs/libraries#client-libraries-install-python)
@@ -71,3 +75,8 @@ print(text)
 ```
 RequestError: recognition connection failed: [Errno 32] Broken pipe
 ```
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

@@ -36,6 +36,10 @@ youtube：[コミュ障でもできる「5分間ネットワーキングトレ�
 
 ブログ：[コミュ障でもできる「5分間ネットワーキングトレーニング」](https://daigoblog.jp/5minutes-network/)
 
+
+## 目次
+[[toc]]
+
 ## コミュ障とは？
 - コミュ障とは，初対面での会話の糸口や切り出し方がわからない人
 - ある実験では，最初の1〜2回目まではコミュ障の人は不利で，3回目以降は普通の人とあまり差がなかった
@@ -111,3 +115,7 @@ youtube：[コミュ障でもできる「5分間ネットワーキングトレ�
 ブログ：[コミュ障でもできる「5分間ネットワーキングトレーニング」](https://daigoblog.jp/5minutes-network/)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

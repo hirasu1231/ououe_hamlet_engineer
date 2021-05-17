@@ -18,6 +18,10 @@ Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動�
 本稿では，[Offliberty](http://offliberty.io)というYouTubeのURLをコピペすればダウンロードできるサイトがあったので，これの操作をSeleniumでします．<br>
 今回は練習でしたものですので，多分に悪ふざけが入っていますし，def文でまとめてはいません．
 
+
+## 目次
+[[toc]]
+
 ## selenium.webdriverの起動
 selenium.webdriverの起動は本サイトの[Python＋Docker＋Selenium＋Chromeでウェブスクレイピングをする part3](https://hirasu1231.github.io/hamlet_engineer/posts/2021/02/13/websc-selenium03.html)で作成したものを使います．
 ```python
@@ -197,3 +201,8 @@ seleniumに慣れるために，[offliberty](http://offliberty.io)というyoutu
 [【Python】seleniumでWebElementからhtmlを取得する](https://engineeeer.com/python-selenium-webelement-get-html/)<br>
 [Python + Selenium + Chrome でファイル保存まわり](https://qiita.com/memakura/items/f80d2e2c59514cfc14c9)<br>
 [Python/SeleniumでChrome自動Google検索](https://watlab-blog.com/2019/08/11/selenium-google-search/)
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

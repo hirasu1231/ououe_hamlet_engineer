@@ -128,3 +128,7 @@ HIITは割りと週間化できているので，週3回激しい運動はHIIT4�
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
 
 [人生が翌日から激変する【寝る前20分の使い方】](https://daigoblog.jp/20minutes-night/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

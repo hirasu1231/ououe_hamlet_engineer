@@ -12,6 +12,10 @@ tags:
 デフォルトのフォントが中国語用の簡体字ベースなので，一般的に使われているフォントに変更します．そして，やりたいことをまとめるページを作りたかったので，ページメニューを追加します．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## ファイル構成
 ファイル構成は以下通りです．
 ```
@@ -128,3 +132,8 @@ body
 ## 参考サイト
 - [VuePressのカスタムページ](https://vuepress-theme-meteorlxy.meteorlxy.cn/custom-pages/)
 - [VuePress + Netlifyでブログ作成](https://meuniere.dev/posts/2020/08/06/create-vuepress.html)
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

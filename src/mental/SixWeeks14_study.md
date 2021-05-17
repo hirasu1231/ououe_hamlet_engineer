@@ -32,6 +32,10 @@ youtube：[悲劇的逆境から立ち直るための7つの習慣](https://www.
 
 D-Lab：[悲劇的逆境から立ち直るための7つの習慣](https://daigovideolab.jp/play/1551498063)
 
+
+## 目次
+[[toc]]
+
 ## 逆境を乗り越え続ける人の習慣
 - 2015年にバージニア大学のティモシー・ウィルソン教授がレジリエンス（折れた心を元に戻すための回復力）に関する文献をレビュー
 - 人間が運命を変えることはできませんが運命を変えることができるものは1つだけ存在し、それは習慣である
@@ -69,3 +73,7 @@ youtube：[悲劇的逆境から立ち直るための7つの習慣](https://www.
 D-Lab：[悲劇的逆境から立ち直るための7つの習慣](https://daigovideolab.jp/play/1551498063)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

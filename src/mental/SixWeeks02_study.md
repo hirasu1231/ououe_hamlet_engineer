@@ -26,6 +26,10 @@ tags:
 <!-- <span style="background-color: #ffff99;"></span> -->
 <!-- <span style="color: #ff0000;"></span> -->
 
+
+## 目次
+[[toc]]
+
 ## 目標達成するには記録が大事
 目標達成するには，<span style="color: #ff0000;">計画を立てるよりも記録をつける方が良い．</span>
 
@@ -76,3 +80,7 @@ tags:
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
 
 [人生が翌日から激変する【寝る前20分の使い方】](https://daigoblog.jp/20minutes-night/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

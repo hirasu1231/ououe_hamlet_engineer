@@ -31,6 +31,10 @@ tags:
 D-Lab：[成功に必要な7つの能力【セルフレギュレーション】〜衝動を抑える7つの方法](https://daigovideolab.jp/play/1579708143)
 
 
+
+## 目次
+[[toc]]
+
 ## 実践手法
 全編有料枠でしたので，以下のことを実践手法のみ記述します．
 - HIITは発作が起きても1回はする
@@ -51,3 +55,7 @@ D-Lab：[成功に必要な7つの能力【セルフレギュレーション】�
 D-Lab：[成功に必要な7つの能力【セルフレギュレーション】〜衝動を抑える7つの方法](https://daigovideolab.jp/play/1579708143)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

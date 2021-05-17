@@ -27,6 +27,10 @@ tags:
 <!-- <span style="background-color: #ffff99;"></span> -->
 <!-- <span style="color: #ff0000;"></span> -->
 
+
+## 目次
+[[toc]]
+
 ## 人生変わる3つの思い込み
 動画：[抜け出せば人生変わる3つの思い込み【バイアス】](https://www.youtube.com/watch?v=AIwuJTz2vVo)
 
@@ -148,3 +152,7 @@ tags:
 続きの動画：[人間関係から投資判断にまで使えるペンシルベニア大学式12のデバイアスガイド](https://daigovideolab.jp/play/1552229589)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

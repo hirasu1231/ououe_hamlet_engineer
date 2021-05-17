@@ -19,6 +19,10 @@ COCOデータセットは物体検出・セグメーテーション等の学習�
 プログラムはJupyter Notebook形式で作成しています．<br>
 最終的に，Youtubeの[平成24年 元旦配達出発式](https://www.youtube.com/watch?v=wnRH3-CIk4I)のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．
 
+
+## 目次
+[[toc]]
+
 ## COCOデータセットのダウンロード
 [mkocabas/coco.sh](https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9)のcoco.shを実行し，COCOデータセットをダウンロードします．<br>
 大容量データなので，ダウンロードに時間がかかります．<br>
@@ -131,3 +135,7 @@ for anno_info in pic["annotations"][0:1000]:
 [coco 公式HP](https://cocodataset.org/#download)<br>
 [mkocabas/coco.sh](https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9)<br>
 [画像を扱う機械学習のためのデータセットまとめ](https://qiita.com/leetmikeal/items/7c0d23e39bf38ab8be23)<br>
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

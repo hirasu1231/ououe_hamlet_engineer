@@ -20,6 +20,10 @@ COCOデータセットから特定のクラスの抽出・[keras-yolo4](https://
 COCOデータセットから特定のクラスの抽出は[COCOデータセットをダウンロードし，特定のクラスを抽出する](https://hirasu1231.github.io/hamlet_engineer/posts/2021/02/21/object-detection01.html)で記述しています．<br>
 最終的に，Youtubeの[平成24年 元旦配達出発式](https://www.youtube.com/watch?v=wnRH3-CIk4I)のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．
 
+
+## 目次
+[[toc]]
+
 ## ファイル構成
 プロジェクトディレクトリはpost_bikeとしています．
 ```
@@ -148,3 +152,7 @@ COCOデータセットから特定のクラスの抽出・[keras-yolo4](https://
 [Windows 10上のDarknetでYolo v3をトレーニングしOpenCVから使ってみる](https://nixeneko.hatenablog.com/entry/2018/08/15/000000)<br>
 [Python, OpenCVで画像ファイルの読み込み、保存（imread, imwrite）](https://note.nkmk.me/python-opencv-imread-imwrite/)<br>
 [Python, OpenCVで図形描画（線、長方形、円、矢印、文字など）](https://note.nkmk.me/python-opencv-draw-function/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

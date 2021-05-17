@@ -15,6 +15,10 @@ Python＋Selenium＋Chromeのウェブスクレイピングでは，by_class_nam
 <!-- more -->
 
 
+
+## 目次
+[[toc]]
+
 ## by_css_selectorを使用
 メソッドを<span style="background-color: #ffff99;">by_class_name</span>ではなく<span style="background-color: #ffff99;">by_css_selector</span>にして，取得します．
 
@@ -59,3 +63,7 @@ by_class_nameでスペースが入った要素を取得するために，<span s
 ## 参考サイト
 [seleniumでby_class_nameでスペースが入った要素が取得できずエラーになる時の対処法](https://qiita.com/hanonaibaobabu/items/e547410865d857aa25ec)<br>
 [<Python, selenium> 空白のあるクラス名を選択するには、、](https://nekoyukimmm.hatenablog.com/entry/2017/05/09/090117)<br>
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

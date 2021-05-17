@@ -26,6 +26,10 @@ tags:
 <!-- <span style="background-color: #ffff99;"></span> -->
 <!-- <span style="color: #ff0000;"></span> -->
 
+
+## 目次
+[[toc]]
+
 ## 頭から消えない悩みを止める意外な方法
 動画：[頭から消えない悩みを止める意外な方法が発見された件](https://www.youtube.com/watch?v=-tEzsLmFIMw)
 
@@ -121,3 +125,7 @@ tags:
 続きの動画のノート：[迷いを断ち切る！メンタルを切り替えるための質問とは？](https://ch.nicovideo.jp/mentalist/blomaga/ar1171227)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

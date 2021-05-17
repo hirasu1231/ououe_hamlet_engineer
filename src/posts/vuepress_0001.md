@@ -12,6 +12,10 @@ tags:
 WordpressやHTMLでブログを作成するんが面倒になったので，Vuepressでの作成に移行しました．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## yarnのインストール
 Vuepressのテーマのインストール，Vuepressの実行等ではnmpか，yarnのどちらかを使用しているサイトが多い．私は最初はnmpを使用していましたが，実行段階でテーマが反映されなかったので，yarnの方に切り替えてます．
 ```
@@ -246,3 +250,8 @@ yarn dev
 - [VuePressで作ったblogに配布されているテーマを設定する](https://qiita.com/tomopict/items/9da7cf28c9bcd5f933cb)
 - [yarnをインストールする](https://qiita.com/suisui654/items/1b89446e03991c7c2c3d)
 
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

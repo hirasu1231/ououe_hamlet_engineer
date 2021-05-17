@@ -20,6 +20,10 @@ tags:
 学会講演［音声］のサンプル音声(aps-smp.mp3)をダウンロードします．
 
 
+
+## 目次
+[[toc]]
+
 ## 事前準備
 ここではSpeechRecognitionというモジュールを用いります．googleのAPIを間接的に利用します．<br>
 [Speech-to-Text 公式API](https://cloud.google.com/speech-to-text/docs/libraries#client-libraries-install-python)
@@ -167,3 +171,8 @@ mp4_to_text('＊＊＊＊＊＊.mp4')
 ## 参考サイト
 - [Pythonで音声からテキストへ変換](https://self-development.info/python%E3%81%A7%E9%9F%B3%E5%A3%B0%E3%81%8B%E3%82%89%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%81%B8%E5%A4%89%E6%8F%9B%E3%80%90speechrecognition%E3%80%91/)
 - [MacでpythonのSpeechRecognitionを使って音声認識](https://qiita.com/seigot/items/62a85f1a561bb820532a)
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

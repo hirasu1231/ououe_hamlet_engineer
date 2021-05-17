@@ -14,12 +14,17 @@ tags:
 
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## <u>目標達成</u>
 [引き寄せの法則は嘘だった！？](/mental/mental_care_001.html)<br>
 [自制心を高める記録術](/mental/SixWeeks02_study.html)<br>
 [自分をコントロールするテクニック](/mental/SixWeeks11_study.html)<br>
 [衝動を抑える7つの方法](/mental/SixWeeks12_study.html)<br>
 [意志力を2倍にする方法](/mental/SixWeeks13_study.html)<br>
+[ゲーミィフィケーションの基本1・基本2](/mental/SixWeeks16_study.html)<br>
 
 
 ***
@@ -45,3 +50,7 @@ tags:
 
 ## <u>睡眠</u>
 [睡眠の質を高める心理学](/mental/SixWeeks03_study.html)<br>
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

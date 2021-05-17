@@ -28,6 +28,10 @@ tags:
 <!-- <span style="color: #ff0000;"></span> -->
 
 
+
+## 目次
+[[toc]]
+
 ## メンタルマップ
 本を読み切るまでには，<span style="background-color: #ffff99;">興味を維持するしかない</span>とのことです．
 
@@ -93,3 +97,7 @@ Daigoさんはレストランのメニューで例えています．(文字だ�
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
 
 [人生が翌日から激変する【寝る前20分の使い方】](https://daigoblog.jp/20minutes-night/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

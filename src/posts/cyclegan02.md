@@ -23,6 +23,10 @@ Python + CycleGanでオリジナルデータでの学習を実装を目指して
 最終的に，実写モンハンのディアブロス亜種を原種に戻す試みをします．
 ![](/image/diablos_black.jpg)
 
+
+## 目次
+[[toc]]
+
 ## 作業ディレクトリのファイル構成
 プロジェクトディレクトリはdiablos_ganとしています．度々，省略しています．
 ```
@@ -134,3 +138,7 @@ Python + CycleGanでオリジナルデータでの学習を兼ねて，ディア
 
 ## 参考サイト
 [junyanz/pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)<br>
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

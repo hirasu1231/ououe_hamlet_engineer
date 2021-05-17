@@ -75,6 +75,7 @@ layout: Page
 ## <u>Nim</u>
 [Nimが対応したJupyterLabをDockerでインストールする](/posts/nim.html)<br>
 [Google ColaboratoryでNimを実行する](/posts/nimnim_01.html)<br>
+[Google ColaboratoryでNotebook風にNimを実行する](/posts/nimnim_02.html)<br>
 
 ---
 

@@ -36,6 +36,10 @@ youtube:[誘惑に4倍強くなる【闇の心理テク】](https://www.youtube.
 
 続きの動画1(後編)：[成功に必要な7つの能力【セルフレギュレーション】〜衝動を抑える7つの方法](https://daigovideolab.jp/play/1579708143)
 
+
+## 目次
+[[toc]]
+
 ## 人間が誘惑に勝つ
 - そもそも強い誘惑にはほぼ勝つことはできない
 - 誘惑の強さにかかわらず、人間が誘惑に勝つことができる確率は50%程度
@@ -83,3 +87,7 @@ youtube:[誘惑に4倍強くなる【闇の心理テク】](https://www.youtube.
 続きの動画2：[【減らない意志力】使えば使うほど強くなる意志の力を手に入れる方法【何度でも蘇るさ](https://daigovideolab.jp/play/1574015464)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

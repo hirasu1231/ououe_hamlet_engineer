@@ -17,6 +17,10 @@ Python, OpenCVを用いて，任意の秒数単位で動画のフレームを画
 ※注意：完全な趣味です・・・<br>
 先日，[ゴジラSPの新予告映像](https://www.youtube.com/watch?v=xVv3kouh4is)が解禁されました．そこには新規カットや新しい怪獣が多くあり，最初は動画いちいち一時停止してチェックしていましたが，面倒でしたので，上記のコードを作成します．<br>
 
+
+## 目次
+[[toc]]
+
 ## ファイル構成
 プロジェクトディレクトリはframe_mp4としています．度々，省略しています．
 ```
@@ -98,3 +102,7 @@ for file in files:
 
 ## 参考サイト
 [Python, OpenCVで動画ファイルからフレームを切り出して保存](https://note.nkmk.me/python-opencv-video-to-still-image/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

@@ -13,6 +13,10 @@ tags:
 VuepressのSEO関係の設定を実装します．本稿では，Google Search Console・サイトマップ・Googleアナリティクス・SEO・RSSの設定を実施します．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## ファイル構成
 ファイル構成は以下通りです．
 ```
@@ -274,3 +278,8 @@ OPGについては，また後日挑戦します．
 [vuepress-plugin-feed](https://github.com/webmasterish/vuepress-plugin-feed)<br>
 [VuePressのブログテーマ使ってみた。](https://inkohx.dev/2020/06/29/using-vuepress-blog-theme/)<br>
 [RSSとは？基本の仕組みと便利な使い方](https://uxmilk.jp/44993)<br>
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

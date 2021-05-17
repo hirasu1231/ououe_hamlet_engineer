@@ -15,6 +15,10 @@ Python＋Selenium＋Chromeのウェブスクレイピングで，ボタンクリ
 <!-- more -->
 
 
+
+## 目次
+[[toc]]
+
 ## ボタンクリック
 class名で取得しても，複数のボタンで同じクラス名が使用されているサイトもあるので，ボタンの文字列を指定してクリックするようなコードを実装しました．
 
@@ -36,3 +40,7 @@ Python＋Selenium＋Chromeのウェブスクレイピングで，ボタンクリ
 
 ## 参考サイト
 [Seleniumでボタンをクリックするときは、ボタンの文字列を取得するのがいい](https://nonenull.hatenablog.com/entry/2018/07/25/015453)<br>
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

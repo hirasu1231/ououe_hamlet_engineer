@@ -15,6 +15,10 @@ Python, OpenCVで指定した色の抽出と別の色への置換を実装しま
 本稿では，Cityscapesデータセットのカラーマスキング画像の内，人だけを抽出し，白色に置換します．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ### 特定の色を抽出する
 ここでは特定の色を抽出して，人のマスキングのみを残した画像を作成します．<br>
 人のマスキングのRGBは，[cityscapesScripts/cityscapesscripts/helpers/labels.py](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py)よりRGB=(220, 20, 60)となります．<br>
@@ -67,3 +71,7 @@ replace.png<br>
 [【python/OpenCV】画像の特定の色を抽出する方法](https://rikoubou.hatenablog.com/entry/2019/02/21/190310)<br>
 [PIL/Pillowで画像の色を高速に置換する](https://qiita.com/pashango2/items/d6dda5f07109ee5b6163)<br>
 [【OpenCV】 forループを使わずに指定した色を別の色に変更する](http://ni4muraano.hatenablog.com/entry/2017/05/15/000000)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

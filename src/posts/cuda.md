@@ -16,6 +16,10 @@ PythonでAI系をやっていると，CUDA・TensorFlow・PyTorchのversionの�
 本稿では，CUDAとTensorFlow，PyTorchのver対応について記述します．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## TensorFlowとの対応表について
 ![](/image/CUDA_tf.png)
 
@@ -82,3 +86,7 @@ watch -n 0.5 nvidia-smi
 ## 参考サイト
 - [PyTorchインストール時のCUDAバージョンの選び方](https://katsuwosashimi.com/archives/742/how-to-choose-CUDA-version-PyTorch/)
 - [TensorFlow GPU, CUDA, CuDNNのバージョン早見表](https://qiita.com/chin_self_driving_car/items/f00af2dbd022b65c9068)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

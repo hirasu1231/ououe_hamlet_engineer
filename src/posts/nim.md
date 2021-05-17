@@ -14,6 +14,10 @@ tags:
 Nimが扱えるJupyterLabをDockerにインストールします．
 <!-- more -->
 
+
+## 目次
+[[toc]]
+
 ## インストール
 [tsutomu7/nim](https://hub.docker.com/r/tsutomu7/nim/)のイメージをdocker-composeでPullします．<br>
 僕はdocker-compose.ymlを以下のように記述しました．
@@ -45,3 +49,8 @@ Nimが扱えるJupyterLabをDockerにインストールしました．<br>
 [Jupyterでnimを使おう](https://qiita.com/SaitoTsutomu/items/f79257430e2d8fcb9196)<br>
 [tsutomu7/nim](https://hub.docker.com/r/tsutomu7/nim/)<br>
 [Jupyter notebookでNimを使い，グラフの可視化まで](https://qiita.com/SatoshiTerasaki/items/281c578c47f8ee497f3c)
+
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

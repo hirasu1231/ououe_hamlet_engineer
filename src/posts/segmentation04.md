@@ -23,6 +23,10 @@ tags:
 最終的に，人以外の背景を着色して，zoomのバーチャル背景機能のようなクロマキー合成を実装したいです．<br>
 ![](/image/zoom.jpg)
 
+
+## 目次
+[[toc]]
+
 ## 作業ディレクトリのファイル構成
 プロジェクトディレクトリはsegmentationとしています．度々，省略しています．
 ```
@@ -318,3 +322,7 @@ cv2_imshow(dst)
 [PIL/Pillowで画像の色を高速に置換する](https://qiita.com/pashango2/items/d6dda5f07109ee5b6163)<br>
 [【OpenCV】 forループを使わずに指定した色を別の色に変更する](http://ni4muraano.hatenablog.com/entry/2017/05/15/000000)<br>
 [OpenCV – マスク画像を利用した画像処理について](https://pystyle.info/opencv-mask-image/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

@@ -16,6 +16,10 @@ Disqusと連携してVuepressにコメント機能を実装します．
 
 Githubとvuepress-comment-pluginを連携する手法もありますが，僕の場合，公式ドキュメント通りにしてもGithubとの連携ができなかったので，Disqusを使用します．
 
+
+## 目次
+[[toc]]
+
 ## ファイル構成
 ファイル構成は以下通りです．
 ```
@@ -154,3 +158,7 @@ Disqusと連携してVuepressにコメント機能を実装しました．
 [Vuepress に DISQUS でコメント欄をつける](https://passe-de-mode.uedasoft.com/ja/tips/software/frontend/vuepress/vuepress03.html)
 
 [Disqusのコメントを承認制にする方法](https://hamazof.com/2019/06/17/disqus_comment_syouninsei/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

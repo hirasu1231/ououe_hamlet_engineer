@@ -24,6 +24,10 @@ tags:
 最終的に，人以外の背景を着色して，zoomのバーチャル背景機能のようなクロマキー合成を実装したいです．<br>
 ![](/image/zoom.jpg)
 
+
+## 目次
+[[toc]]
+
 ## 作業ディレクトリのファイル構成
 プロジェクトディレクトリはsegmentationとしています．度々，省略しています．
 ```
@@ -462,3 +466,7 @@ Cityscapesデータセットの人は立っている状態ばかりなので，�
 [【python/OpenCV】画像の特定の色を抽出する方法](https://rikoubou.hatenablog.com/entry/2019/02/21/190310)<br>
 [PIL/Pillowで画像の色を高速に置換する](https://qiita.com/pashango2/items/d6dda5f07109ee5b6163)<br>
 [【OpenCV】 forループを使わずに指定した色を別の色に変更する](http://ni4muraano.hatenablog.com/entry/2017/05/15/000000)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

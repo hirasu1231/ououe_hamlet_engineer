@@ -20,6 +20,10 @@ COCOデータセットから特定のクラスを抽出できるようにした�
 プログラムはJupyter Notebook形式で作成しています．<br>
 最終的に，Youtubeの[平成24年 元旦配達出発式](https://www.youtube.com/watch?v=wnRH3-CIk4I)のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．
 
+
+## 目次
+[[toc]]
+
 ## ダウンロード後のファイル構成
 ```
 dataset
@@ -310,3 +314,7 @@ COCOデータセットから特定のクラスを抽出できるようにした�
 [Google Colab上でdarknet（YOLO）を使って物体を数える【画像認識】](https://wakuphas.hatenablog.com/entry/2018/09/19/025941)<br>
 [Python, OpenCVで画像ファイルの読み込み、保存（imread, imwrite）](https://note.nkmk.me/python-opencv-imread-imwrite/)<br>
 [Python, OpenCVで図形描画（線、長方形、円、矢印、文字など）](https://note.nkmk.me/python-opencv-draw-function/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

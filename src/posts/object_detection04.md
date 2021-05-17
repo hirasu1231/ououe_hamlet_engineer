@@ -24,6 +24,10 @@ COCOデータセットから特定のクラスの画像を抽出し，アノテ�
 
 最終的に，Youtubeの[平成24年 元旦配達出発式](https://www.youtube.com/watch?v=wnRH3-CIk4I)のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．
 
+
+## 目次
+[[toc]]
+
 ## Google Colabのファイル構成
 プロジェクトディレクトリはpost_bikeとしています．度々，省略しています．
 ```
@@ -411,3 +415,7 @@ Unable to init server: Could not connect: Connection refused
 
 (chart_yolov4_bike.png:526): Gtk-WARNING **: 12:49:27.135: cannot open display
 ```
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>

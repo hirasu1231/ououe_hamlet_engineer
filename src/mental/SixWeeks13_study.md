@@ -32,6 +32,10 @@ youtube：[意志力を2倍にする方法](https://www.youtube.com/watch?v=ffVO
 
 D-Lab：[【減らない意志力】使えば使うほど強くなる意志の力を手に入れる方法](https://daigovideolab.jp/play/1574015464)
 
+
+## 目次
+[[toc]]
+
 ## 意思力=セルフコントロール能力
 - 意思力(セルフコントロール能力)=やるべきことに集中でき、やってはいけないことにとらわれない能力
 - 意思力(セルフコントロール能力)が高い=計画的に行動することができて、長期的な視点で行動することができる
@@ -88,3 +92,7 @@ youtube：[意志力を2倍にする方法](https://www.youtube.com/watch?v=ffVO
 D-Lab：[【減らない意志力】使えば使うほど強くなる意志の力を手に入れる方法](https://daigovideolab.jp/play/1574015464)
 
 [【本気で人生を変える】カリフォルニア大学式6週間人生改造プログラム](https://daigoblog.jp/pushing-thelimits/)
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
