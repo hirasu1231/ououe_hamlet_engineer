@@ -23,7 +23,7 @@ tags:
 引用元：[Google Colabの使い方](https://interface.cqpub.co.jp/ail01/)
 
 
-## 目次
+
 [[toc]]
 
 ## Google Colabのファイル構成

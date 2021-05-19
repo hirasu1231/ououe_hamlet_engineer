@@ -132,5 +132,4 @@ export default {
       transition all .5s ease-in-out
       @media (prefers-color-scheme: dark)
         color $textDarkColor
-
 </style>

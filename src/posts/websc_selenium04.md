@@ -19,7 +19,7 @@ Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動�
 今回は練習でしたものですので，多分に悪ふざけが入っていますし，def文でまとめてはいません．
 
 
-## 目次
+
 [[toc]]
 
 ## selenium.webdriverの起動

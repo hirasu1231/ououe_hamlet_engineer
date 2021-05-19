@@ -16,7 +16,7 @@ Python＋Selenium＋Chromeのウェブスクレイピングでは，by_class_nam
 
 
 
-## 目次
+
 [[toc]]
 
 ## by_css_selectorを使用

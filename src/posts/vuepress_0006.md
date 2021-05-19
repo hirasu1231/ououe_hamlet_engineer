@@ -17,7 +17,7 @@ Disqusと連携してVuepressにコメント機能を実装します．
 Githubとvuepress-comment-pluginを連携する手法もありますが，僕の場合，公式ドキュメント通りにしてもGithubとの連携ができなかったので，Disqusを使用します．
 
 
-## 目次
+
 [[toc]]
 
 ## ファイル構成

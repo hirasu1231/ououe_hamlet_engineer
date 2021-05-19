@@ -85,6 +85,66 @@
   margin 16
   padding 10
 
+/*目次に太いライン*/
+.table-of-contents
+    position relative
+    margin 0
+    padding 1em 1.2em 1em
+    background #fff
+    font-size 100%
+    border-top solid 40px #5eb58e
+    border-right solid 3px #5eb58e
+    border-bottom solid 3px #5eb58e
+    border-left solid 3px #5eb58e
+    border-radius 4px
+
+.table-of-contents::before
+    content "目次"
+    position absolute
+    top -33px
+    left 20px
+    margin 0 0 .8rem
+    padding 0 0 .4rem
+    color #fff
+    border none
+    font-size 120%
+
+.table-of-contents li
+    margin .2em 0 1em 1em
+    list-style-type decimal
+    line-height 1.6em
+
+.table-of-contents li ul
+    margin 0 0 1em .5em
+    padding 0
+
+.table-of-contents li ul li
+    margin .2em 0 0 1em
+    list-style-type disc
+
+.table-of-contents li ul li ul li
+    list-style-type circle
+
+.table-of-contents li a
+    line-height 1.6em
+
+.table-of-contents a
+    color #454545
+    text-decoration underline
+
+/*番号を自動でふる*/
+body {
+    counter-reset: chapter;
+}
+
+h2 {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
 
 @media print
   .tip, .warning, .danger

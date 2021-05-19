@@ -15,7 +15,7 @@ Nimが扱えるJupyterLabをDockerにインストールします．
 <!-- more -->
 
 
-## 目次
+
 [[toc]]
 
 ## インストール

@@ -13,7 +13,7 @@ WordpressやHTMLでブログを作成するんが面倒になったので，Vuep
 <!-- more -->
 
 
-## 目次
+
 [[toc]]
 
 ## yarnのインストール

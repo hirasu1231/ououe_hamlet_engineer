@@ -33,7 +33,7 @@ tags:
 D-Lab：[若い時にやると人生変わる8つのこと 【前編】](https://daigovideolab.jp/play/R21CWTBQCbDTQuZ2hfX6)
 
 
-## 目次
+
 [[toc]]
 
 ## 1. 読書

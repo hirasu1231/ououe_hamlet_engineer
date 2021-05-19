@@ -14,7 +14,7 @@ VuepressのSEO関係の設定を実装します．本稿では，Google Search C
 <!-- more -->
 
 
-## 目次
+
 [[toc]]
 
 ## ファイル構成

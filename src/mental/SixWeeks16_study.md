@@ -2,7 +2,7 @@
 display: home
 title: '[3週目2日目_座学]ゲーミィフィケーションの基本1・基本2'
 description: 本稿では，youtubeで公開されている[チュートリアル・スニペット・損失回避【ゲーミィフィケーションの基本1】](https://daigovideolab.jp/play/wM94dzd1W9wFqg43Rnsr)について，整理します．
-date: 2021-05-17
+date: 2021-05-18
 image: https://www.hamlet-engineer.com/image/kiroku.jpeg
 categories: 
   - メンタル
@@ -31,7 +31,7 @@ D-Lab1：[チュートリアル・スニペット・損失回避【ゲーミィ�
 D-Lab2：[進展フィードバック、テーマ化、ストーリーシェアリング【仕事をゲーム化するゲーミィフィケーション】](https://daigovideolab.jp/play/HUzmomReYlfrOgatqo87)
 
 
-## 目次
+
 [[toc]]
 
 
