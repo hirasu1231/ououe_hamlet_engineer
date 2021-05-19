@@ -7,7 +7,7 @@ image: https://www.hamlet-engineer.com/image/kiroku.jpeg
 categories: 
   - メンタル
 tags:
-  - 自分を変える
+  - ゲーミィフィケーション
   - 座学
 ---
 
