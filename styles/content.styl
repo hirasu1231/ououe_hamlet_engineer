@@ -1,5 +1,6 @@
 .content,
 .markdown-body
+  counter-reset chapter
   padding: 3rem
   font-size: 16px
   a
@@ -84,11 +85,16 @@
     font-size 2em
 
   h2
+    counter-reset section
     margin: 1.5rem 0 1rem
     font-size 1.65em
     &+p
       @media print
         page-break-before avoid
+
+  h2::before
+    counter-increment chapter
+    content counter(chapter) ". "
 
   h3
     margin: 1rem 0
