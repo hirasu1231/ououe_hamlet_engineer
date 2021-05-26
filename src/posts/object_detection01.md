@@ -13,15 +13,24 @@ tags:
   - YOLO
 ---
 YOLO・SSDの物体検出の実施のために，まずCOCOデータセットをダウンロードし，特定のクラスだけを抽出します．<br>
+
 <!-- more -->
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
 
 COCOデータセットは物体検出・セグメーテーション等の学習に使え，無料で大量に公開されているデータセットです．<br>
 プログラムはJupyter Notebook形式で作成しています．<br>
 最終的に，Youtubeの[平成24年 元旦配達出発式](https://www.youtube.com/watch?v=wnRH3-CIk4I)のIDを振り分けるトラッキングも含めたバイクのカウントを実施します．
 
-
-
 [[toc]]
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 ## COCOデータセットのダウンロード
 [mkocabas/coco.sh](https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9)のcoco.shを実行し，COCOデータセットをダウンロードします．<br>
@@ -135,6 +144,13 @@ for anno_info in pic["annotations"][0:1000]:
 [coco 公式HP](https://cocodataset.org/#download)<br>
 [mkocabas/coco.sh](https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9)<br>
 [画像を扱う機械学習のためのデータセットまとめ](https://qiita.com/leetmikeal/items/7c0d23e39bf38ab8be23)<br>
+
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 <ClientOnly>
   <CallInArticleAdsense />

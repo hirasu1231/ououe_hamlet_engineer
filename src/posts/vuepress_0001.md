@@ -10,11 +10,20 @@ tags:
   - Vuepress
 ---
 WordpressやHTMLでブログを作成するんが面倒になったので，Vuepressでの作成に移行しました．
+
 <!-- more -->
 
-
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
 
 [[toc]]
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 ## yarnのインストール
 Vuepressのテーマのインストール，Vuepressの実行等ではnmpか，yarnのどちらかを使用しているサイトが多い．私は最初はnmpを使用していましたが，実行段階でテーマが反映されなかったので，yarnの方に切り替えてます．
@@ -251,6 +260,11 @@ yarn dev
 - [yarnをインストールする](https://qiita.com/suisui654/items/1b89446e03991c7c2c3d)
 
 
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 <ClientOnly>
   <CallInArticleAdsense />

@@ -14,11 +14,19 @@ Disqusと連携してVuepressにコメント機能を実装します．
 
 <!-- more -->
 
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
+
 Githubとvuepress-comment-pluginを連携する手法もありますが，僕の場合，公式ドキュメント通りにしてもGithubとの連携ができなかったので，Disqusを使用します．
 
-
-
 [[toc]]
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 ## ファイル構成
 ファイル構成は以下通りです．
@@ -158,6 +166,12 @@ Disqusと連携してVuepressにコメント機能を実装しました．
 [Vuepress に DISQUS でコメント欄をつける](https://passe-de-mode.uedasoft.com/ja/tips/software/frontend/vuepress/vuepress03.html)
 
 [Disqusのコメントを承認制にする方法](https://hamazof.com/2019/06/17/disqus_comment_syouninsei/)
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 <ClientOnly>
   <CallInArticleAdsense />

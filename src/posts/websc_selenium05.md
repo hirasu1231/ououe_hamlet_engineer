@@ -12,12 +12,22 @@ tags:
   - ウェブスクレイピング
 ---
 Python＋Selenium＋Chromeのウェブスクレイピングでは，by_class_nameでスペースが入った要素を取得することができませんので，取得できる手法を紹介します．<br>
+
+
 <!-- more -->
 
-
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
 
 
 [[toc]]
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 ## by_css_selectorを使用
 メソッドを<span style="background-color: #ffff99;">by_class_name</span>ではなく<span style="background-color: #ffff99;">by_css_selector</span>にして，取得します．
@@ -63,6 +73,12 @@ by_class_nameでスペースが入った要素を取得するために，<span s
 ## 参考サイト
 [seleniumでby_class_nameでスペースが入った要素が取得できずエラーになる時の対処法](https://qiita.com/hanonaibaobabu/items/e547410865d857aa25ec)<br>
 [<Python, selenium> 空白のあるクラス名を選択するには、、](https://nekoyukimmm.hatenablog.com/entry/2017/05/09/090117)<br>
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 <ClientOnly>
   <CallInArticleAdsense />

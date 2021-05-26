@@ -12,15 +12,24 @@ tags:
   - ウェブスクレイピング
 ---
 Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードします．本稿では，OfflibertyをSeleniumでダウンロードします<br>
+
 <!-- more -->
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
 
 前回までの[甘茶の音楽工房のダウンロード](https://www.hamlet-engineer.com/posts/websc_selenium01.html)を実施していましたが，せっかくなのでseleniumをとうしたブラウザの操作をしてみます．<br>
 本稿では，[Offliberty](http://offliberty.io)というYouTubeのURLをコピペすればダウンロードできるサイトがあったので，これの操作をSeleniumでします．<br>
 今回は練習でしたものですので，多分に悪ふざけが入っていますし，def文でまとめてはいません．
 
-
-
 [[toc]]
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 ## selenium.webdriverの起動
 selenium.webdriverの起動は本サイトの[Python＋Docker＋Selenium＋Chromeでウェブスクレイピングをする part3](https://hirasu1231.github.io/hamlet_engineer/posts/2021/02/13/websc-selenium03.html)で作成したものを使います．
@@ -202,6 +211,12 @@ seleniumに慣れるために，[offliberty](http://offliberty.io)というyoutu
 [Python + Selenium + Chrome でファイル保存まわり](https://qiita.com/memakura/items/f80d2e2c59514cfc14c9)<br>
 [Python/SeleniumでChrome自動Google検索](https://watlab-blog.com/2019/08/11/selenium-google-search/)
 
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 <ClientOnly>
   <CallInArticleAdsense />

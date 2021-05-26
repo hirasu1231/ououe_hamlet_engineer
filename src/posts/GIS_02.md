@@ -14,13 +14,23 @@ tags:
 兵庫県がオープンデータで「DSM」を公開しているので，QGISで3D地図を描画します．
 
 QGISのversionは3.18です．
+
 <!-- more -->
+
+<ClientOnly>
+  <CallInArticleAdsense />
+</ClientOnly>
 
 ２〜３は，「[QGIS3で兵庫県の「DSM」から標高で色分けした地図を描画する](https://www.hamlet-engineer.com/posts/GIS_01.html)」と同じ内容です．
 
 
-
 [[toc]]
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 ## １：ファイル構成
 ```
@@ -193,6 +203,13 @@ QGISで兵庫県の「DSM」の3D地図を描画しました．
 [兵庫県_全域数値地形図_ポータル](https://www.geospatial.jp/ckan/dataset/2010-2018-hyogo-geo-potal)
 
 [兵庫県_DSM](https://www.geospatial.jp/ckan/dataset/2010-2018-hyogo-geo-dsm/resource/5473fd75-0bcc-423b-960d-99ab37b25bff)
+
+
+<!-- TechAcademy -->
+<a href="//af.moshimo.com/af/c/click?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0866/000000029835.jpg" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2604050&p_id=1555&pc_id=2816&pl_id=29835" width="1" height="1" style="border:none;">
+
+<!-- テックキャンプ -->
+<a href="//af.moshimo.com/af/c/click?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1115/000000025847.png" width="728" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2641145&p_id=1770&pc_id=3386&pl_id=25847" width="1" height="1" style="border:none;">
 
 <ClientOnly>
   <CallInArticleAdsense />
