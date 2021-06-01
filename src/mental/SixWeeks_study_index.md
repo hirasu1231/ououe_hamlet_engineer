@@ -40,6 +40,7 @@ tags:
 [若い時にやると人生変わる8つのこと 【前編】](/mental/SixWeeks07_study.html)<br>
 [若い時にやると人生変わる8つのこと 【後編】](/mental/SixWeeks08_study.html)<br>
 [悲劇的逆境から立ち直るための7つの習慣](/mental/SixWeeks14_study.html)<br>
+[逆境力の高い人の10の特徴](/mental/SixWeeks15_study.html)<br>
 
 ***
 
@@ -48,8 +49,35 @@ tags:
 [心理学者が選ぶ【最強の話術】](/mental/SixWeeks09_study2.html)<br>
 [5分間ネットワーキングトレーニング](/mental/SixWeeks10_study.html)<br>
 
+***
+
 ## <u>睡眠</u>
 [睡眠の質を高める心理学](/mental/SixWeeks03_study.html)<br>
+
+***
+
+## <u>ゲーミィフィケーション</u>
+[ゲーミィフィケーションの基本1・基本2](/mental/SixWeeks16_study.html)<br>
+[ゲーミィフィケーションの基本3・基本4](/mental/SixWeeks17_study.html)<br>
+
+***
+
+## <u>人間関係</u>
+[人の読み方①インスタントビッグファイブ入門](/mental/SixWeeks18_study.html)<br>
+[人を読む力②ヒトを見抜く直感の磨きかた](/mental/SixWeeks19_study.html)<br>
+[人の読み方③ダークパーソナリティの見抜き方](/mental/SixWeeks20_study.html)<br>
+[人の読み方④友達になると人生変わるブライトパーソナリティ](/mental/SixWeeks21_study.html)<br>
+[人の読み方⑤自分だけの生き方と働き方の見つけ方](/mental/SixWeeks22_study.html)<br>
+[人の読み方⑥ 5つの戦略でむしろ最強繊細な人の勝ち方](/mental/SixWeeks23_study.html)<br>
+[人の読み方⑦7つの神性格〜身につけたら全てが変わる最高の性格](/mental/SixWeeks24_study.html)<br>
+[人の読み方⑧ストレスに強い性格と痩せる性格の作り方](/mental/SixWeeks25_study.html)<br>
+
+***
+
+## <u>時間富豪</u>
+[時間に余裕がない人がハマる6つの罠](/mental/SixWeeks27_study.html)<br>
+[人生変わる7つの時間感覚改善ツール【時間貧困対策・前半】](/mental/SixWeeks28_study.html)<br>
+[時間をアイデアで買う5つの習慣【時間貧困対策・後半】](/mental/SixWeeks29_study.html)<br>
 
 <ClientOnly>
   <CallInArticleAdsense />
