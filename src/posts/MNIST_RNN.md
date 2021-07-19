@@ -2,7 +2,7 @@
 display: home
 title: 'MNISTの分類問題をRNN(Recurrent Neural Network)で実装する'
 description: RNN(Recurrent Neural Network)にも手を出すために，初心者用としてMNISTの分類問題を実装します．
-date: 2021-06-15
+date: 2021-07-19
 image: https://www.hamlet-engineer.com/image/rnn_model.png
 categories: 
   - Python
