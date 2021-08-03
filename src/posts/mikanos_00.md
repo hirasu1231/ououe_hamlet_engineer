@@ -107,15 +107,7 @@ cp Conf/target.txt /workspaces/mikanos-devcontainer/target.txt
 ```
 
 ### Hello World
-環境構築確認のために，Hello Worldのコードを本の解説を見ながら自作するのは重たい作業なので，[uchan-nos/mikanos-build](https://github.com/uchan-nos/mikanos-build)からクローンします．(ここでのディレクトリ名はosbook)
-
-```bash
-# 実行場所は/workspaces/mikanos-devcontainer/
-git clone https://github.com/uchan-nos/mikanos-build.git osbook
-
-ls
-# mikanos  osbook  README.md  target.txt
-```
+環境構築確認のために，Hello Worldのコードを本の解説を見ながら自作するのは重たい作業なので，あらかじめクローンされている[uchan-nos/mikanos-build](https://github.com/uchan-nos/mikanos-build)を使用します．ディレクトリの場所は~/osbookです．
 
 ここからのコードの実行は，意味を調べずに機械的に実行します．(あくまでの環境構築の確認が目的なので)
 
@@ -146,6 +138,7 @@ qemu-system-x86_64 -drive if=pflash,file=$HOME/osbook/devenv/OVMF_CODE.fd -drive
 ## まとめ
 Mac + Dockerで「ゼロからのOS自作入門」の環境構築を実装しました．
 
+「ゼロからのOS自作入門」を進めていく上で，弊害が出た場合は逐次修正します．
 
 ## 参考サイト
 [Docker ではじめる "ゼロからのOS自作入門"](https://zenn.dev/sarisia/articles/6b57ea835344b6)
