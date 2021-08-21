@@ -2,7 +2,7 @@
 display: home
 title: 'YouTube Data API を使ってキーワード検索から動画のタイトル等の情報を取得する'
 description: YouTube Data API を使ってキーワード検索から動画のタイトル等の情報を取得します．
-date: 2021-08-21
+date: 2021-08-22
 image: https://www.hamlet-engineer.com/image/youtubeAPI.jpeg
 categories: 
   - Python
