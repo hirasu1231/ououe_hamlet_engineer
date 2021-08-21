@@ -1,7 +1,13 @@
 ---
-title: サイトマップ
-layout: Page
+display: home
+title: 'サイトマップ'
+date: 2025-01-01
+description: 本稿では，技術系の記事をまとめています．
+image: https://www.hamlet-engineer.com/image/sitemap.jpeg
+categories: 
+  - その他
 ---
+本稿では，技術系の記事をまとめています．
 
 <!-- more -->
 

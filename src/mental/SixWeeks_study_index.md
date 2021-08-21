@@ -2,7 +2,7 @@
 display: home
 title: '[メンタル_座学]過去記事のまとめ'
 description: 本稿では，D-Labで公開されている[コミュ障でもできる「5分間ネットワーキングトレーニング」](https://daigovideolab.jp/play/1525704925)について，整理します．
-date: 2025-01-01
+date: 2021-06-05
 image: https://www.hamlet-engineer.com/image/SixWeeks.png
 categories: 
   - メンタル
