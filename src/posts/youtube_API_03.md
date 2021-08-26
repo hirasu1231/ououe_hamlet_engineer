@@ -1,7 +1,7 @@
 ---
 display: home
-title: 'YouTube Data API を使ってキーワード検索から動画の再生回数等の情報を取得する'
-description: YouTube Data API を使ってキーワード検索から動画の再生回数等の情報を取得します．
+title: 'YouTube Data API を使って動画の再生回数等の情報を取得する'
+description: YouTube Data API を使って動画の再生回数等の情報を取得します．
 date: 2021-08-26
 image: https://www.hamlet-engineer.com/image/youtubeAPI.jpeg
 categories: 
@@ -12,7 +12,7 @@ tags:
   - YouTube_Data_API
 ---
 <!-- https://www.hamlet-engineer.com -->
-YouTube Data API を使ってキーワード検索から動画の再生回数等の情報を取得します．
+YouTube Data API を使って動画の再生回数等の情報を取得します．
 
 <!-- more -->
 

@@ -39,6 +39,7 @@ categories:
 ### YouTube Data API
 [YouTube Data API を使って1つの動画から様々な情報を取得する](/posts/youtube_API_01.html)<br>
 [YouTube Data API を使ってキーワード検索から動画のタイトル等の情報を取得する](/posts/youtube_API_02.html)<br>
+[YouTube Data API を使って動画の再生回数等の情報を取得する](/posts/youtube_API_03.html)<br>
 
 ### その他
 [CUDAとTensorFlow，PyTorchのversion対応について](/posts/cuda.html)<br>
