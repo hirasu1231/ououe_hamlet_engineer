@@ -4,7 +4,7 @@
   padding: 3rem
   font-size: 16px
   a
-    font-weight 500
+    font-weight 600
     color $accentColor
     text-decoration none
     transition color .5s ease-in-out
@@ -69,6 +69,8 @@
   h1, h2, h3, h4, h5, h6
     color $titleColor
     font-weight 600
+    margin-bottom 0.5em
+    margin-top 0.5em
     line-height 1.25
     transition color .5s ease-in-out
     @media (prefers-color-scheme: dark)
@@ -81,13 +83,13 @@
       page-break-before avoid
 
   h1
-    margin: 1.5rem 0
+    margin: 18px 0
     font-size 2em
 
   h2
     counter-reset sub-chapter;
-    margin: 1.5rem 0 1rem
-    font-size 1.65em
+    margin: 24px 0 24px
+    font-size 26px
     &+p
       @media print
         page-break-before avoid
@@ -97,8 +99,8 @@
     content counter(chapter) ". "
 
   h3
-    margin: 1rem 0
-    font-size 1.35em
+    margin: 18px 0
+    font-size 23px
 
   h3::before
     counter-increment: sub-chapter
@@ -127,20 +129,26 @@
       text-decoration none
 
   code, kbd, .line-number
-    font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+    /* source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace */
+    font-family source-code-pro
 
   p, ul, ol
-    margin: .6rem 0
+    font-size 17px
+    font-weight 500
+    margin-bottom 6px
     line-height 1.6
 
   p
-    font-size 1em
+    font-size 17px
+    font-weight 500
+    margin-top 12px
     color $textColor
     transition color .5s ease-in-out
     @media (prefers-color-scheme: dark)
       color $textDarkColor
     @media print
       color $textColor
+    display block
 
   img
     max-width: 100%
@@ -168,7 +176,7 @@
     &:nth-child(2n)
       background-color #f6f8fa
       @media (prefers-color-scheme: dark)
-        background-color #444
+        background-color #bbb
       @media print
         background-color transparent
 
