@@ -3,7 +3,7 @@ display: home
 title: 'C言語に対応したjupyter Labを実装する'
 description: C言語に対応したjupyter Labを実装します．
 date: 2021-09-09
-image: https://www.hamlet-engineer.com/image/youtubeAPI.jpeg
+image: https://www.hamlet-engineer.com/image/jupyter.png
 categories: 
   - Python
 tags:
