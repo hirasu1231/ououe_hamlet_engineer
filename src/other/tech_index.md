@@ -40,6 +40,10 @@ categories:
 [YouTube Data API を使って1つの動画から様々な情報を取得する](/posts/youtube_API_01.html)<br>
 [YouTube Data API を使ってキーワード検索から動画のタイトル等の情報を取得する](/posts/youtube_API_02.html)<br>
 [YouTube Data API を使って動画の再生回数等の情報を取得する](/posts/youtube_API_03.html)<br>
+[YouTube Data APIから得た情報からサムネイル画像をダウンロードする](/posts/youtube_API_04.html)<br>
+[YouTube Data API を使ってキーワード検索から動画の再生回数等の情報を取得し，可視化も実装する](/posts/youtube_API_05.html)<br>
+[YouTube Data API を使ってチャンネルIDから動画の情報を取得する](/posts/youtube_API_06.html)<br>
+[YouTube Data API を使って再生リストから動画の再生回数等の情報を取得する](/posts/youtube_API_07.html)<br>
 
 ### その他
 [CUDAとTensorFlow，PyTorchのversion対応について](/posts/cuda.html)<br>
@@ -99,6 +103,13 @@ categories:
 ## <u>文字起こし</u>
 [pythonで音声からの文字起こしを実装する](/posts/mojiokoshi.html)<br>
 [pythonで長い音声・動画からの文字起こしを実装する](/posts/mojiokoshi_long.html)<br>
+
+---
+
+## <u>音響</u>
+[Python + CycleGAN-VC2で音質変換を実装する](/posts/VoiceConversion01.html)<br>
+[Python + CycleGAN-VC2でオリジナルデータにおける音質変換を実装する](/posts/VoiceConversion02.html)<br>
+[Python + Google Colab + Spleeterで楽器と人の声を分離する音源分離を実装する](/posts/sound_separation.html)<br>
 
 ---
 
