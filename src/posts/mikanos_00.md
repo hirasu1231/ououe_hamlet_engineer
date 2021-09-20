@@ -133,7 +133,7 @@ sudo umount mnt
 
 バイナリファイルを書き込んだイメージをQEMUで読み込み起動します．(XQuartzに表示される)
 ```bash
-qemu-system-x86_64 -drive if=pflash,format=raw,file=$HOME/osbook/devenv/OVMF_CODE.fd -drive if=pflash,format=raw,file=$HOME/osbook/devenv/OVMF_VARS.fd -hda disk.img
+qemu-system-x86_64 -drive if=pflash,format=raw,file=$HOME/osbook/devenv/OVMF_CODE.fd -drive if=pflash,format=raw,file=$HOME/osbook/devenv/OVMF_VARS.fd -drive file=disk.img,format=raw,index=0,media=disk
 ```
 
 ![](/image/xquartz_hello.png)
