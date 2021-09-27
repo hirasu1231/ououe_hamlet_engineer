@@ -3,7 +3,7 @@ display: home
 title: 'Python＋Docker＋Selenium＋Chromeでウェブスクレイピングをする part1'
 description: Python＋Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，一通りの設定を実施します．
 date: 2021-02-11
-image: https://www.hamlet-engineer.com/image/selenium.jpg
+image: https://www.hamlet-engineer.com/image/amacha.jpeg
 categories: 
   - Python
 tags:
@@ -12,8 +12,8 @@ tags:
   - Docker
   - ウェブスクレイピング
 ---
-Python＋Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，一通りの設定を実施します．<br>
 
+Python＋Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，一通りの設定を実施します．<br>
 
 <!-- more -->
 
