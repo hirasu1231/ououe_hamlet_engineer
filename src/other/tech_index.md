@@ -45,11 +45,19 @@ categories:
 [YouTube Data API を使ってチャンネルIDから動画の情報を取得する](/posts/youtube_API_06.html)<br>
 [YouTube Data API を使って再生リストから動画の再生回数等の情報を取得する](/posts/youtube_API_07.html)<br>
 
+### データ分析
+[データ可視化ライブラリ Altairを使ってみる(クロス集計編)](/posts/Altair01.html)<br>
+[データ可視化ライブラリ Altairを使ってみる(時系列データ編)](/posts/Altair02.html)<br>
+[matplotlibで日本語表示を実施する](/posts/matplotlib_japanese.html)<br>
+
 ### その他
 [CUDAとTensorFlow，PyTorchのversion対応について](/posts/cuda.html)<br>
 [JupyterLabに17言語を対応させる](/posts/jupyter_langs.html)<br>
 [MNISTの分類問題をRNN(Recurrent Neural Network)で実装する](/posts/MNIST_RNN.html)<br>
 [MNISTの分類問題をLSTM(Long short-term memory)で実装する](/posts/MNIST_LSTM.html)<br>
+[CNNのアルゴリズムを一通りまとめたdeepgazeについて整理する](/posts/deepgaze.html)<br>
+[C言語に対応したjupyter Labを実装する](/posts/clang_jupyter.html)<br>
+
 
 ---
 
@@ -97,6 +105,10 @@ categories:
 
 ## <u>機械翻訳</u>
 [Python＋Selenium＋ChromeでDeepLの翻訳を実行する](/posts/DeepL.html)<br>
+[Pythonで英文のPDFをレイアウトを維持したまま翻訳してみる](/posts/pdf_translate_01.html)<br>
+[Pythonで英文をTransformer(BERT)で翻訳してみる](/posts/pdf_translate_02.html)<br>
+[Python + BERTで英文のPDFをレイアウトを維持したまま翻訳してみる](/posts/pdf_translate_03.html)<br>
+[Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードする](/posts/arxiv_download.html)<br>
 
 ---
 
@@ -128,7 +140,8 @@ categories:
 ---
 
 ## <u>OS</u>
-[QMac + Dockerで「ゼロからのOS自作入門」の環境構築を実装する](/posts/mikanos_00.html)<br>
+[Mac + Dockerで「ゼロからのOS自作入門」の環境構築を実装する](/posts/mikanos_00.html)<br>
+[「ゼロからのOS自作入門」2章 EDKⅡでHello worldを実行する(前編)](/posts/mikanos_01.html)<br>
 
 
 <ClientOnly>
