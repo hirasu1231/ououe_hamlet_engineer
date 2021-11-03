@@ -293,14 +293,14 @@ if __name__ == '__main__':
 **変換前の動画**
 
 <video width="640" height="360" controls>
-  <source src="/video/gegege4OP.mp4" type="video/mp4">
+  <source src="/video/gegege4OP.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 **変換後の動画**
 
 <video width="640" height="360" controls>
-  <source src="/video/gegege4OP_out.mp4" type="video/mp4">
+  <source src="/video/gegege4OP_out.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
