@@ -3,7 +3,7 @@ display: home
 title: 'Python + CycleGAN-VC2で音質変換を実装する'
 description: Clubhouseの影響で音質系に興味を持ちました．本稿では，Python + CycleGAN-VC2で音質変換を実施します．
 date: 2021-08-31
-image: https://www.hamlet-engineer.com/image/tenni.png
+image: https://www.hamlet-engineer.com/image/VC.png
 categories: 
   - Python
 tags:
