@@ -35,6 +35,8 @@ categories:
 ### OpenCV
 [Python, OpenCVで好きな動画ファイルからフレームを切り出して保存します](/posts/frame_mp4.html)<br>
 [Python, OpenCVで指定した色の抽出と別の色への置換を実装する](/posts/color_replace.html)<br>
+[Python + Opencvでアニメをラフ画のような線画に変換する](/posts/lineart.html)<br>
+[Pillow ↔ OpenCVの変換を実装する](/posts/pil_cv2.html)<br>
 
 ### YouTube Data API
 [YouTube Data API を使って1つの動画から様々な情報を取得する](/posts/youtube_API_01.html)<br>
@@ -57,7 +59,9 @@ categories:
 [MNISTの分類問題をLSTM(Long short-term memory)で実装する](/posts/MNIST_LSTM.html)<br>
 [CNNのアルゴリズムを一通りまとめたdeepgazeについて整理する](/posts/deepgaze.html)<br>
 [C言語に対応したjupyter Labを実装する](/posts/clang_jupyter.html)<br>
-
+[映画「CUBE」を楽しむプログラミングを構築してみた](/posts/cube.html)<br>
+[PythonでPDFの切り取りを実装する](/posts/pdf_crop.html)<br>
+[Pythonでyoutubeから字幕情報を抽出する](/posts/youtube_subtitle.html)<br>
 
 ---
 
@@ -109,12 +113,14 @@ categories:
 [Pythonで英文をTransformer(BERT)で翻訳してみる](/posts/pdf_translate_02.html)<br>
 [Python + BERTで英文のPDFをレイアウトを維持したまま翻訳してみる](/posts/pdf_translate_03.html)<br>
 [Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードする](/posts/arxiv_download.html)<br>
+[Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードし，翻訳も実施する](/posts/arxiv_download_tanslate.html)<br>
 
 ---
 
 ## <u>文字起こし</u>
 [pythonで音声からの文字起こしを実装する](/posts/mojiokoshi.html)<br>
 [pythonで長い音声・動画からの文字起こしを実装する](/posts/mojiokoshi_long.html)<br>
+[Python + ESPnetで日本語の文字起こし(ASR)を実装する](/posts/ESPnetASR.html)<br>
 
 ---
 
@@ -122,6 +128,13 @@ categories:
 [Python + CycleGAN-VC2で音質変換を実装する](/posts/VoiceConversion01.html)<br>
 [Python + CycleGAN-VC2でオリジナルデータにおける音質変換を実装する](/posts/VoiceConversion02.html)<br>
 [Python + Google Colab + Spleeterで楽器と人の声を分離する音源分離を実装する](/posts/sound_separation.html)<br>
+
+---
+
+## <u>画像変換</u>
+[Anime2Sketchでアニメ画像から線画への変換を実装する](/posts/Anime2Sketch.html)<br>
+[Real-ESRGANを用いて画像を高画質化する](/posts/Real_ESRGAN01.html)<br>
+[Real-ESRGANを用いて動画を高画質化する](/posts/Real_ESRGAN02.html)<br>
 
 ---
 
@@ -142,6 +155,8 @@ categories:
 ## <u>OS</u>
 [Mac + Dockerで「ゼロからのOS自作入門」の環境構築を実装する](/posts/mikanos_00.html)<br>
 [「ゼロからのOS自作入門」2章 EDKⅡでHello worldを実行する(前編)](/posts/mikanos_01.html)<br>
+[「ゼロからのOS自作入門」2章 メモリ情報を出力しながらでHello worldを実行する(後編)](/posts/mikanos_02.html)<br>
+[「ゼロからのOS自作入門」3章 3.1〜3.3を実行する(前編)](mikanos_03_01.html)<br>
 
 
 <ClientOnly>
