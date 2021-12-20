@@ -3,7 +3,7 @@ display: home
 title: 'Python + ESPnetで日本語の文字起こし(ASR)を実装する'
 description: Python + ESPnetで日本語の文字起こし(ASR)を実施します．
 date: 2021-11-20
-image: https://www.hamlet-engineer.com/image/mojiokoshi.png
+image: https://www.hamlet-engineer.com/image/mojiokoshi_AI.png
 categories: 
   - Python
 tags:
