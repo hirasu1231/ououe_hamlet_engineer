@@ -1,6 +1,6 @@
 ---
 display: home
-title: 'TransformerTTS + MelGANでテキストからの音声の生成の学習を実装する'
+title: 'TransformerTTS + MelGANでテキストからの音声の生成の学習を実装する(学習編)'
 description: TransformerTTS + MelGANでテキストからの音声の生成の学習を実施します．
 date: 2021-12-27
 image: https://www.hamlet-engineer.com/image/TTS.jpeg
