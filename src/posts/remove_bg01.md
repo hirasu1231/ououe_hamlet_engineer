@@ -2,7 +2,7 @@
 display: home
 title: 'Pytorchで学習済みモデルによる背景削除を実装する'
 description: Pytorchで学習済みモデルによる背景削除を実装します．
-date: 2021-01-8
+date: 2022-01-8
 image: https://www.hamlet-engineer.com/image/remove_bg.png
 categories: 
   - Python
