@@ -4,7 +4,7 @@ description: 近年では引き寄せの法則は嘘であるという研究結�
 date: 2021-04-10
 image: https://www.hamlet-engineer.com/image/hikiyose.png
 categories: 
-  - メンタル
+  - 勉強
 tags:
   - 目標達成
 ---

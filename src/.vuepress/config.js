@@ -3,8 +3,20 @@ module.exports = {
   head: [
     ['meta', { name: 'google-site-verification', content: 'BDXGk8FJfikB_I6Pyxv35Zc87jBMziCgRMvmpNDpdYA' }],
     // google-adsense
-    ["script",{"data-ad-client": "ca-pub-2263820744635038", async: true, src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}],
+    // ["script",{"data-ad-client": "ca-pub-2263820744635038", async: true, src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}],
+    [
+      "script",
+      {
+        "async src": "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      }
     ],
+    [
+      "script",
+      {},
+      '(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: "ca-pub-2263820744635038",  enable_page_level_ads: true });'
+    ]
+  ],
+  ],
   // プラグイン
   plugins: {
     // サイトマップ(案内図)
@@ -80,7 +92,7 @@ module.exports = {
     lang: {
       home: 'ホーム',
       posts: '技術',
-      mental: 'メンタル',
+      study: '勉強',
       other: 'その他',
       category: 'カテゴリー',
       categories: 'カテゴリー',
@@ -98,7 +110,7 @@ module.exports = {
       { text: 'ホーム', link: '/' },
       { text: 'ページ集', link: '/about/' },
       { text: '技術', link: '/posts/' },
-      { text: 'メンタル', link: '/mental/' },
+      { text: '勉強', link: '/study/' },
       { text: 'その他', link: '/other/' },
       { text: 'タグ', link: '/tag/' },
       { text: 'カテゴリ', link: '/category/' },

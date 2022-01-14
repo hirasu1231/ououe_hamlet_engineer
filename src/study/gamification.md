@@ -5,7 +5,7 @@ description: 6週間プログラムの座学で，「ゲーミィフィケーシ
 date: 2021-05-19
 image: https://www.hamlet-engineer.com/image/gamification.png
 categories: 
-  - その他
+  - 勉強
 tags:
   - ゲーミィフィケーション
 ---

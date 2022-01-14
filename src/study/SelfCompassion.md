@@ -5,8 +5,9 @@ description: セルフ・コンパッション［新訳版］(クリスティン
 date: 2021-08-25
 image: https://www.hamlet-engineer.com/image/SelfCompassion.png
 categories: 
-  - 本
+  - 勉強
 tags:
+  - 本
   - メンタル
   - セルフコンパッション
   - マインドフルネス

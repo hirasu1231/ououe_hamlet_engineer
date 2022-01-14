@@ -17,10 +17,6 @@ DockerでQGISがインストールされたコンテナ(Ubuntu20.04)を作成し
 
 <!-- more -->
 
-<ClientOnly>
-  <CallInArticleAdsense />
-</ClientOnly>
-
 [[toc]]
 
 <!-- お名前.com -->
@@ -211,9 +207,4 @@ Finderのメニューバーの「移動→サーバへ接続→vnc://localhost:5
 
 <!-- りらくる -->
 <a href="https://px.a8.net/svt/ejp?a8mat=3HIN6N+7FBNEA+4AQ0+5YJRM" rel="nofollow">全国630店舗以上！もみほぐし・足つぼ・ハンドリフレ・クイックヘッドのリラクゼーション店【りらくる】</a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3HIN6N+7FBNEA+4AQ0+5YJRM" alt="">
-
-
-<ClientOnly>
-  <CallInArticleAdsense />
-</ClientOnly>
 
