@@ -16,7 +16,6 @@ module.exports = {
       '(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: "ca-pub-2263820744635038",  enable_page_level_ads: true });'
     ]
   ],
-  ],
   // プラグイン
   plugins: {
     // サイトマップ(案内図)
