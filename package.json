@@ -45,6 +45,7 @@
     "vuepress-theme-ououe": "^1.5.3"
   },
   "devDependencies": {
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vuepress/plugin-google-analytics": "^1.8.2",
     "eslint": "^5.16.0",

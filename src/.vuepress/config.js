@@ -14,8 +14,26 @@ module.exports = {
       "script",
       {},
       '(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: "ca-pub-2263820744635038",  enable_page_level_ads: true });'
-    ]
+    ],
+    // 数式css
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css'
+    }]
   ],
+  // 数式md
+  markdown: {
+    extendMarkdown: md => {
+        md.use(require('@iktakahiro/markdown-it-katex'), {
+            throwOnError: false,
+            errorColor: "#cc0000",
+            macros: {
+                '\\Z': '\\mathbb{Z}',
+                '*': '\\times'
+              }
+          })
+      }
+  },
   // プラグイン
   plugins: {
     // サイトマップ(案内図)
