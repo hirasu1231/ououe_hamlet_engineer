@@ -109,7 +109,7 @@ module.exports = {
     lang: {
       home: 'ホーム',
       posts: '技術',
-      study: '勉強',
+      study: '小ネタ',
       other: 'その他',
       category: 'カテゴリー',
       categories: 'カテゴリー',
@@ -127,7 +127,7 @@ module.exports = {
       { text: 'ホーム', link: '/' },
       { text: 'ページ集', link: '/about/' },
       { text: '技術', link: '/posts/' },
-      { text: '勉強', link: '/study/' },
+      { text: '小ネタ', link: '/study/' },
       { text: 'その他', link: '/other/' },
       { text: 'タグ', link: '/tag/' },
       { text: 'カテゴリ', link: '/category/' },
