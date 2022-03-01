@@ -10,7 +10,7 @@ categories:
 本稿では，技術系の記事をまとめています．
 
 <!-- more -->
-
+<!-- []()<br> -->
 
 <ClientOnly>
   <CallInArticleAdsense />
@@ -28,6 +28,8 @@ categories:
 [SlideShareと連携してVuepressにスライド機能を実装する](/posts/vuepress_0007.html)<br>
 [VuepressとGoogle Adsenseを連携させる](/posts/vuepress_0008.html)<br>
 [Vuepressで動画を貼れるようにする](/posts/vuepress_0009.html)<br>
+[Vuepressで数式を記述できるようにする](/posts/vuepress_0010.html)<br>
+[VuepressでGoogle AdSense広告を表示する](/posts/vuepress_0011.html)<br>
 
 ---
 
@@ -47,10 +49,18 @@ categories:
 [YouTube Data API を使ってチャンネルIDから動画の情報を取得する](/posts/youtube_API_06.html)<br>
 [YouTube Data API を使って再生リストから動画の再生回数等の情報を取得する](/posts/youtube_API_07.html)<br>
 
+### Spotify API
+[PythonでSpotify APIを使ってみる](/posts/spotify01.html)<br>
+[PythonでSpotify APIを使って楽曲の特徴情報を抽出する](/posts/spotify02.html)<br>
+[PythonでSpotify APIを使って邦楽情報を抽出する](/posts/spotify03.html)<br>
+[PythonでSpotify APIを使って50曲以上の楽曲情報を抽出する](/posts/spotify04.html)<br>
+[PythonでSpotify APIを使って1970年から2021年までの楽曲情報を抽出する](/posts/spotify05.html)<br>
+
 ### データ分析
 [データ可視化ライブラリ Altairを使ってみる(クロス集計編)](/posts/Altair01.html)<br>
 [データ可視化ライブラリ Altairを使ってみる(時系列データ編)](/posts/Altair02.html)<br>
 [matplotlibで日本語表示を実施する](/posts/matplotlib_japanese.html)<br>
+[国別covid-19感染者データでアニメーション棒グラフを作成しよう](/posts/animetion_graph.html)<br>
 
 ### その他
 [CUDAとTensorFlow，PyTorchのversion対応について](/posts/cuda.html)<br>
@@ -62,6 +72,9 @@ categories:
 [映画「CUBE」を楽しむプログラミングを構築してみた](/posts/cube.html)<br>
 [PythonでPDFの切り取りを実装する](/posts/pdf_crop.html)<br>
 [Pythonでyoutubeから字幕情報を抽出する](/posts/youtube_subtitle.html)<br>
+[Pytorchで学習済みモデルによる背景削除を実装する](/posts/remove_bg01.html)<br>
+[Image Mattingで学習済みモデルによる背景削除を実装する](/posts/remove_bg02.html)<br>
+[pytorch-grad-camでCAM(Class Activation Mapping)を実装する](/posts/pytorch_CAM01.html)<br>
 
 ---
 
@@ -104,6 +117,12 @@ categories:
 ### CycleGan
 [Python + CycleGanで茶毛のウマをシマウマに変換する](/posts/cyclegan01.html)<br>
 [Python + CycleGanでオリジナルデータでの学習を実装する](/posts/cyclegan02.html)<br>
+[Python + CycleGanでオリジナルデータでの学習を実装する(番外編)](/posts/cyclegan03.html)<br> 
+[CycleGANの概要](/posts/cyclegan04.html)<br> 
+
+### その他
+[音楽に合わせて画像を変化させる「Lucid Sonic Dreams」を実装する](/posts/LucidSonicDreams.html)<br>
+[VQGAN + CLIPでテキストから画像の生成](/posts/VQGAN_CLIP.html)<br>
 
 ---
 
@@ -114,6 +133,7 @@ categories:
 [Python + BERTで英文のPDFをレイアウトを維持したまま翻訳してみる](/posts/pdf_translate_03.html)<br>
 [Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードする](/posts/arxiv_download.html)<br>
 [Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードし，翻訳も実施する](/posts/arxiv_download_tanslate.html)<br>
+[Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードし，翻訳も実施する(2022/02/25修正版)](/posts/arxiv_download_tanslate02.html)<br>
 
 ---
 
@@ -121,6 +141,8 @@ categories:
 [pythonで音声からの文字起こしを実装する](/posts/mojiokoshi.html)<br>
 [pythonで長い音声・動画からの文字起こしを実装する](/posts/mojiokoshi_long.html)<br>
 [Python + ESPnetで日本語の文字起こし(ASR)を実装する](/posts/ESPnetASR.html)<br>
+[Python + ESPnetで音声データにおける日本語の文字起こし(ASR)を実装する](/posts/ESPnetASR_02.html)<br>
+[Python + ESPnetで長い音声データにおける日本語の文字起こし(ASR)を実装する](/posts/ESPnetASR_long.html)<br>
 
 ---
 
@@ -128,6 +150,8 @@ categories:
 [Python + CycleGAN-VC2で音質変換を実装する](/posts/VoiceConversion01.html)<br>
 [Python + CycleGAN-VC2でオリジナルデータにおける音質変換を実装する](/posts/VoiceConversion02.html)<br>
 [Python + Google Colab + Spleeterで楽器と人の声を分離する音源分離を実装する](/posts/sound_separation.html)<br>
+[TransformerTTS + MelGANでテキストからの音声の生成を実装する](/posts/TransformerTTS_01.html)<br>
+[TransformerTTS + MelGANでテキストからの音声の生成の学習を実装する(学習編)](/posts/TransformerTTS_02.html)<br>
 
 ---
 
@@ -149,6 +173,8 @@ categories:
 [QGIS3で兵庫県の「DSM」から標高で色分けした地図を描画する](/posts/GIS_01.html)<br>
 [QGIS3で兵庫県の「DSM」から3D地図を描画する](/posts/GIS_02.html)<br>
 [QGIS3で兵庫県の「DEM」と「DSM」から構造物の3D地図を描画する](/posts/GIS_03.html)<br>
+[DockerでQGISがインストールされたコンテナ(Ubuntu20.04)を作成し起動する](/posts/QGIS_Docker.html)<br>
+[Kepler.glをJupyterNotebook上で扱ってみた](/posts/keplerpy.html)<br>
 
 ---
 
@@ -156,8 +182,19 @@ categories:
 [Mac + Dockerで「ゼロからのOS自作入門」の環境構築を実装する](/posts/mikanos_00.html)<br>
 [「ゼロからのOS自作入門」2章 EDKⅡでHello worldを実行する(前編)](/posts/mikanos_01.html)<br>
 [「ゼロからのOS自作入門」2章 メモリ情報を出力しながらでHello worldを実行する(後編)](/posts/mikanos_02.html)<br>
-[「ゼロからのOS自作入門」3章 3.1〜3.3を実行する(前編)](mikanos_03_01.html)<br>
+[「ゼロからのOS自作入門」3章 3.1〜3.3を実行する(前編)](/posts/mikanos_03_01.html)<br>
+[「ゼロからのOS自作入門」4章 4.1〜4.2を実行する(前編)](/posts/mikanos_04_01.html)<br>
 
+---
+
+## <u>SQL</u>
+[PythonでBig Queryを操作する](/posts/gbq_python.html)<br>
+[[小ネタ001]PandasとBig Queryを連携させる](/posts/bq_pandas.html)<br>
+
+---
+
+## <u>小ネタ</u>
+[シグモイド関数のオーバーフローに対策する](/posts/sigmoid_overflow.html)<br>
 
 <ClientOnly>
   <CallInArticleAdsense />
