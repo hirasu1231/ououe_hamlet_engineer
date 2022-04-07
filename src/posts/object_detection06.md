@@ -2,7 +2,7 @@
 display: home
 title: 'Python + Google Colab + keras-yolo4でバイク検出を転移学習する'
 description: COCOデータセットから特定のクラスの画像を抽出し，アノテーション情報を整形したので，keras-yolo4での転移学習を実施します．
-date: 2021-03-02
+date: 2021-03-03
 image: https://www.hamlet-engineer.com/image/tenni.png
 categories: 
   - Python
@@ -180,36 +180,170 @@ keras-yolo4も起動も確認できたので，keras-yolo4でバイク検出の�
 !unzip darknet4_bike.zip > /dev/null
 ```
 
-### 学習の実行
-ダウンロードしたkeras-yolo4に移動して，train.pyの設定をイジって実行準備をします．<br>
-annotation_train_pathとannotation_val_pathは学習・評価用のデータ，log_dirはモデルの出力先，classes_pathはクラスのリストを示す．
+### train.pyの書き換え
+ダウンロードしたkeras-yolo4に移動して，train.pyの設定をイジって実行準備をします．
+
+annotation_train_pathとannotation_val_pathは学習・評価用のデータ，log_dirはモデルの出力先，classes_pathはクラスのリストを示します．
+
+書き換えの箇所は、下記の通りです。
+
+#### 書換箇所1:入力ファイルの変更
+入力ファイルの設定を任意のファイルに変更します。
+
 ```python
-# train.py
-# 26-29行目
-annotation_train_path = 'keras_bike/train.txt' 
-annotation_val_path = 'keras_bike/val.txt' 
-log_dir = 'logs/keras_bike/'
-classes_path = 'keras_bike/yolov4_bike.txt'  
-
-# 51行目
-# weights_path：重みの読み込み
-# freeze_body：固定の仕方の設定
-# 1:250層目の特徴量抽出層までを固定
-# 2:出力直前の3層前までを固定
-model, model_body = create_model(input_shape, anchors_stride_base, num_classes, load_pretrained=False, freeze_body=2, weights_path='yolo4_weight.h5')
-
-# 58行目
-# eval_file='2012_val.txt' -> eval_file=annotation_val_path
-evaluation = Evaluate(model_body=model_body, anchors=anchors, class_names=class_index, score_threshold=0.05, tensorboard=logging, weighted_average=True, eval_file=annotation_val_path, log_dir=log_dir)
-
-# 127-128行目
-# 固定する層の指定
-if freeze_body in [1, 2]:
-  # Freeze darknet53 body or freeze all but 3 output layers.
-  num = (250, len(model_body.layers)-3)[freeze_body-1]
-  for i in range(num): model_body.layers[i].trainable = False
-  print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
+def _main():
+    (省略)
+    # 書換箇所1:*入力ファイルの変更
+    annotation_train_path = 'keras_bike/train.txt' 
+    annotation_val_path = 'keras_bike/val.txt' 
+    log_dir = 'logs/keras_bike/'
+    classes_path = 'keras_bike/yolov4_bike.txt'  
+    # 書換箇所1_END
 ```
+
+#### 書換箇所2:学習済みモデルの流用(固定)設定
+学習済みモデルをどの層まで固定するかを設定します。
+
+固定する層の設定を変えたい場合は下記の箇所を書き換えてください。
+
+```python
+def _main():
+    (省略)
+    # 書換箇所2:学習済みモデルの流用(固定)設定
+    # weights_path：重みの読み込み
+    # load_pretrained：初期値として学習済みモデルを使用
+    # freeze_body：固定の仕方の設定
+    # 1:250層目の特徴量抽出層までを固定
+    # 2:出力直前の3層前までを固定
+    model, model_body = create_model(input_shape, anchors_stride_base, num_classes, load_pretrained=True, freeze_body=2, weights_path='yolo4_weight.h5')
+    # 書換箇所2_END
+```
+
+#### 書換箇所3:評価データの設定
+デフォルトのコードでは任意の評価データで入力できないので、下記の通りに書き換えます。
+
+```python
+def _main():
+    (省略)
+    # 書換箇所3:評価データの設定
+    # eval_file='2012_val.txt' -> eval_file=annotation_val_path
+    evaluation = Evaluate(model_body=model_body,
+                          anchors=anchors, class_names=class_index,
+                          score_threshold=0.05, tensorboard=logging,
+                          weighted_average=True,
+                          eval_file=annotation_val_path, log_dir=log_dir)
+    # 書換箇所3_END
+```
+
+#### 書換箇所4:転移学習の設定
+下記の箇所で転移学習の設定をできます。
+
+転移学習は初期値の重み(学習済みモデル)の大部分を固定して，一部のみを学習する手法です．
+
+今回は**転移学習のみ**なので「if True」とします。
+
+任意に書き換える箇所は主に下記の通りです。
+
+- batch_size：メモリオーバーの場合は少なくします
+- epochs：学習回数
+- initial_epoch：学習回数の初期値(何回目の学習か)を記述します。
+```python
+def _main():
+    (省略)
+    # 書換箇所4:転移学習の設定
+    if True:
+        model.compile(optimizer=Adam(lr=1e-3), loss={'yolo_loss': lambda y_true, y_pred: y_pred})
+
+        batch_size = 16
+        print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
+        model.fit_generator(data_generator_wrapper(lines_train, batch_size, anchors_stride_base, num_classes, max_bbox_per_scale, 'train'),
+                steps_per_epoch=max(1, num_train//batch_size),
+                epochs=30,
+                initial_epoch=0,
+                callbacks=[logging, checkpoint, evaluation])
+    # 書換箇所4_END
+```
+
+#### 書換箇所5:通常学習の設定
+下記の箇所で通常学習の設定をできます。
+
+ここでの通常学習は初期値の重み(学習済みモデル)の全てを学習する手法を示しています．
+
+今回は**転移学習のみ**なので「if False」とします。
+
+```python
+def _main():
+    (省略)
+    # 書換箇所5:通常学習の設定
+    if False:
+        for i in range(len(model.layers)):
+            model.layers[i].trainable = True
+        model.compile(optimizer=Adam(lr=1e-5), loss={'yolo_loss': lambda y_true, y_pred: y_pred}) # recompile to apply the change
+        print('Unfreeze all of the layers.')
+
+        batch_size = 4 # note that more GPU memory is required after unfreezing the body
+        print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
+        model.fit_generator(data_generator_wrapper(lines_train, batch_size, anchors_stride_base, num_classes, max_bbox_per_scale, 'train'),
+            steps_per_epoch=max(1, num_train//batch_size),
+            epochs=40,
+            initial_epoch=30,
+            callbacks=[logging, checkpoint, reduce_lr, early_stopping, evaluation])
+    # 書換箇所5_END
+```
+
+ただし、連続して通常学習もさせたい場合は、「if True」とします。
+
+その際は、initial_epochが転移学習の学習回数と同じ数値にしてください。
+
+下記のコードは「転移学習で30回学習し、その続きで通常学習で40回まで学習する場合」を想定しています。
+
+- batch_size：メモリオーバーとなる場合は少なくします(4 -> 2)
+- epochs：学習回数(40)
+- initial_epoch：学習回数の初期値(何回目の学習か)を記述します(30)
+
+```python
+def _main():
+    (省略)
+    # 例：「転移学習で30回学習し、その続きで通常学習で40回まで学習する場合」
+    # 書換箇所5:通常学習の設定
+    if False:
+        for i in range(len(model.layers)):
+            model.layers[i].trainable = True
+        model.compile(optimizer=Adam(lr=1e-5), loss={'yolo_loss': lambda y_true, y_pred: y_pred}) # recompile to apply the change
+        print('Unfreeze all of the layers.')
+
+        batch_size = 2 # note that more GPU memory is required after unfreezing the body
+        print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
+        model.fit_generator(data_generator_wrapper(lines_train, batch_size, anchors_stride_base, num_classes, max_bbox_per_scale, 'train'),
+            steps_per_epoch=max(1, num_train//batch_size),
+            epochs=40,
+            initial_epoch=30,
+            callbacks=[logging, checkpoint, reduce_lr, early_stopping, evaluation])
+    # 書換箇所5_END
+```
+
+#### 書換箇所6:固定する層の指定(転移学習時のみ)
+下記の箇所で固定する層の指定ができます。基本はデフォルトのままでいいですが、変更したい場合は下記の箇所を書き換えてください。
+
+```python
+def create_model(input_shape, anchors_stride_base, num_classes, load_pretrained=True, freeze_body=2,
+            weights_path='model_data/yolo_weights.h5'):
+    (省略)
+    if load_pretrained:
+        (省略)
+        # 書換箇所6:固定する層の指定
+        if freeze_body in [1, 2]:
+        # Freeze darknet53 body or freeze all but 3 output layers.
+        num = (250, len(model_body.layers)-3)[freeze_body-1]
+        for i in range(num):
+            model_body.layers[i].trainable = False
+        print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
+        # 書換箇所6_END
+```
+
+
+### 学習の実行
+下記のコードで学習を実行します．
 ```python
 # ディレクトリの移動
 %cd /content/drive/MyDrive/post_bike/keras-yolo4/
@@ -218,7 +352,7 @@ if freeze_body in [1, 2]:
 ```
 
 ## バイク検出の実行
-学習(約5時間)が終わったので，出力された最終の重み`logs/keras_bike/ep063-loss12.063.h5`でtest_video.pyを作成しバイク検出を実施します．
+学習(約2時間)が終わったので，出力された最終の重み`logs/keras_bike/ep030-loss7.373.h5`でtest_video.pyを作成しバイク検出を実施します．
 ```python
 # test_video.py
 import os
@@ -256,7 +390,7 @@ def get_anchors(anchors_path):
 if __name__ == '__main__':
     print('Please visit https://github.com/miemie2013/Keras-YOLOv4 for more complete model!')
 
-    model_path = 'logs/keras_bike/ep063-loss12.063.h5'
+    model_path = 'logs/keras_bike/ep030-loss7.373.h5'
     anchors_path = 'model_data/yolo4_anchors.txt'
     classes_path = 'keras_bike/yolov4_bike.txt'
 
@@ -309,6 +443,7 @@ if __name__ == '__main__':
 vid.release()
 out.release()
 ```
+
 以下のコードをGoogle Colabで実行します．
 ```python
 # ディレクトリの移動
@@ -316,8 +451,9 @@ out.release()
 # 学習の実行
 !python test_video.py
 ```
+
 keras-yolo4の検出結果<br>
-![keras-yolo4の検出結果](/image/keras_post_md.gif)
+![keras-yolo4の検出結果](/image/keras_post_md2.gif)
 
 
 ## まとめ
