@@ -1,9 +1,9 @@
 ---
 display: home
-title: 'HTML/CSSでFlaskに使うフロントエンドのデザインを作成する02'
+title: 'HTML/CSSでFlaskに使うフロントエンドのデザインを作成する02(フッターとヘッダー)'
 description: 簡単なヘッダーの作成を実施します．
 date: 2022-5-13
-image: https://www.hamlet-engineer.com/image/HTML_CSS.png
+image: https://www.hamlet-engineer.com/image/HTML_CSS.jpg
 categories: 
   - FrontEnd
 tags:
@@ -19,11 +19,11 @@ tags:
 最終成果は，WinXのデザインをベースにしたフロントエンドを作成します．
 
 **デザイン元**
-![](image/WinX.png)
+![](/image/WinX.png)
 
 
 **デザイン元**
-![](image/goal_design.png)
+![](/image/goal_design.png)
 
 <ClientOnly>
   <CallInArticleAdsense />
@@ -56,7 +56,7 @@ tags:
 
 下記の画像までのデザインを作成します．
 
-![](image/front_1221.png)
+![](/image/front_1221.png)
 
 
 ### HTML

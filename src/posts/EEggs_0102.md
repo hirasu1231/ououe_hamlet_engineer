@@ -1,15 +1,15 @@
 ---
 display: home
-title: '[小ネタ]date型の加算を実行する'
+title: 'date型の加算を実行する'
 description: date型の加算を実行します。
 date: 2022-5-4
 image: https://www.hamlet-engineer.com/image/Python.png
 categories: 
   - Python
 tags:
-  - 小ネタ
   - Python
   - date
+  - 小ネタ
 ---
 date型の加算を実行します。
 

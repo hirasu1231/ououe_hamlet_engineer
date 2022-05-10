@@ -5,10 +5,12 @@ description: BigQueryでWIH句を使用します．
 date: 2022-3-31
 image: https://www.hamlet-engineer.com/image/gbq_pandas.png
 categories: 
-  - Python
+  - BigQuery
 tags:
   - Python
   - BigQuery
+  - GCP
+  - GoogleBigQuery
 ---
 BigQueryでWIH句を使用します．
 

@@ -1,9 +1,9 @@
 ---
 display: home
-title: 'HTML/CSSでFlaskに使うフロントエンドのデザインを作成する01'
+title: 'HTML/CSSでFlaskに使うフロントエンドのデザインを作成する01(背景色と文字色の指定)'
 description: 簡単なヘッダーの作成を実施します．
 date: 2022-5-12
-image: https://www.hamlet-engineer.com/image/HTML_CSS.png
+image: https://www.hamlet-engineer.com/image/HTML_CSS.jpg
 categories: 
   - FrontEnd
 tags:
@@ -19,11 +19,11 @@ tags:
 最終成果は，WinXのデザインをベースにしたフロントエンドを作成します．
 
 **デザイン元**
-![](image/WinX.png)
+![](/image/WinX.png)
 
 
-**デザイン元**
-![](image/goal_design.png)
+**デザインゴール**
+![](/image/goal_design.png)
 
 <ClientOnly>
   <CallInArticleAdsense />
@@ -104,7 +104,7 @@ body {
 
 下記の画像までのデザインを作成します．
 
-![](image/header01.png)
+![](/image/header01.png)
 
 
 ### HTML
@@ -198,7 +198,7 @@ h2{
 ### h2の自動配置の修正
 `h2`はデフォルトだと，下画像のような空白が挿入されます．
 
-![](image/header02.png)
+![](/image/header02.png)
 
 そこで下記のcssで空白が挿入されないようにします．
 ```css

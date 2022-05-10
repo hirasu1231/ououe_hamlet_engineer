@@ -5,10 +5,10 @@ description: PythonでBig Queryを操作します．
 date: 2022-2-15
 image: https://www.hamlet-engineer.com/image/gbq_pandas.png
 categories: 
-  - Python
+  - BigQuery
 tags:
-  - 小ネタ
   - Python
+  - BigQuery
   - GCP
   - GoogleBigQuery
 ---

@@ -7,10 +7,8 @@ image: https://www.hamlet-engineer.com/image/jma_logo.png
 categories: 
   - Python
 tags:
-  - 小ネタ
   - Python
-  - GCP
-  - GoogleBigQuery
+  - ウェブスクレイピング
 ---
 Pythonを使って気象庁でウェブスクレイピングを実施します(都心部+地方部編)．
 

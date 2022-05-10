@@ -5,10 +5,12 @@ description: BigQueryでwhile文を使用します．
 date: 2022-3-29
 image: https://www.hamlet-engineer.com/image/gbq_pandas.png
 categories: 
-  - Python
+  - BigQuery
 tags:
   - Python
   - BigQuery
+  - GCP
+  - GoogleBigQuery
 ---
 BigQueryでwhile文を使用します．
 

@@ -1,15 +1,15 @@
 ---
 display: home
-title: '[小ネタ]pandasでdatetimeをdateに変換する'
+title: 'pandasでdatetimeをdateに変換する'
 description: pandasでdatetimeをdateに変換します。
 date: 2022-5-6
 image: https://www.hamlet-engineer.com/image/Python.png
 categories: 
   - Python
 tags:
-  - 小ネタ
   - Python
   - date
+  - 小ネタ
 ---
 pandasでdatetimeをdateに変換します。
 

@@ -1,15 +1,15 @@
 ---
 display: home
-title: '[小ネタ]重複なしのランダム生成を実行する'
+title: '重複なしのランダム生成を実行する'
 description: 重複なしのランダム生成を実行します。
 date: 2022-4-19
 image: https://www.hamlet-engineer.com/image/Python.png
 categories: 
   - Python
 tags:
-  - 小ネタ
   - Python
   - random
+  - 小ネタ
 ---
 重複なしのランダム生成を実行します。
 

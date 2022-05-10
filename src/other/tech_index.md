@@ -30,6 +30,7 @@ categories:
 [Vuepressで動画を貼れるようにする](/posts/vuepress_0009.html)<br>
 [Vuepressで数式を記述できるようにする](/posts/vuepress_0010.html)<br>
 [VuepressでGoogle AdSense広告を表示する](/posts/vuepress_0011.html)<br>
+[Vuepressで音声ファイルを貼れるようにする](/posts/vuepress_0012.html)<br>
 
 ---
 
@@ -55,14 +56,18 @@ categories:
 [PythonでSpotify APIを使って邦楽情報を抽出する](/posts/spotify03.html)<br>
 [PythonでSpotify APIを使って50曲以上の楽曲情報を抽出する](/posts/spotify04.html)<br>
 [PythonでSpotify APIを使って1970年から2021年までの楽曲情報を抽出する](/posts/spotify05.html)<br>
+[PythonでSpotifyAPIの情報から音楽をダウンロードする](/posts/spotifyDL01.html)<br>
 
 ### データ分析
 [データ可視化ライブラリ Altairを使ってみる(クロス集計編)](/posts/Altair01.html)<br>
 [データ可視化ライブラリ Altairを使ってみる(時系列データ編)](/posts/Altair02.html)<br>
 [matplotlibで日本語表示を実施する](/posts/matplotlib_japanese.html)<br>
 [国別covid-19感染者データでアニメーション棒グラフを作成しよう](/posts/animetion_graph.html)<br>
+[架空の行動履歴データでChordDiagram(弦グラフ)を作成する(前半)](/posts/ChordDiagram01.html)<br>
+[架空の行動履歴データでChordDiagram(弦グラフ)を作成する(後半)](/posts/ChordDiagram02.html)<br>
 
 ### その他
+[量子コンピュータ(組合せ最適化問題)をPythonで実行する](/posts/q_machine.html)<br>
 [CUDAとTensorFlow，PyTorchのversion対応について](/posts/cuda.html)<br>
 [JupyterLabに17言語を対応させる](/posts/jupyter_langs.html)<br>
 [MNISTの分類問題をRNN(Recurrent Neural Network)で実装する](/posts/MNIST_RNN.html)<br>
@@ -85,6 +90,8 @@ categories:
 [Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードする](/posts/websc_selenium04.html)<br>
 [Python＋Selenium＋Chromeのウェブスクレイピングで，スペースが入った要素を取得する](/posts/websc_selenium05.html)<br>
 [Python＋Selenium＋Chromeのウェブスクレイピングで，ボタンクリックを実装する](/posts/websc_selenium06.html)<br>
+[Pythonを使って気象庁でウェブスクレイピングを実施する(都心部編)](/posts/jma_scrape01.html)<br>
+[Pythonを使って気象庁でウェブスクレイピングを実施する(都心部+地方部編)](/posts/jma_scrape02.html)<br>
 
 ---
 
@@ -162,6 +169,11 @@ categories:
 
 ---
 
+## <u>強化学習</u>
+[【第1週目】強化学習を今さら勉強する(バンディッドアルゴリズム)](/posts/RL_ch01.html)<br>
+
+---
+
 ## <u>Nim</u>
 [Nimが対応したJupyterLabをDockerでインストールする](/posts/nim.html)<br>
 [Google ColaboratoryでNimを実行する](/posts/nimnim_01.html)<br>
@@ -190,11 +202,23 @@ categories:
 ## <u>SQL</u>
 [PythonでBig Queryを操作する](/posts/gbq_python.html)<br>
 [[小ネタ001]PandasとBig Queryを連携させる](/posts/bq_pandas.html)<br>
+[BigQueryでwhile文を使用する](/posts/gbq_while.html)<br>
+[BigQueryでWIH句を使用する](/posts/gbq_with.html)<br>
+
+---
+
+## <u>フロントエンド</u>
+[HTML/CSSでFlaskに使うフロントエンドのデザインを作成する01(背景色と文字色の指定)](/posts/HTML_01.html)<br>
+[HTML/CSSでFlaskに使うフロントエンドのデザインを作成する02(フッターとヘッダー)](/posts/HTML_02.html)<br>
 
 ---
 
 ## <u>小ネタ</u>
 [シグモイド関数のオーバーフローに対策する](/posts/sigmoid_overflow.html)<br>
+[Pandasで連続データの重複を削除する](/posts/EEggs_220401.html)<br>
+[重複なしのランダム生成を実行する](/posts/EEggs_0101.html)<br>
+[date型の加算を実行する](/posts/EEggs_0102.html)<br>
+[pandasでdatetimeをdateに変換する](/posts/EEggs_0103.html)<br>
 
 <ClientOnly>
   <CallInArticleAdsense />

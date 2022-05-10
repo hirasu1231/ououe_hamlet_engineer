@@ -5,10 +5,11 @@ description: PandasとBig Queryを連携させます．
 date: 2022-2-17
 image: https://www.hamlet-engineer.com/image/gbq_pandas.png
 categories: 
-  - Python
+  - BigQuery
 tags:
   - 小ネタ
   - Python
+  - BigQuery
   - GCP
   - GoogleBigQuery
 ---
