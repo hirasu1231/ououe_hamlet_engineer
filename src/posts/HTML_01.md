@@ -1,7 +1,7 @@
 ---
 display: home
 title: 'HTML/CSSでFlaskに使うフロントエンドのデザインを作成する01(背景色と文字色の指定)'
-description: 簡単なヘッダーの作成を実施します．
+description: 背景色と文字色の指定を実施します．
 date: 2022-5-12
 image: https://www.hamlet-engineer.com/image/HTML_CSS.jpg
 categories: 
@@ -10,7 +10,7 @@ tags:
   - HTML
   - CSS
 ---
-簡単なヘッダーの作成を実施します．
+背景色と文字色の指定を実施します．
 
 <!-- https://www.hamlet-engineer.com -->
 
