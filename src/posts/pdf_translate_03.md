@@ -9,7 +9,9 @@ categories:
 tags:
   - Python
   - jupyter
-  - 機械翻訳
+  - machine_translate
+  - BERT
+  - Transformer
 ---
 <!-- https://www.hamlet-engineer.com -->
 Python + BERTで英文のPDFをレイアウトを維持したままの翻訳を実施します．<br>

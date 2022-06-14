@@ -10,6 +10,7 @@ tags:
   - Python
   - jupyter
   - YouTube_Data_API
+  - YouTube
 ---
 <!-- https://www.hamlet-engineer.com -->
 YouTube Data API を使って再生リストから動画の再生回数等の情報を取得します．

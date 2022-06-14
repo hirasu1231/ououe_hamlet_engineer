@@ -11,6 +11,7 @@ tags:
   - Jupyter
   - Spotify
   - API
+  - Spotify_API
 ---
 
 <!-- https://www.hamlet-engineer.com -->

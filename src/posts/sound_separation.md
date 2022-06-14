@@ -9,8 +9,8 @@ categories:
 tags:
   - Python
   - Jupyter
-  - Google Colab
-  - 音源分離
+  - Google_Colaboratory
+  - Sound_Source_Separation
 ---
 
 <!-- https://www.hamlet-engineer.com -->

@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - Python
-  - ウェブスクレイピング
+  - WebScraping
 ---
 Pythonを使って気象庁でウェブスクレイピングを実施します．(都心部編)
 

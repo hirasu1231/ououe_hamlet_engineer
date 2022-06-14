@@ -9,8 +9,10 @@ categories:
 tags:
   - Python
   - Jupyter
-  - 物体検出
+  - Object_Detection
   - YOLO
+  - Tracking
+  - Google_Colaboratory
   - Keras
 ---
 COCOデータセットから特定のクラスの抽出・[keras-yolo4](https://github.com/Ma-Dan/keras-yolo4)の学習形式への整形を実施します．<br>

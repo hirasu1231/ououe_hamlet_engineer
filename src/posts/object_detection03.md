@@ -9,10 +9,12 @@ categories:
 tags:
   - Python
   - Jupyter
-  - 物体検出
+  - Object_Detection
   - YOLO
+  - Tracking
+  - Google_Colaboratory
+  - Keras
   - Darknet
-  - Google Colab
 ---
 COCOデータセットから特定のクラスの抽出・学習形式への整形を実施しましたので，学習に用いる画像のパスを示すtxtファイルやモデルのネットワークを示すcfgファイル等を作成します．<br>
 

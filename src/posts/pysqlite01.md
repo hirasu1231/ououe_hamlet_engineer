@@ -10,6 +10,7 @@ tags:
   - Python
   - jupyter
   - SQLite
+  - SQL
 ---
 
 PythonにおけるSQLiteの操作をまとめてます．．<br>

@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - Jupyter
-  - CycleGan
+  - CycleGAN
   - GAN
 ---
 Python + CycleGanでオリジナルデータでの学習を実装を目指して，本稿ではディアブロス(原種)とディアブロス亜種の変換を実施します．<br>

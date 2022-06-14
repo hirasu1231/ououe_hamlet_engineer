@@ -9,7 +9,8 @@ categories:
 tags:
   - Python
   - Jupyter
-  - ウェブスクレイピング
+  - Selenium
+  - Web_Scraping
 ---
 Python＋Selenium＋ChromeでウェブスクレイピングしてYouTubeの動画をダウンロードします．本稿では，OfflibertyをSeleniumでダウンロードします<br>
 

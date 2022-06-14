@@ -10,7 +10,7 @@ tags:
   - Python
   - Jupyter
   - ESPNet
-  - セマンティックセグメンテーション
+  - Semantic_Segmentation
 ---
 セマンティックセグメンテーションの中で軽いモデルであるESPNetv2の実装を目指し，Python + ESPNetで学習した人を検出するセマンティックセグメンテーションのモデルを使って，クロマキー合成を実施します．<br>
 

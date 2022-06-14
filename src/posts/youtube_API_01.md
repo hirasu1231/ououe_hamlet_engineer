@@ -10,6 +10,7 @@ tags:
   - Python
   - jupyter
   - YouTube_Data_API
+  - YouTube
 ---
 <!-- https://www.hamlet-engineer.com -->
 YouTube Data API を使って1つの動画から様々な情報を取得します．

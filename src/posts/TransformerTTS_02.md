@@ -10,8 +10,8 @@ tags:
   - Python
   - Jupyter
   - Text-to-Speech
-  - 音声合成
-  - 読み上げ
+  - Speech_Synthesis
+  - TTS
 ---
 TransformerTTS + MelGANでテキストからの音声の生成の学習を実施します．<br>
 

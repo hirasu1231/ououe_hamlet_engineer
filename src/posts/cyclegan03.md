@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - Jupyter
-  - CycleGan
+  - CycleGAN
   - GAN
 ---
 Python + CycleGanでオリジナルデータでの学習について，追加情報を記述します．<br>

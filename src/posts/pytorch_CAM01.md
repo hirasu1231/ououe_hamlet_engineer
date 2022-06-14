@@ -10,7 +10,7 @@ tags:
   - Python
   - jupyter
   - CAM
-  - GradCam
+  - GradCAM
 ---
 
 pytorch-grad-camでCAM(Class Activation Mapping)を実施します．<br>

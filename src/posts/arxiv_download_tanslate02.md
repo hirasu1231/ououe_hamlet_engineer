@@ -9,7 +9,8 @@ categories:
 tags:
   - Python
   - jupyter
-  - Google Colaboratory
+  - Google_Colaboratory
+  - machine_translate
 ---
 <!-- https://www.hamlet-engineer.com -->
 [Google Colab + seleniumでarxivの論文をアブストも含めてダウンロードし，翻訳も実施する](https://www.hamlet-engineer.com/posts/arxiv_download_tanslate.html)において，arxiv論文のダウンロード・翻訳のコードを修正します．

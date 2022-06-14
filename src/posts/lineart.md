@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - jupyter
-  - opencv
+  - OpenCV
 ---
 <!-- https://www.hamlet-engineer.com -->
 Python + Opencvでアニメをラフ画のような線画への変換を実施します．<br>

@@ -10,8 +10,8 @@ tags:
   - Python
   - jupyter
   - Spotify
-  - Spotify_API
   - API
+  - Spotify_API
 ---
 
 <!-- https://www.hamlet-engineer.com -->

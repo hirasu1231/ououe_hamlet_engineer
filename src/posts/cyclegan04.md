@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - Jupyter
-  - CycleGan
+  - CycleGAN
   - GAN
 ---
 CycleGANの概要を記述します．<br>

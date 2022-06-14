@@ -9,7 +9,8 @@ categories:
 tags:
   - Python
   - Jupyter
-  - ウェブスクレイピング
+  - Selenium
+  - Web_Scraping
 ---
 Python＋Selenium＋Chromeのウェブスクレイピングで，ボタンクリックの操作を容易にするために，コードを実装します．<br>
 

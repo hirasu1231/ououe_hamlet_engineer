@@ -9,6 +9,7 @@ categories:
 tags:
   - QGIS
   - Docker
+  - GIS
 ---
 
 <!-- https://www.hamlet-engineer.com -->

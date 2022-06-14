@@ -10,6 +10,7 @@ tags:
   - Python
   - jupyter
   - YouTube_Data_API
+  - YouTube
 ---
 <!-- https://www.hamlet-engineer.com -->
 YouTube Data API を使ってキーワード検索から動画のタイトル等の情報を取得します．

@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - date
-  - 小ネタ
+  - memo
 ---
 date型の加算を実行します。
 

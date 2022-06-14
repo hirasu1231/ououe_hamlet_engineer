@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - ChordDiagram
-  - 弦グラフ
+  - Visualization
 ---
 前回作成した架空の行動履歴データでChordDiagram(弦グラフ)を作成します．
 

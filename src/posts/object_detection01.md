@@ -9,8 +9,12 @@ categories:
 tags:
   - Python
   - Jupyter
-  - 物体検出
+  - Object_Detection
   - YOLO
+  - Tracking
+  - Google_Colaboratory
+  - Keras
+  - Darknet
 ---
 YOLO・SSDの物体検出の実施のために，まずCOCOデータセットをダウンロードし，特定のクラスだけを抽出します．<br>
 

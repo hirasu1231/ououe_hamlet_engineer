@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - jupyter
-  - youtube
+  - YouTube
 ---
 
 Pythonにより，youtubeから字幕情報を抽出を実施します．<br>

@@ -7,7 +7,7 @@ image: https://www.hamlet-engineer.com/image/gbq_pandas.png
 categories: 
   - BigQuery
 tags:
-  - 小ネタ
+  - memo
   - Python
   - BigQuery
   - GCP

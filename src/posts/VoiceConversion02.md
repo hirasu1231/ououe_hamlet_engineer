@@ -8,11 +8,11 @@ categories:
   - Python
 tags:
   - Python
-  - Google Colab
+  - Google_Colaboratory
   - Jupyter
-  - CycleGan
+  - CycleGAN
   - GAN
-  - 音声変換
+  - Voice_Conversion
 ---
 Clubhouseの影響で音質系に興味を持ちました．本稿では，Python + CycleGAN-VC2でリジナルデータにおける音質変換を実施します．<br>
 

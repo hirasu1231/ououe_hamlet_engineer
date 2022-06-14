@@ -9,8 +9,8 @@ categories:
 tags:
   - Python
   - jupyter
-  - グラフ
-  - 可視化
+  - graph
+  - Visualization
 ---
 <!-- https://www.hamlet-engineer.com -->
 国別covid-19感染者データでアニメーション棒グラフを作成します．

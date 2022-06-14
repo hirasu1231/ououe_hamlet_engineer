@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - jupyter
-  - 機械翻訳
+  - machine_translate
 ---
 <!-- https://www.hamlet-engineer.com -->
 Excel等ですでに翻訳したい文をまとめている場合，いちいちコピペしてDeepLに翻訳させるのは面倒なので，Python＋Selenium＋ChromeでDeepLの翻訳を実行します．

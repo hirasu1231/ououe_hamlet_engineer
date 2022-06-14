@@ -11,7 +11,6 @@ tags:
   - jupyter
   - ESPnet
   - ASR
-  - 文字起こし
 ---
 <!-- https://www.hamlet-engineer.com -->
 Python + ESPnetで長い音声データにおける日本語の文字起こし(ASR)を実施します．<br>

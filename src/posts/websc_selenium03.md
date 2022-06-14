@@ -10,7 +10,8 @@ tags:
   - Python
   - Jupyter
   - Docker
-  - ウェブスクレイピング
+  - Selenium
+  - Web_Scraping
 ---
 Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，前回のまでの工程をdef文を用いて定義します．<br>
 <!-- more -->

@@ -9,7 +9,9 @@ categories:
 tags:
   - Python
   - jupyter
-  - opencv
+  - OpneCV
+  - ESRGAN
+  - Image_Super_Resolution
 ---
 <!-- https://www.hamlet-engineer.com -->
 Real-ESRGANを用いた画像の高画質化を実施します．<br>

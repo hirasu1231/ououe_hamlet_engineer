@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - jupyter
-  - Google Colaboratory
+  - Google_Colaboratory
 ---
 <!-- https://www.hamlet-engineer.com -->
 映画「CUBE」で出てくる謎解きを楽しむプログラミングを構築してみました．

@@ -8,10 +8,10 @@ categories:
   - Python
 tags:
   - Python
-  - 強化学習
+  - Reinforcement_Learning
   - AI
-  - 機械学習
-  - バンディッドアルゴリズム
+  - Machine_Translate
+  - Bandit_Algorithm
 ---
 強化学習を今さら勉強します(バンディッドアルゴリズム)．
 

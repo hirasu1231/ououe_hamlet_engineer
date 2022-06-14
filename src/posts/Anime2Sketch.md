@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - Jupyter
-  - アニメ
+  - Anime
 ---
 Anime2Sketchでアニメ画像から線画への変換を実装します．<br>
 

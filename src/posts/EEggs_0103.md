@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - date
-  - 小ネタ
+  - memo
 ---
 pandasでdatetimeをdateに変換します。
 

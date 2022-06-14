@@ -10,7 +10,8 @@ tags:
   - Python
   - Jupyter
   - Docker
-  - ウェブスクレイピング
+  - Selenium
+  - Web_Scraping
 ---
 
 Python＋Docker＋Selenium＋Chromeで甘茶の音楽工房ウェブスクレイピングします．本稿では，一通りの設定を実施します．<br>

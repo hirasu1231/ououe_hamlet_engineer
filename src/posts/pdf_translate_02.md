@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - jupyter
-  - 機械翻訳
+  - machine_translate
 ---
 <!-- https://www.hamlet-engineer.com -->
 Pythonで英文をTransformer(BERT)での翻訳を実施します．<br>

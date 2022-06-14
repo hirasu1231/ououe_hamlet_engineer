@@ -11,6 +11,7 @@ tags:
   - jupyter
   - VQGAN
   - CLIP
+  - GAN
 ---
 <!-- https://www.hamlet-engineer.com -->
 VQGAN + CLIPでテキストから画像を生成します．<br>

@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - Python
-  - 量子コンピュータ
+  - Quantum_Computer
   - D-Wave
 ---
 量子コンピュータ(組合せ最適化問題)をPythonで実行します．

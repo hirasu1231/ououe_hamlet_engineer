@@ -8,9 +8,9 @@ categories:
   - Python
 tags:
   - Python
-  - セマンティックセグメンテーション
-  - 背景削除
-  - Image Matting
+  - Semantic_Segmentation
+  - Background_Removal
+  - Image_Matting
 ---
 Image Mattingで学習済みモデルによる背景削除を実装します．
 

@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - GIS
-  - kepler
+  - Kepler
 ---
 Kepler.glをJupyterNotebook上で扱ってみます.
 

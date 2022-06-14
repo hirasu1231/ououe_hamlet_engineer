@@ -9,10 +9,10 @@ categories:
 tags:
   - Python
   - Jupyter
-  - 物体検出
+  - Object_Detection
   - YOLO
-  - トラッキング
-  - Google Colab
+  - Tracking
+  - Google_Colaboratory
   - Keras
 ---
 COCOデータセットから特定のクラスの画像を抽出し，アノテーション情報を整形したので，keras-yolo4での通常学習を実施します．

@@ -10,7 +10,7 @@ tags:
   - Python
   - Jupyter
   - ESPNet
-  - セマンティックセグメンテーション
+  - Semantic_Segmentation
 ---
 セマンティックセグメンテーションの中で軽いモデルであるESPNetv2を実装します．<br>
 本稿ではまず，デモの起動と公開データセットのCityscapesでの学習を実施します．<br>

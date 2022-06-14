@@ -9,10 +9,10 @@ categories:
 tags:
   - Python
   - Jupyter
-  - 物体検出
+  - Object_Detection
   - YOLO
-  - トラッキング
-  - Google Colab
+  - Tracking
+  - Google_Colaboratory
 ---
 バイク検出のモデルを作成いたしましたので，DeepSortというトラッキング(物体追跡)を使い，Youtubeの[平成24年 元旦配達出発式](https://www.youtube.com/watch?v=wnRH3-CIk4I)のバイクをカウントします．<br>
 

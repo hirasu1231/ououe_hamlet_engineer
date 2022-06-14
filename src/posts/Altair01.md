@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - jupyter
-  -  Altair
+  - Altair
 ---
 <!-- https://www.hamlet-engineer.com -->
 クロス集計でのデータ可視化ライブラリ Altair を使ってみる．

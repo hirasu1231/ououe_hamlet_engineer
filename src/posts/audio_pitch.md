@@ -9,8 +9,7 @@ categories:
 tags:
   - Python
   - Jupyter
-  - Spotify
-  - API
+  - Audio
 ---
 
 <!-- https://www.hamlet-engineer.com -->

@@ -9,7 +9,8 @@ categories:
 tags:
   - Python
   - Jupyter
-  - ウェブスクレイピング
+  - Selenium
+  - Web_Scraping
 ---
 Python＋Selenium＋Chromeのウェブスクレイピングでは，by_class_nameでスペースが入った要素を取得することができませんので，取得できる手法を紹介します．<br>
 

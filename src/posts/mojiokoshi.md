@@ -8,8 +8,8 @@ categories:
   - Python
 tags:
   - Python
-  - 音声
-  - 文字起こし
+  - Audio
+  - ASR
 ---
 本稿では，音声データからテキストに変換する文字起こしを実装します．<br>
 

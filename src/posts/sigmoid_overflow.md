@@ -8,8 +8,8 @@ categories:
   - Python
 tags:
   - Python
-  - シグモイド関数
-  - 機械学習
+  - sigmoid
+  - machine_learning
 ---
 
 <!-- https://www.hamlet-engineer.com -->

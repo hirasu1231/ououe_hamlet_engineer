@@ -9,10 +9,12 @@ categories:
 tags:
   - Python
   - Jupyter
-  - 物体検出
+  - Object_Detection
   - YOLO
+  - Tracking
+  - Google_Colaboratory
+  - Keras
   - Darknet
-  - Google Colab
 ---
 COCOデータセットから特定のクラスを抽出できるようにしたので，Darknet(Yolov4)で学習できるように整形します．<br>
 

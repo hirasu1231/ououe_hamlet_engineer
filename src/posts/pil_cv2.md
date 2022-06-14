@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - Python
-  - Opencv
+  - OpenCV
   - Pillow
 ---
 

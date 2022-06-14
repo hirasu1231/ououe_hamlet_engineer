@@ -9,8 +9,9 @@ categories:
 tags:
   - Python
   - jupyter
-  - Google Colab
+  - Google_Colaboratory
   - matplotlib
+  - Visualization
 ---
 <!-- https://www.hamlet-engineer.com -->
 matplotlibでキャッシュの削除を行わずに日本語表示を実施します．

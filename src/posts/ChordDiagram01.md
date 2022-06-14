@@ -10,7 +10,7 @@ tags:
   - Python
   - matplotlib
   - ChordDiagram
-  - 弦グラフ
+  - Visualization
 ---
 架空の行動履歴データでChordDiagram(弦グラフ)を作成します．ここでは，架空の行動履歴データを作成します．
 

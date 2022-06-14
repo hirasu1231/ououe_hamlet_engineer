@@ -8,8 +8,8 @@ categories:
   - Python
 tags:
   - Python
-  - セマンティックセグメンテーション
-  - 背景削除
+  - Semantic_Segmentation
+  - Background_Removal
 ---
 Pytorchで学習済みモデルによる背景削除を実装します．
 

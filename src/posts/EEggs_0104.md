@@ -7,7 +7,7 @@ image: https://www.hamlet-engineer.com/image/gbq_pandas.png
 categories: 
   - Python
 tags:
-  - 小ネタ
+  - memo
   - Python
   - date
 ---

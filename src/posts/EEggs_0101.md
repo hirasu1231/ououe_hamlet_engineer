@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - random
-  - 小ネタ
+  - memo
 ---
 重複なしのランダム生成を実行します。
 

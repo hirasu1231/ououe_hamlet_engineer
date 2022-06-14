@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - Jupyter
-  - CycleGan
+  - CycleGAN
   - GAN
 ---
 画像生成系のCycleGanを実装します．Python + CycleGanで茶毛のウマをシマウマに変換します．<br>
