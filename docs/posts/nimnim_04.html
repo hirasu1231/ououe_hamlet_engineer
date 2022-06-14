@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Google Colaboratory+Nimで変数宣言について勉強する | ハムレット型エンジニアのカンニングノート</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: "ca-pub-2263820744635038",  enable_page_level_ads: true });</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css">
+    <meta name="description" content="Google Colaboratory+Nimで変数宣言について勉強します．">
+    <meta property="article:published_time" content="2022-06-13T00:00:00.000Z">
+    <meta property="article:modified_time" content="2022-06-14T04:20:43.000Z">
+    <meta property="og:site_name" content="ハムレット型エンジニアのカンニングノート">
+    <meta property="og:title" content="Google Colaboratory+Nimで変数宣言について勉強する">
+    <meta property="og:description" content="Google Colaboratory+Nimで変数宣言について勉強します．">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/posts/nimnim_04.html">
+    <meta property="og:image" content="https://www.hamlet-engineer.com/image/nim.png">
+    <meta name="twitter:title" content="Google Colaboratory+Nimで変数宣言について勉強する">
+    <meta name="twitter:description" content="Google Colaboratory+Nimで変数宣言について勉強します．">
+    <meta name="twitter:url" content="/posts/nimnim_04.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.hamlet-engineer.com/image/nim.png">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Nim, Google_Colaboratory">
+    <meta property="article:tag" content="Nim">
+    <meta name="google-site-verification" content="BDXGk8FJfikB_I6Pyxv35Zc87jBMziCgRMvmpNDpdYA">
+    
+    <link rel="preload" href="/assets/css/0.styles.f79f4c23.css" as="style"><link rel="preload" href="/assets/js/app.ec06ad2c.js" as="script"><link rel="preload" href="/assets/js/85.d536723a.js" as="script"><link rel="prefetch" href="/assets/js/10.1445d48c.js"><link rel="prefetch" href="/assets/js/100.4b2e8c6f.js"><link rel="prefetch" href="/assets/js/101.c4ab5007.js"><link rel="prefetch" href="/assets/js/102.5047d209.js"><link rel="prefetch" href="/assets/js/103.443ced83.js"><link rel="prefetch" href="/assets/js/104.25b3bdf1.js"><link rel="prefetch" href="/assets/js/105.1c82312a.js"><link rel="prefetch" href="/assets/js/106.39e5fd75.js"><link rel="prefetch" href="/assets/js/107.f10ad5ec.js"><link rel="prefetch" href="/assets/js/108.d89f11eb.js"><link rel="prefetch" href="/assets/js/109.ff6b3e40.js"><link rel="prefetch" href="/assets/js/11.874d7ca1.js"><link rel="prefetch" href="/assets/js/110.f873226d.js"><link rel="prefetch" href="/assets/js/111.a53c982f.js"><link rel="prefetch" href="/assets/js/112.b1163e9b.js"><link rel="prefetch" href="/assets/js/113.0048f545.js"><link rel="prefetch" href="/assets/js/114.efb157e8.js"><link rel="prefetch" href="/assets/js/115.70c814a7.js"><link rel="prefetch" href="/assets/js/116.df3e0460.js"><link rel="prefetch" href="/assets/js/117.e9c21d31.js"><link rel="prefetch" href="/assets/js/118.11ba0c38.js"><link rel="prefetch" href="/assets/js/119.2abdb93d.js"><link rel="prefetch" href="/assets/js/12.76f7696a.js"><link rel="prefetch" href="/assets/js/120.80283f06.js"><link rel="prefetch" href="/assets/js/121.9fd8984c.js"><link rel="prefetch" href="/assets/js/122.41a36611.js"><link rel="prefetch" href="/assets/js/123.2372b27c.js"><link rel="prefetch" href="/assets/js/124.87dd1c36.js"><link rel="prefetch" href="/assets/js/125.c7e01f83.js"><link rel="prefetch" href="/assets/js/126.51fd8ba1.js"><link rel="prefetch" href="/assets/js/127.863e4745.js"><link rel="prefetch" href="/assets/js/128.9b7b799d.js"><link rel="prefetch" href="/assets/js/129.6a01770a.js"><link rel="prefetch" href="/assets/js/13.19ace9b4.js"><link rel="prefetch" href="/assets/js/130.e0768508.js"><link rel="prefetch" href="/assets/js/131.253ce8e0.js"><link rel="prefetch" href="/assets/js/132.a5035dfc.js"><link rel="prefetch" href="/assets/js/133.7334dcd2.js"><link rel="prefetch" href="/assets/js/134.a902176c.js"><link rel="prefetch" href="/assets/js/135.fc50600b.js"><link rel="prefetch" href="/assets/js/136.74cff400.js"><link rel="prefetch" href="/assets/js/137.02cbbcac.js"><link rel="prefetch" href="/assets/js/138.77774411.js"><link rel="prefetch" href="/assets/js/139.2dad3afa.js"><link rel="prefetch" href="/assets/js/14.f2e9edf8.js"><link rel="prefetch" href="/assets/js/140.6f4b40bb.js"><link rel="prefetch" href="/assets/js/141.a329cfdb.js"><link rel="prefetch" href="/assets/js/142.e08c8635.js"><link rel="prefetch" href="/assets/js/143.e6d170ab.js"><link rel="prefetch" href="/assets/js/144.cc4c9148.js"><link rel="prefetch" href="/assets/js/145.eb2c8f96.js"><link rel="prefetch" href="/assets/js/146.f57f3bc6.js"><link rel="prefetch" href="/assets/js/147.651e0f50.js"><link rel="prefetch" href="/assets/js/148.b07169d9.js"><link rel="prefetch" href="/assets/js/149.08e1a254.js"><link rel="prefetch" href="/assets/js/15.ac1630d2.js"><link rel="prefetch" href="/assets/js/150.fc499739.js"><link rel="prefetch" href="/assets/js/151.4a5cee47.js"><link rel="prefetch" href="/assets/js/16.b2570466.js"><link rel="prefetch" href="/assets/js/17.f5a19a26.js"><link rel="prefetch" href="/assets/js/18.84a63122.js"><link rel="prefetch" href="/assets/js/19.bab152f2.js"><link rel="prefetch" href="/assets/js/2.e26bae79.js"><link rel="prefetch" href="/assets/js/20.3918d83d.js"><link rel="prefetch" href="/assets/js/21.83785f10.js"><link rel="prefetch" href="/assets/js/22.90b4bb44.js"><link rel="prefetch" href="/assets/js/23.5f08a899.js"><link rel="prefetch" href="/assets/js/24.0d4416da.js"><link rel="prefetch" href="/assets/js/25.9abfd4a7.js"><link rel="prefetch" href="/assets/js/26.983622a3.js"><link rel="prefetch" href="/assets/js/27.385b280a.js"><link rel="prefetch" href="/assets/js/28.4fbf6d13.js"><link rel="prefetch" href="/assets/js/29.ca9c52e9.js"><link rel="prefetch" href="/assets/js/3.928b27a3.js"><link rel="prefetch" href="/assets/js/30.fffc6179.js"><link rel="prefetch" href="/assets/js/31.55b2be28.js"><link rel="prefetch" href="/assets/js/32.c2a1da10.js"><link rel="prefetch" href="/assets/js/33.87721802.js"><link rel="prefetch" href="/assets/js/34.ee4d81ee.js"><link rel="prefetch" href="/assets/js/35.5fdff339.js"><link rel="prefetch" href="/assets/js/36.45620680.js"><link rel="prefetch" href="/assets/js/37.530e97bd.js"><link rel="prefetch" href="/assets/js/38.ab074899.js"><link rel="prefetch" href="/assets/js/39.50748c7c.js"><link rel="prefetch" href="/assets/js/4.067e6e97.js"><link rel="prefetch" href="/assets/js/40.ee9a8d98.js"><link rel="prefetch" href="/assets/js/41.eb9556bf.js"><link rel="prefetch" href="/assets/js/42.5a3fde47.js"><link rel="prefetch" href="/assets/js/43.4cc9704c.js"><link rel="prefetch" href="/assets/js/44.03327028.js"><link rel="prefetch" href="/assets/js/45.31e53be1.js"><link rel="prefetch" href="/assets/js/46.a57f2481.js"><link rel="prefetch" href="/assets/js/47.e18d317e.js"><link rel="prefetch" href="/assets/js/48.291e61de.js"><link rel="prefetch" href="/assets/js/49.231cb1fc.js"><link rel="prefetch" href="/assets/js/5.29c94ca9.js"><link rel="prefetch" href="/assets/js/50.2faa7797.js"><link rel="prefetch" href="/assets/js/51.263aa9c8.js"><link rel="prefetch" href="/assets/js/52.46aaad56.js"><link rel="prefetch" href="/assets/js/53.d40ce680.js"><link rel="prefetch" href="/assets/js/54.6f6b2260.js"><link rel="prefetch" href="/assets/js/55.1bb4cff8.js"><link rel="prefetch" href="/assets/js/56.d7128c64.js"><link rel="prefetch" href="/assets/js/57.28daf156.js"><link rel="prefetch" href="/assets/js/58.97458bbd.js"><link rel="prefetch" href="/assets/js/59.8aab1dd7.js"><link rel="prefetch" href="/assets/js/6.ce30206a.js"><link rel="prefetch" href="/assets/js/60.b448cb34.js"><link rel="prefetch" href="/assets/js/61.3582a249.js"><link rel="prefetch" href="/assets/js/62.657862de.js"><link rel="prefetch" href="/assets/js/63.153c7439.js"><link rel="prefetch" href="/assets/js/64.86407dfc.js"><link rel="prefetch" href="/assets/js/65.d0dfd6bc.js"><link rel="prefetch" href="/assets/js/66.b6da0e0a.js"><link rel="prefetch" href="/assets/js/67.9adad15d.js"><link rel="prefetch" href="/assets/js/68.0eed8312.js"><link rel="prefetch" href="/assets/js/69.9a86f944.js"><link rel="prefetch" href="/assets/js/7.9715b356.js"><link rel="prefetch" href="/assets/js/70.8a65558b.js"><link rel="prefetch" href="/assets/js/71.1f5b6199.js"><link rel="prefetch" href="/assets/js/72.0b15e691.js"><link rel="prefetch" href="/assets/js/73.8804d69e.js"><link rel="prefetch" href="/assets/js/74.b43ab53f.js"><link rel="prefetch" href="/assets/js/75.7f9ccc7e.js"><link rel="prefetch" href="/assets/js/76.056b9e95.js"><link rel="prefetch" href="/assets/js/77.b93fd288.js"><link rel="prefetch" href="/assets/js/78.00638a69.js"><link rel="prefetch" href="/assets/js/79.103d7996.js"><link rel="prefetch" href="/assets/js/8.8d94ecb4.js"><link rel="prefetch" href="/assets/js/80.defb65e2.js"><link rel="prefetch" href="/assets/js/81.7e1c3371.js"><link rel="prefetch" href="/assets/js/82.a06ecc50.js"><link rel="prefetch" href="/assets/js/83.f66c8d14.js"><link rel="prefetch" href="/assets/js/84.50097d51.js"><link rel="prefetch" href="/assets/js/86.ccdfdd07.js"><link rel="prefetch" href="/assets/js/87.c3b8123e.js"><link rel="prefetch" href="/assets/js/88.b4ed4f06.js"><link rel="prefetch" href="/assets/js/89.b9da034d.js"><link rel="prefetch" href="/assets/js/9.9622b429.js"><link rel="prefetch" href="/assets/js/90.8674a774.js"><link rel="prefetch" href="/assets/js/91.a2224860.js"><link rel="prefetch" href="/assets/js/92.80bb5a4b.js"><link rel="prefetch" href="/assets/js/93.d211d89d.js"><link rel="prefetch" href="/assets/js/94.63d9431a.js"><link rel="prefetch" href="/assets/js/95.87fb8557.js"><link rel="prefetch" href="/assets/js/96.d34a12c3.js"><link rel="prefetch" href="/assets/js/97.e1cb4db4.js"><link rel="prefetch" href="/assets/js/98.be98a8b4.js"><link rel="prefetch" href="/assets/js/99.0bdbc1a2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f79f4c23.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-98a81704><header class="header" data-v-00466d8e data-v-98a81704><div class="header-navbar" data-v-00466d8e><div class="flex-xbc main header-nav" data-v-00466d8e><div class="nav-link" data-v-00466d8e><a href="/" class="inblock link-logo router-link-active" data-v-00466d8e><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-00466d8e></a> <nav class="link-list" data-v-00466d8e><a href="/" class="list-item router-link-active" data-v-00466d8e>ホーム</a><a href="/about/" class="list-item" data-v-00466d8e>ページ集</a><a href="/posts/" class="list-item router-link-active" data-v-00466d8e>技術</a><a href="/study/" class="list-item" data-v-00466d8e>小ネタ</a><a href="/other/" class="list-item" data-v-00466d8e>その他</a><a href="/tag/" class="list-item" data-v-00466d8e>タグ</a><a href="/category/" class="list-item" data-v-00466d8e>カテゴリ</a><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-00466d8e>筆者</a></nav></div> <div class="search-box" data-v-00466d8e><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-98a81704 data-v-98a81704><section class="info no-bg" data-v-2602fa21><article class="main info-content" data-v-c4dc5dfa data-v-2602fa21><div class="content-header" data-v-c4dc5dfa><h1 class="header-title" data-v-c4dc5dfa>Google Colaboratory+Nimで変数宣言について勉強する</h1></div> <div class="flex-wcc content-tag" data-v-c4dc5dfa><div class="inblock tag-list" data-v-c4dc5dfa><a href="/category/Nim/" class="tag-text" data-v-c4dc5dfa>Nim
+      </a></div> <span class="tag-space" data-v-c4dc5dfa>/</span> <div class="inblock tag-list" data-v-c4dc5dfa><a href="/tag/Nim/" class="tag-text" data-v-c4dc5dfa>Nim
+      </a><a href="/tag/Google_Colaboratory/" class="tag-text" data-v-c4dc5dfa>Google_Colaboratory
+      </a></div></div> <div class="content content__default" data-v-c4dc5dfa><p>Google Colaboratory+Nimで変数宣言について勉強します．</p> <!----> <blockquote><p>Google Colaboratory（以下Google Colab）は、Google社が無料で提供している機械学習の教育や研究用の開発環境です。開発環境はJupyter Notebookに似たインターフェースを持ち、Pythonの主要なライブラリがプリインストールされています。<br>
+引用元：<a href="https://interface.cqpub.co.jp/ail01/" target="_blank" rel="noopener noreferrer">Google Colabの使い方<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p></p><div class="table-of-contents"><ul><li><a href="#nim4colabのインストール">nim4colabのインストール</a></li><li><a href="#nimpyのインストール">nimpyのインストール</a></li><li><a href="#nimのコメントアウト">Nimのコメントアウト</a></li><li><a href="#nimの変数宣言">Nimの変数宣言</a><ul><li><a href="#変数宣言">変数宣言</a></li><li><a href="#関数を作成-def-→-proc">関数を作成(def → proc)</a></li></ul></li><li><a href="#まとめ">まとめ</a></li><li><a href="#参考サイト">参考サイト</a></li></ul></div><p></p> <p><a href="https://px.a8.net/svt/ejp?a8mat=3HBXCY+4DRW36+50+2HM5Z5" rel="nofollow"><img border="0" width="1000" height="124" alt="" src="https://www27.a8.net/svt/bgt?aid=210508450265&amp;wid=001&amp;eno=01&amp;mid=s00000000018015052000&amp;mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HBXCY+4DRW36+50+2HM5Z5" alt=""></p> <p><a href="https://px.a8.net/svt/ejp?a8mat=3HIN6N+3YAMCY+CO4+6BMG1" rel="nofollow"><img border="0" width="1000" height="124" alt="" src="https://www23.a8.net/svt/bgt?aid=210821855239&amp;wid=001&amp;eno=01&amp;mid=s00000001642001062000&amp;mc=1"></a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3HIN6N+3YAMCY+CO4+6BMG1" alt=""></p> <p><a href="https://px.a8.net/svt/ejp?a8mat=3HIN6N+7FBNEA+4AQ0+5YJRM" rel="nofollow">全国630店舗以上！もみほぐし・足つぼ・ハンドリフレ・クイックヘッドのリラクゼーション店【りらくる】</a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3HIN6N+7FBNEA+4AQ0+5YJRM" alt=""></p> <h2 id="nim4colabのインストール"><a href="#nim4colabのインストール" class="header-anchor">#</a> nim4colabのインストール</h2> <p>Google Colab で nimコマンドを使用するためのライブラリであるnim4colabをインストールします．</p> <p>%load_ext nim4colab により%を付けてNimのコマンドを使えます．</p> <div class="language-python extra-class"><pre class="language-python"><code>!pip install git<span class="token operator">+</span>https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>demotomohiro<span class="token operator">/</span>nim4colab<span class="token punctuation">.</span>git
+<span class="token operator">%</span>load_ext nim4colab
+</code></pre></div><h2 id="nimpyのインストール"><a href="#nimpyのインストール" class="header-anchor">#</a> nimpyのインストール</h2> <p>PythonからNimを呼び出すためのNimのライブラリ、nimpyをインストールします．</p> <p><a href="https://qiita.com/k4saNova/items/5bb67d1cb40ba90431af" target="_blank" rel="noopener noreferrer">Nim初心者が始めるNimとnimpy<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>nimpyをインストールすることで、後述の fib.nim内で使っているnimpyをコンパイル、ライブラリとして使用することができます．</p> <p>nimbleはNimのライブラリをインストールするためのコマンドです．</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token operator">%</span>nimble install nimpy <span class="token operator">-</span>y
+</code></pre></div><h2 id="nimのコメントアウト"><a href="#nimのコメントアウト" class="header-anchor">#</a> Nimのコメントアウト</h2> <p>プログラミングでは、コード中にコメントを書くことができます。</p> <p>Nimでは文頭に「#」を書くことで、コメントとして扱われます。</p> <p>コメント扱いされた文は実行されることはありません。</p> <div class="language-Python extra-class"><pre class="language-python"><code><span class="token comment"># Google Colabでnimを使用するためのおまじない</span>
+<span class="token operator">%</span><span class="token operator">%</span>nimc
+<span class="token comment"># この行はコメントです.</span>
+<span class="token comment"># print(&quot;コメントです&quot;) </span>
+
+echo <span class="token string">&quot;Hello, World&quot;</span>
+echo <span class="token string">&quot;Not, Comment&quot;</span>
+
+<span class="token comment"># 実行結果</span>
+<span class="token comment"># Hello, World</span>
+<span class="token comment"># Not, Comment</span>
+</code></pre></div><h2 id="nimの変数宣言"><a href="#nimの変数宣言" class="header-anchor">#</a> Nimの変数宣言</h2> <p>Nimでは，Pythonと同様に変数をつける時は、左に変数名・右に数値や文字列を置き、間に「=」を挟みます。変数は大文字と小文字でも区別されます。</p> <p>変数名が長い時に、Pythonのように「_」で区切るとエラーが発生しますので，区切る箇所を大文字にします。</p> <h3 id="変数宣言"><a href="#変数宣言" class="header-anchor">#</a> 変数宣言</h3> <p>また，Nimでは変数宣言の前に「var, let, const」をつける必要があります．</p> <p>上記の3つのタグについては，下記の通りです．</p> <ul><li>var：書き換え可能な変数の定義はvarで行います</li> <li>let：変数を束縛したい場合はletを使用します</li> <li>const：constで宣言した値は、コンパイル時に確定します。
+letの場合は実行時に確定する変数で、変更ができないという扱いのようです。</li></ul> <p><a href="https://symfoware.blog.fc2.com/blog-entry-2239.html" target="_blank" rel="noopener noreferrer">Nim 変数、定数の宣言方法(var, let, const)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://zenn.dev/dumblepy/articles/b475b3b4f7d0da" target="_blank" rel="noopener noreferrer">Nimを知ってほしい2022<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h4 id="nim-var"><a href="#nim-var" class="header-anchor">#</a> nim(var)</h4> <div class="language-Python extra-class"><pre class="language-python"><code><span class="token comment"># Google Colabでnimを使用するためのおまじない</span>
+<span class="token operator">%</span><span class="token operator">%</span>nimc
+<span class="token comment"># データ型→初期値</span>
+var text<span class="token punctuation">:</span>string
+text <span class="token operator">=</span> <span class="token string">&quot;text&quot;</span>
+<span class="token comment"># データ型と初期値を同時</span>
+var Text <span class="token operator">=</span> <span class="token string">&quot;Text&quot;</span>
+
+<span class="token comment"># 出力</span>
+echo text
+echo Text
+
+<span class="token comment"># 変数名が長い時</span>
+<span class="token comment"># 同時に宣言</span>
+<span class="token comment"># varの後で改行は必須</span>
+var 
+    x<span class="token punctuation">,</span> y<span class="token punctuation">:</span><span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+    helloworldmessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+    HelloWorldMessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+<span class="token comment"># varなので書き換え可能</span>
+y <span class="token operator">=</span> <span class="token number">2</span>
+
+<span class="token comment"># 出力</span>
+echo x<span class="token punctuation">,</span> helloworldmessage
+echo y<span class="token punctuation">,</span> HelloWorldMessage
+<span class="token comment"># 実行結果</span>
+<span class="token comment"># text</span>
+<span class="token comment"># Text</span>
+<span class="token comment"># 1Hello, World</span>
+<span class="token comment"># 2Hello, World</span>
+</code></pre></div><h4 id="nim-let"><a href="#nim-let" class="header-anchor">#</a> nim(let)</h4> <div class="language-Python extra-class"><pre class="language-python"><code><span class="token comment"># Google Colabでnimを使用するためのおまじない</span>
+<span class="token operator">%</span><span class="token operator">%</span>nimc
+<span class="token comment"># データ型→初期値</span>
+<span class="token comment"># letでは初期値なしではエラー発生</span>
+<span class="token comment"># let text:string</span>
+<span class="token comment"># text = &quot;text&quot;</span>
+
+<span class="token comment"># データ型と初期値を同時</span>
+let text <span class="token operator">=</span> <span class="token string">&quot;text&quot;</span>
+let Text <span class="token operator">=</span> <span class="token string">&quot;Text&quot;</span>
+
+<span class="token comment"># 出力</span>
+echo text
+echo Text
+
+<span class="token comment"># 変数名が長い時</span>
+<span class="token comment"># 同時に宣言</span>
+<span class="token comment"># varの後で改行は必須</span>
+let 
+    x<span class="token punctuation">,</span> y<span class="token punctuation">:</span><span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span>
+    helloworldmessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+    HelloWorldMessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+
+<span class="token comment"># letなので書き換え不可能</span>
+<span class="token comment"># エラー発生</span>
+<span class="token comment"># y = 2</span>
+
+<span class="token comment"># 出力</span>
+echo x<span class="token punctuation">,</span> helloworldmessage
+echo y<span class="token punctuation">,</span> HelloWorldMessage
+<span class="token comment"># 実行結果</span>
+<span class="token comment"># text</span>
+<span class="token comment"># Text</span>
+<span class="token comment"># 1Hello, World</span>
+<span class="token comment"># 1Hello, World</span>
+</code></pre></div><h4 id="nim-const"><a href="#nim-const" class="header-anchor">#</a> nim(const)</h4> <div class="language-Python extra-class"><pre class="language-python"><code><span class="token comment"># Google Colabでnimを使用するためのおまじない</span>
+<span class="token operator">%</span><span class="token operator">%</span>nimc
+<span class="token comment"># データ型→初期値</span>
+<span class="token comment"># constでも初期値なしではエラー発生</span>
+<span class="token comment"># const text:string</span>
+<span class="token comment"># text = &quot;text&quot;</span>
+
+<span class="token comment"># データ型と初期値を同時</span>
+const text <span class="token operator">=</span> <span class="token string">&quot;text&quot;</span>
+const Text <span class="token operator">=</span> <span class="token string">&quot;Text&quot;</span>
+
+<span class="token comment"># 出力</span>
+echo text
+echo Text
+
+<span class="token comment"># 変数名が長い時</span>
+<span class="token comment"># 同時に宣言</span>
+<span class="token comment"># constの後で改行は必須</span>
+const 
+    <span class="token comment"># x, y:int = 1 #constではエラー発生</span>
+    x <span class="token operator">=</span> <span class="token number">1</span>
+    y<span class="token punctuation">:</span><span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">2</span>
+    helloworldmessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+    HelloWorldMessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+
+<span class="token comment"># constなので書き換え不可能</span>
+<span class="token comment"># エラー発生</span>
+<span class="token comment"># y = 2</span>
+
+<span class="token comment"># 出力</span>
+echo x<span class="token punctuation">,</span> helloworldmessage
+echo y<span class="token punctuation">,</span> HelloWorldMessage
+<span class="token comment"># 実行結果</span>
+<span class="token comment"># text</span>
+<span class="token comment"># Text</span>
+<span class="token comment"># 1Hello, World</span>
+<span class="token comment"># 2Hello, World</span>
+</code></pre></div><h3 id="関数を作成-def-→-proc"><a href="#関数を作成-def-→-proc" class="header-anchor">#</a> 関数を作成(def → proc)</h3> <p>Nimではprocで関数を作成する．</p> <div class="language-Python extra-class"><pre class="language-python"><code><span class="token comment"># Google Colabでnimを使用するためのおまじない</span>
+<span class="token operator">%</span><span class="token operator">%</span>nimc
+<span class="token comment"># 返り値:result</span>
+proc integer00<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span>
+    var 
+        text <span class="token operator">=</span> <span class="token string">&quot;text&quot;</span>
+        Text <span class="token operator">=</span> <span class="token string">&quot;Text&quot;</span>
+    echo text
+    echo Text
+
+    <span class="token comment"># 変数名が長い時</span>
+    var 
+        helloworldmessage  <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+        HelloWorldMessage <span class="token operator">=</span> <span class="token string">&quot;Hello, World&quot;</span>
+    echo helloworldmessage
+    echo HelloWorldMessage
+
+integer00<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># text</span>
+<span class="token comment"># Text</span>
+<span class="token comment"># Hello, World</span>
+<span class="token comment"># Hello, World</span>
+</code></pre></div><p>また，返り値は下記の3つで設定できる．</p> <ul><li>result</li> <li>return</li> <li>関数名</li></ul> <div class="language-Python extra-class"><pre class="language-python"><code><span class="token comment"># Google Colabでnimを使用するためのおまじない</span>
+<span class="token operator">%</span><span class="token operator">%</span>nimc
+<span class="token comment"># 返り値:result</span>
+proc HelloWorld<span class="token punctuation">(</span>str1<span class="token punctuation">:</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token operator">=</span>
+    var text <span class="token operator">=</span> str1 <span class="token comment"># &amp;は文字列連結演算子</span>
+    result <span class="token operator">=</span> <span class="token string">&quot;Hello World&quot;</span>
+
+<span class="token comment"># 返り値:return</span>
+proc HelloWorld2<span class="token punctuation">(</span>str1<span class="token punctuation">:</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token operator">=</span>
+    var text <span class="token operator">=</span> <span class="token string">&quot;Hello World&quot;</span> <span class="token operator">&amp;</span> str1 <span class="token comment"># &amp;は文字列連結演算子</span>
+    <span class="token keyword">return</span> text
+
+<span class="token comment"># 返り値:関数名</span>
+proc HelloWorld3<span class="token punctuation">(</span>str1<span class="token punctuation">:</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span> string <span class="token operator">=</span>
+    var text <span class="token operator">=</span> <span class="token string">&quot;Hello World\n&quot;</span> <span class="token operator">&amp;</span> str1 <span class="token comment"># &amp;は文字列連結演算子</span>
+    text
+
+<span class="token comment"># 初期設定</span>
+var echo_str<span class="token punctuation">:</span>string
+
+<span class="token comment"># 返り値:result</span>
+echo_str <span class="token operator">=</span> HelloWorld<span class="token punctuation">(</span><span class="token string">&quot;mass&quot;</span><span class="token punctuation">)</span>
+echo echo_str
+<span class="token comment"># 返り値:return</span>
+echo_str <span class="token operator">=</span> HelloWorld2<span class="token punctuation">(</span><span class="token string">&quot;mass&quot;</span><span class="token punctuation">)</span>
+echo echo_str
+<span class="token comment"># 返り値:関数名</span>
+echo_str <span class="token operator">=</span> HelloWorld3<span class="token punctuation">(</span><span class="token string">&quot;mass&quot;</span><span class="token punctuation">)</span>
+echo echo_str
+
+<span class="token comment"># Hello World</span>
+<span class="token comment"># Hello Worldmass</span>
+<span class="token comment"># Hello World</span>
+<span class="token comment"># mass</span>
+</code></pre></div><h2 id="まとめ"><a href="#まとめ" class="header-anchor">#</a> まとめ</h2> <p>Google Colaboratory+Nimで変数宣言について勉強しました．</p> <h2 id="参考サイト"><a href="#参考サイト" class="header-anchor">#</a> 参考サイト</h2> <p><a href="https://agency-star.co.jp/column/nim/" target="_blank" rel="noopener noreferrer">Nimの特徴や使い方をわかりやすく解説！<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://qiita.com/k4saNova/items/5bb67d1cb40ba90431af" target="_blank" rel="noopener noreferrer">Nim初心者が始めるNimとnimpy<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://medium.com/statch/speeding-up-python-code-with-nim-ec205a8a5d9c" target="_blank" rel="noopener noreferrer">Speeding up Python code with Nim<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://zenn.dev/megane_otoko/articles/029_nim_for_python" target="_blank" rel="noopener noreferrer">Nimを組み込んでPythonを高速化してみた<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://qiita.com/rigani/items/6e87c7cee6903ed65ed2" target="_blank" rel="noopener noreferrer">至高の言語、Nimを始めるエンジニアへ<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://nim-lang.org/docs/nimc.html" target="_blank" rel="noopener noreferrer">Nim Compiler User Guide<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://cpprefjp.github.io/lang/cpp11/thread_local_storage.html" target="_blank" rel="noopener noreferrer">スレッドローカルストレージ<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://2vg.github.io/Nim-World/proc/" target="_blank" rel="noopener noreferrer">Nim 関数<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://zenn.dev/dumblepy/articles/3f4f1c288ada66#%E6%AF%94%E8%BC%83" target="_blank" rel="noopener noreferrer">PythonistaのためのNim入門<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://qiita.com/6in/items/809f4eb788d00503a825" target="_blank" rel="noopener noreferrer">nim内包表記<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://qiita.com/meganeo/items/051fd0aa59d89b3a7049" target="_blank" rel="noopener noreferrer">Nimの便利な標準ライブラリ sugar<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://qiita.com/k4saNova/items/5bb67d1cb40ba90431af" target="_blank" rel="noopener noreferrer">Nim初心者が始めるNimとnimpy<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://qiita.com/mkanenobu/items/0e100625ea7d719c6d96" target="_blank" rel="noopener noreferrer">Nimでゼロ埋め<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://symfoware.blog.fc2.com/blog-entry-2239.html" target="_blank" rel="noopener noreferrer">Nim 変数、定数の宣言方法(var, let, const)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://zenn.dev/dumblepy/articles/b475b3b4f7d0da" target="_blank" rel="noopener noreferrer">Nimを知ってほしい2022<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://symfoware.blog.fc2.com/blog-entry-2236.html" target="_blank" rel="noopener noreferrer">nim いろいろなコメントの方法<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://flat-leon.hatenablog.com/entry/nim_howto" target="_blank" rel="noopener noreferrer">【Nim】個人的逆引きリファレンス<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://px.a8.net/svt/ejp?a8mat=3HBXCY+4DRW36+50+2HM5Z5" rel="nofollow"><img border="0" width="1000" height="124" alt="" src="https://www27.a8.net/svt/bgt?aid=210508450265&amp;wid=001&amp;eno=01&amp;mid=s00000000018015052000&amp;mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HBXCY+4DRW36+50+2HM5Z5" alt=""></p> <p><a href="https://px.a8.net/svt/ejp?a8mat=3HIN6N+3YAMCY+CO4+6BMG1" rel="nofollow"><img border="0" width="1000" height="124" alt="" src="https://www23.a8.net/svt/bgt?aid=210821855239&amp;wid=001&amp;eno=01&amp;mid=s00000001642001062000&amp;mc=1"></a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3HIN6N+3YAMCY+CO4+6BMG1" alt=""></p> <p><a href="https://px.a8.net/svt/ejp?a8mat=3HIN6N+7FBNEA+4AQ0+5YJRM" rel="nofollow">全国630店舗以上！もみほぐし・足つぼ・ハンドリフレ・クイックヘッドのリラクゼーション店【りらくる】</a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3HIN6N+7FBNEA+4AQ0+5YJRM" alt=""></p> <!----></div> <div class="content-time" data-v-c4dc5dfa><time datetime="6/13/2022, 12:00:00 AM" class="time-text" data-v-c4dc5dfa>Create Time: 6/13/2022, 12:00:00 AM
+    </time> <time datetime="6/14/2022, 4:20:43 AM" class="time-text" data-v-c4dc5dfa>Last Updated: 6/14/2022, 4:20:43 AM
+    </time></div></article> <section class="flex-xb main info-nav" data-v-203269c1 data-v-2602fa21><a href="/posts/audio_pitch.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="https://www.hamlet-engineer.com/image/stylegan_sample.png" loading="lazy" alt="Pythonで再生時間を変えずに音声のピッチを上げる方法" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>Pythonで再生時間を変えずに音声のピッチを上げる方法</h2> <div class="content" data-v-203269c1><!-- https://www.hamlet-engineer.com -->
+<p>Pythonで再生時間を変えずに音声のピッチを上げる方法を実装します．</p>
+</div></article></a> <a href="/posts/EEggs_0106.html" class="flex-xb nav-item" data-v-203269c1><div class="flex-xcc item-img" data-v-203269c1><img data-src="https://www.hamlet-engineer.com/image/gbq_pandas.png" loading="lazy" alt="foliumで特定座標の位置を把握する" class="img lazy" data-v-203269c1></div> <article class="flex-ysc item-content" data-v-203269c1><h2 class="content-title" data-v-203269c1>foliumで特定座標の位置を把握する</h2> <div class="content" data-v-203269c1><p>foliumで特定座標の位置を把握します。</p>
+<!-- https://www.hamlet-engineer.com -->
+<!-- ![](/image/ChordDiagram.png) -->
+</div></article></a></section> <!----></section></section> <footer class="footer" data-v-8dceedee data-v-98a81704><nav class="link-list" data-v-8dceedee><a href="https://twitter.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Twitter</a><a href="https://github.com/hirasu1231" target="_blank" rel="noopener noreferrer" class="list-item" data-v-8dceedee>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-8dceedee>ハムレット型エンジニアのカンニングノート © 2022</a></footer></section><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.ec06ad2c.js" defer></script><script src="/assets/js/85.d536723a.js" defer></script>
+  </body>
+</html>
