@@ -3,16 +3,15 @@ display: home
 title: '国勢調査から２重棒グラフを作成する'
 description: 国勢調査から２重棒グラフを作成します．
 date: 2022-7-13
-image: https://www.hamlet-engineer.com/image/gbq_pandas.png
+image: https://www.hamlet-engineer.com/image/matplot.png
 categories: 
   - Python
 tags:
-  - 小ネタ
+  - memo
   - Python
   - Pandas
-  - テキストファイル
   - matplotlib
-  - 2重棒グラフ
+  - Visualization
 ---
 国勢調査から２重棒グラフを作成します．
 

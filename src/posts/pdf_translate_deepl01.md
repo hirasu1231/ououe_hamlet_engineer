@@ -3,13 +3,13 @@ display: home
 title: 'Google Colab + Selenium + Deeplで機械翻訳を実施する'
 description: Google Colab + Selenium + Deeplで機械翻訳を実施します
 date: 2022-7-16
-image: https://www.hamlet-engineer.com/image/Python.png
+image: https://www.hamlet-engineer.com/image/machine_translate.jpeg
 categories: 
   - Python
 tags:
-  - memo
   - Python
-  - Pandas
+  - jupyterNotebook
+  - Machine_Translate
 ---
 
 Google Colab + Selenium + Deeplで機械翻訳を実施します

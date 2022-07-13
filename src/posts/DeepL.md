@@ -8,8 +8,8 @@ categories:
   - Python
 tags:
   - Python
-  - jupyter
-  - machine_translate
+  - jupyterNotebook
+  - Machine_Translate
 ---
 <!-- https://www.hamlet-engineer.com -->
 Excel等ですでに翻訳したい文をまとめている場合，いちいちコピペしてDeepLに翻訳させるのは面倒なので，Python＋Selenium＋ChromeでDeepLの翻訳を実行します．
