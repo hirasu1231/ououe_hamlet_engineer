@@ -5,9 +5,9 @@ description: 6週間プログラムの座学で，「ゲーミィフィケーシ
 date: 2021-05-19
 image: https://www.hamlet-engineer.com/image/gamification.png
 categories: 
-  - 勉強
+  - Study
 tags:
-  - ゲーミィフィケーション
+  - gamification
 ---
 6週間プログラムの座学で，「ゲーミィフィケーションの基本」があったので，実際のゲームで当てはめて，どの基本要素から始めるかのたたき台を作成する．
 

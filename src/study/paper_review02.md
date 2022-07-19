@@ -5,11 +5,11 @@ description: 地方活性に関する研究をレビューします．
 date: 2022-02-23
 image: https://www.hamlet-engineer.com/image/josetsu.jpeg
 categories: 
-  - 勉強
+  - Study
 tags:
-  - 論文レビュー
-  - 交通計画
-  - にぎわい
+  - paper_review
+  - traffic_planning
+  - activity
 ---
 
 2022/02/23 論文レビュー(駄文)を記述します．

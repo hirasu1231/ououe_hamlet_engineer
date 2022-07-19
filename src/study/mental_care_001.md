@@ -4,9 +4,9 @@ description: 近年では引き寄せの法則は嘘であるという研究結�
 date: 2021-04-10
 image: https://www.hamlet-engineer.com/image/hikiyose.png
 categories: 
-  - 勉強
+  - Study
 tags:
-  - 目標達成
+  - law_of_attraction
 ---
 
 <span style="background-color: #ffff99;">ポジティブなものを意識すれば，自然とポジティブな出来事が引き寄せられますという引き寄せの法則</span>を自己啓発本でよく目にしました．<br>

@@ -5,10 +5,10 @@ description: 最適除雪道路選択モデルに関する研究をレビュー�
 date: 2021-12-21
 image: https://www.hamlet-engineer.com/image/josetsu.jpeg
 categories: 
-  - 勉強
+  - Study
 tags:
-  - 論文レビュー
-  - 交通計画
+  - paper_review
+  - traffic_planning
 ---
 
 2021/12/21 論文レビュー(駄文)を記述します．
