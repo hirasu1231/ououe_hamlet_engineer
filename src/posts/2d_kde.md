@@ -10,10 +10,10 @@ tags:
   - Python
   - visualization
   - Pandas
-	- matplotlib
-	- scikit-learn
-	- カーネル密度
-	- 2次元カーネル密度
+  - matplotlib
+  - scikit-learn
+  - カーネル密度
+  - 2次元カーネル密度
 ---
 2次元カーネル密度の描画を実行します。
 
