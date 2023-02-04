@@ -2,9 +2,9 @@
 display: home
 title: 'Colabratryでkeplerを実装する'
 description: Colabratryでkeplerを実装します
-date: 2023-2-4
+date: 2023-02-04
 image: https://www.hamlet-engineer.com/image/colab_kepler.png
-categories: 
+categories:
   - Python
 tags:
   - Python
@@ -44,6 +44,7 @@ import base64
 
 ## データの作成
 下記のコードでデータを作成します。
+
 ```python
 dict1 = {
         "lon" :[139.7951, 139.7944, 139.7941, 139.7940, 139.7944],
@@ -80,6 +81,7 @@ df2
 
 ## keplerの実行
 下記のコードでkeplerを実行します。
+
 ```python
 # データを描画
 map1 = KeplerGl(height=600)
