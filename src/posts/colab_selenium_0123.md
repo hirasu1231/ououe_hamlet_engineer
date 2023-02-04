@@ -8,9 +8,9 @@ categories:
   - Python
 tags:
   - Python
-	- GIS
+  - GIS
   - kepler
-	- Colabratry
+  - Colabratry
 ---
 ColabratryでSeleniumを復活させる(2023年1月24日
 

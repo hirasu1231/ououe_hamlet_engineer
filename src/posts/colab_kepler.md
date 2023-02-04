@@ -8,9 +8,9 @@ categories:
   - Python
 tags:
   - Python
-	- GIS
+  - GIS
   - kepler
-	- Colabratry
+  - Colabratry
 ---
 Colabratryでkeplerを実装します。
 
