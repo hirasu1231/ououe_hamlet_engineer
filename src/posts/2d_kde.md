@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - Python
-	- visualization
+  - visualization
   - Pandas
 	- matplotlib
 	- scikit-learn
