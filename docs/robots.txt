@@ -1,4 +1,0 @@
-# src/.vuepress/public/robots.txt
-User-agent : *
-Disallow :
-Sitemap : https://www.hamlet-engineer.com/sitemap.xml
