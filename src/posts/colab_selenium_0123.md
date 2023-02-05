@@ -2,7 +2,7 @@
 display: home
 title: 'ColabratryでSeleniumを復活させる(2023年1月24日)'
 description: ColabratryでSeleniumを復活させる(2023年1月24日)
-date: 2022-2-4
+date: 2023-02-04
 image: https://www.hamlet-engineer.com/image/selenium.jpg
 categories: 
   - Python
