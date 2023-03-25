@@ -3,7 +3,7 @@ display: home
 title: 'PLATEAU SDKをMacBookProで操作できるようにするまで'
 description: PLATEAU SDKをMacBookProで操作できるようにするまでのことを記述します
 date: 2023-3-25
-image: https://www.hamlet-engineer.com/image/sample_53391540.png
+image: https://www.hamlet-engineer.com/image/sample_kokura.png
 categories: 
   - GIS
 tags:
@@ -97,14 +97,12 @@ A meta data file (.meta) exists but its asset 'Packages/com.synesthesias.plateau
   - あんまり，このエラーは関係にないのかな
 
 - Demの読み込みでメモリ消費量230GBが出てきたw
-- 今日はここまでにするか
+- Demでメモリオーバーするならのければイケる？
 
-### 次：53391540
-付属しているサンプルの描画ができたしなぁ
+### Dem(土地形状)を外す
+Dem(土地形状)を外したら，デケた
 
-![](/image/sample_53391540.png)
-
-53391540で一から作ってみるか
+![](/image/sample_kokura.png)
 
 
 
